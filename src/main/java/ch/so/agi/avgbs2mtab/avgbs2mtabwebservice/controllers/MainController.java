@@ -27,7 +27,7 @@ public class MainController {
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
 
 	// Folder prefix
-    private static String FOLDER_PREFIX = "avgbs2mtab_";
+	private static String FOLDER_PREFIX = "avgbs2mtab_";
     
 	@Autowired
 	private Environment env;
