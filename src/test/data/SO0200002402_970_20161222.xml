@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <HEADERSECTION VERSION="2.2" SENDER="BSB + Partner">
+    <ALIAS/>
+  </HEADERSECTION>
+  <DATASECTION>
+    <GB2AV.Mutationstabelle BID="xxx" KIND="FULL">
+      <GB2AV.Grundstuecksbeschrieb.Gebaeude TID="xz48185abb000002f8">
+        <GWR_EGID>2124589</GWR_EGID>
+        <istProjektiert>false</istProjektiert>
+        <istUnterirdisch>false</istUnterirdisch>
+        <Nummer>1</Nummer>
+        <Gebaeudeart>Gebaeude</Gebaeudeart>
+        <Flaechenmass>341.0</Flaechenmass>
+        <Adresse>
+          <GB2AV.GebaeudeeingangAdresse>
+            <Strasse>Neuendörferstrasse</Strasse>
+            <Hausnummer>4</Hausnummer>
+            <PLZ>9999</PLZ>
+            <Ortschaft>Härkingen</Ortschaft>
+            <GWR_EDID>0</GWR_EDID>
+          </GB2AV.GebaeudeeingangAdresse>
+        </Adresse>
+      </GB2AV.Grundstuecksbeschrieb.Gebaeude>
+      <GB2AV.Grundstuecksbeschrieb.Gebaeude TID="xz48185abb000002f9">
+        <istProjektiert>false</istProjektiert>
+        <istUnterirdisch>false</istUnterirdisch>
+        <Gebaeudeart>Gebaeude</Gebaeudeart>
+        <Flaechenmass>154.0</Flaechenmass>
+        <Adresse>
+          <GB2AV.GebaeudeeingangAdresse>
+            <Strasse>Lammweg</Strasse>
+            <Hausnummer>1</Hausnummer>
+            <PLZ>9999</PLZ>
+            <Ortschaft>Härkingen</Ortschaft>
+          </GB2AV.GebaeudeeingangAdresse>
+        </Adresse>
+      </GB2AV.Grundstuecksbeschrieb.Gebaeude>
+      <GB2AV.Grundstuecksbeschrieb.Gebaeude TID="xz48185abb000002ff">
+        <GWR_EGID>3010370</GWR_EGID>
+        <istProjektiert>false</istProjektiert>
+        <istUnterirdisch>false</istUnterirdisch>
+        <Nummer>1</Nummer>
+        <Gebaeudeart>Gebaeude</Gebaeudeart>
+        <Flaechenmass>180.0</Flaechenmass>
+        <Adresse>
+          <GB2AV.GebaeudeeingangAdresse>
+            <Strasse>Neuendörferstrasse</Strasse>
+            <Hausnummer>6</Hausnummer>
+            <PLZ>9999</PLZ>
+            <Ortschaft>Härkingen</Ortschaft>
+            <GWR_EDID>0</GWR_EDID>
+          </GB2AV.GebaeudeeingangAdresse>
+        </Adresse>
+      </GB2AV.Grundstuecksbeschrieb.Gebaeude>
+      <GB2AV.Grundstuecksbeschrieb.Gebaeude TID="xz48185abb0000087d">
+        <GWR_EGID>3010367</GWR_EGID>
+        <istProjektiert>false</istProjektiert>
+        <istUnterirdisch>false</istUnterirdisch>
+        <Nummer>1</Nummer>
+        <Gebaeudeart>Gebaeude</Gebaeudeart>
+        <Flaechenmass>312.0</Flaechenmass>
+        <Adresse>
+          <GB2AV.GebaeudeeingangAdresse>
+            <Strasse>Neuendörferstrasse</Strasse>
+            <Hausnummer>2</Hausnummer>
+            <PLZ>9999</PLZ>
+            <Ortschaft>Härkingen</Ortschaft>
+            <GWR_EDID>0</GWR_EDID>
+          </GB2AV.GebaeudeeingangAdresse>
+        </Adresse>
+      </GB2AV.Grundstuecksbeschrieb.Gebaeude>
+      <GB2AV.Grundstuecksbeschrieb.Gebaeude TID="xz55af85cfeb20002c">
+        <istProjektiert>false</istProjektiert>
+        <istUnterirdisch>false</istUnterirdisch>
+        <Gebaeudeart>Gebaeude</Gebaeudeart>
+        <Flaechenmass>11.0</Flaechenmass>
+      </GB2AV.Grundstuecksbeschrieb.Gebaeude>
+      <GB2AV.Mutationstabelle.Liegenschaft TID="xz48185b7b00001437">
+        <Flaechenmass>718</Flaechenmass>
+        <GrundstueckArt>Liegenschaft</GrundstueckArt>
+        <Gemeinde>
+          <GB2AV.Gemeinde>
+            <Name>Härkingen</Name>
+            <BFSNr>2402</BFSNr>
+          </GB2AV.Gemeinde>
+        </Gemeinde>
+        <letzteVollzogeneMutation>
+          <GB2AV.MutationsNummer>
+            <Nummer>970</Nummer>
+            <NBIdent>SO0200002402</NBIdent>
+          </GB2AV.MutationsNummer>
+        </letzteVollzogeneMutation>
+        <Nummer>
+          <GB2AV.GrundstueckNummer>
+            <EGRID>CH333274062027</EGRID>
+            <Nummer>2</Nummer>
+            <SubKreis>SO0200002402</SubKreis>
+          </GB2AV.GrundstueckNummer>
+        </Nummer>
+        <GBPlaene>
+          <GB2AV.GBPlan>
+            <Nummer>1</Nummer>
+            <NBIdent>SO0200002402</NBIdent>
+          </GB2AV.GBPlan>
+        </GBPlaene>
+        <Flurnamen>
+          <GB2AV.Flurname>
+            <Name>Bügetacker</Name>
+          </GB2AV.Flurname>
+          <GB2AV.Flurname>
+            <Name>Dingerten</Name>
+          </GB2AV.Flurname>
+        </Flurnamen>
+        <BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>Gebaeude</Art>
+            <Flaechenmass>312.0</Flaechenmass>
+            <ArtBezeichnung>Gebäude</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>befestigt.uebrige_befestigte</Art>
+            <Flaechenmass>257.0</Flaechenmass>
+            <ArtBezeichnung>Gebäudeerschliessung</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>humusiert.Gartenanlage</Art>
+            <Flaechenmass>149.0</Flaechenmass>
+            <ArtBezeichnung>Gartenanlage</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+        </BodbdAnteil>
+        <Zugang>
+          <GB2AV.Mutationstabelle.Abschnitt>
+            <Flaechenmass>9</Flaechenmass>
+            <von>
+              <GB2AV.GrundstueckNummer>
+                <EGRID>CH669832069942</EGRID>
+                <Nummer>90001</Nummer>
+                <SubKreis>SO0200002402</SubKreis>
+              </GB2AV.GrundstueckNummer>
+            </von>
+          </GB2AV.Mutationstabelle.Abschnitt>
+        </Zugang>
+      </GB2AV.Mutationstabelle.Liegenschaft>
+      <GB2AV.Mutationstabelle.Liegenschaft TID="xz48185b7b00001632">
+        <Flaechenmass>13025</Flaechenmass>
+        <GrundstueckArt>Liegenschaft</GrundstueckArt>
+        <Gemeinde>
+          <GB2AV.Gemeinde>
+            <Name>Härkingen</Name>
+            <BFSNr>2402</BFSNr>
+          </GB2AV.Gemeinde>
+        </Gemeinde>
+        <letzteVollzogeneMutation>
+          <GB2AV.MutationsNummer>
+            <Nummer>970</Nummer>
+            <NBIdent>SO0200002402</NBIdent>
+          </GB2AV.MutationsNummer>
+        </letzteVollzogeneMutation>
+        <Nummer>
+          <GB2AV.GrundstueckNummer>
+            <EGRID>CH567432062621</EGRID>
+            <Nummer>622</Nummer>
+            <SubKreis>SO0200002402</SubKreis>
+          </GB2AV.GrundstueckNummer>
+        </Nummer>
+        <GBPlaene>
+          <GB2AV.GBPlan>
+            <Nummer>1</Nummer>
+            <NBIdent>SO0200002402</NBIdent>
+          </GB2AV.GBPlan>
+          <GB2AV.GBPlan>
+            <Nummer>7</Nummer>
+            <NBIdent>SO0200002402</NBIdent>
+          </GB2AV.GBPlan>
+        </GBPlaene>
+        <Flurnamen>
+          <GB2AV.Flurname>
+            <Name>Bügetacker</Name>
+          </GB2AV.Flurname>
+          <GB2AV.Flurname>
+            <Name>Winkel</Name>
+          </GB2AV.Flurname>
+        </Flurnamen>
+        <BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>Gebaeude</Art>
+            <Flaechenmass>686.0</Flaechenmass>
+            <ArtBezeichnung>Gebäude</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>befestigt.uebrige_befestigte</Art>
+            <Flaechenmass>922.0</Flaechenmass>
+            <ArtBezeichnung>Gebäudeerschliessung</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>humusiert.Acker_Wiese_Weide</Art>
+            <Flaechenmass>10182.0</Flaechenmass>
+            <ArtBezeichnung>Acker und Wiese</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>humusiert.Gartenanlage</Art>
+            <Flaechenmass>994.0</Flaechenmass>
+            <ArtBezeichnung>Gartenanlage</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>bestockt.uebrige_bestockte</Art>
+            <Flaechenmass>241.0</Flaechenmass>
+            <ArtBezeichnung>Hecke</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+        </BodbdAnteil>
+        <Korrektur>1</Korrektur>
+        <korrigiertesFlaechenmass>13086</korrigiertesFlaechenmass>
+        <Zugang>
+          <GB2AV.Mutationstabelle.Abschnitt>
+            <Flaechenmass>4</Flaechenmass>
+            <von>
+              <GB2AV.GrundstueckNummer>
+                <EGRID>CH470698913282</EGRID>
+                <Nummer>90029</Nummer>
+                <SubKreis>SO0200002402</SubKreis>
+              </GB2AV.GrundstueckNummer>
+            </von>
+          </GB2AV.Mutationstabelle.Abschnitt>
+        </Zugang>
+      </GB2AV.Mutationstabelle.Liegenschaft>
+      <GB2AV.Mutationstabelle.Liegenschaft TID="xz48185b7b000016bb">
+        <Flaechenmass>2382</Flaechenmass>
+        <GrundstueckArt>Liegenschaft</GrundstueckArt>
+        <Gemeinde>
+          <GB2AV.Gemeinde>
+            <Name>Härkingen</Name>
+            <BFSNr>2402</BFSNr>
+          </GB2AV.Gemeinde>
+        </Gemeinde>
+        <letzteVollzogeneMutation>
+          <GB2AV.MutationsNummer>
+            <Nummer>970</Nummer>
+            <NBIdent>SO0200002402</NBIdent>
+          </GB2AV.MutationsNummer>
+        </letzteVollzogeneMutation>
+        <Nummer>
+          <GB2AV.GrundstueckNummer>
+            <EGRID>CH669832069942</EGRID>
+            <Nummer>90001</Nummer>
+            <SubKreis>SO0200002402</SubKreis>
+          </GB2AV.GrundstueckNummer>
+        </Nummer>
+        <GBPlaene>
+          <GB2AV.GBPlan>
+            <Nummer>1</Nummer>
+            <NBIdent>SO0200002402</NBIdent>
+          </GB2AV.GBPlan>
+        </GBPlaene>
+        <Flurnamen>
+          <GB2AV.Flurname>
+            <Name>Dingerten</Name>
+          </GB2AV.Flurname>
+          <GB2AV.Flurname>
+            <Name>Gaisenacker</Name>
+          </GB2AV.Flurname>
+        </Flurnamen>
+        <BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>befestigt.Strasse_Weg</Art>
+            <Flaechenmass>1933.0</Flaechenmass>
+            <ArtBezeichnung>Strasse, Weg</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>befestigt.Trottoir</Art>
+            <Flaechenmass>14.0</Flaechenmass>
+            <ArtBezeichnung>Trottoir</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>befestigt.uebrige_befestigte</Art>
+            <Flaechenmass>7.0</Flaechenmass>
+            <ArtBezeichnung>Gebäudeerschliessung</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>humusiert.Acker_Wiese_Weide</Art>
+            <Flaechenmass>153.0</Flaechenmass>
+            <ArtBezeichnung>Acker und Wiese</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>humusiert.Gartenanlage</Art>
+            <Flaechenmass>67.0</Flaechenmass>
+            <ArtBezeichnung>Gartenanlage</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>bestockt.uebrige_bestockte</Art>
+            <Flaechenmass>208.0</Flaechenmass>
+            <ArtBezeichnung>Hecke</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+        </BodbdAnteil>
+        <Korrektur>-1</Korrektur>
+        <korrigiertesFlaechenmass>2397</korrigiertesFlaechenmass>
+      </GB2AV.Mutationstabelle.Liegenschaft>
+      <GB2AV.Mutationstabelle.Liegenschaft TID="xz48185b7b000016d7">
+        <Flaechenmass>3359</Flaechenmass>
+        <GrundstueckArt>Liegenschaft</GrundstueckArt>
+        <Gemeinde>
+          <GB2AV.Gemeinde>
+            <Name>Härkingen</Name>
+            <BFSNr>2402</BFSNr>
+          </GB2AV.Gemeinde>
+        </Gemeinde>
+        <letzteVollzogeneMutation>
+          <GB2AV.MutationsNummer>
+            <Nummer>970</Nummer>
+            <NBIdent>SO0200002402</NBIdent>
+          </GB2AV.MutationsNummer>
+        </letzteVollzogeneMutation>
+        <Nummer>
+          <GB2AV.GrundstueckNummer>
+            <EGRID>CH470698913282</EGRID>
+            <Nummer>90029</Nummer>
+            <SubKreis>SO0200002402</SubKreis>
+          </GB2AV.GrundstueckNummer>
+        </Nummer>
+        <GBPlaene>
+          <GB2AV.GBPlan>
+            <Nummer>1</Nummer>
+            <NBIdent>SO0200002402</NBIdent>
+          </GB2AV.GBPlan>
+          <GB2AV.GBPlan>
+            <Nummer>7</Nummer>
+            <NBIdent>SO0200002402</NBIdent>
+          </GB2AV.GBPlan>
+        </GBPlaene>
+        <Flurnamen>
+          <GB2AV.Flurname>
+            <Name>Bügetacker</Name>
+          </GB2AV.Flurname>
+          <GB2AV.Flurname>
+            <Name>Dingerten</Name>
+          </GB2AV.Flurname>
+          <GB2AV.Flurname>
+            <Name>Häberlig</Name>
+          </GB2AV.Flurname>
+          <GB2AV.Flurname>
+            <Name>Winkel</Name>
+          </GB2AV.Flurname>
+        </Flurnamen>
+        <BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>befestigt.Strasse_Weg</Art>
+            <Flaechenmass>2396.0</Flaechenmass>
+            <ArtBezeichnung>Strasse, Weg</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>befestigt.Trottoir</Art>
+            <Flaechenmass>839.0</Flaechenmass>
+            <ArtBezeichnung>Trottoir</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>befestigt.uebrige_befestigte</Art>
+            <Flaechenmass>9.0</Flaechenmass>
+            <ArtBezeichnung>Gebäudeerschliessung</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>humusiert.Acker_Wiese_Weide</Art>
+            <Flaechenmass>37.0</Flaechenmass>
+            <ArtBezeichnung>Acker und Wiese</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>humusiert.Gartenanlage</Art>
+            <Flaechenmass>78.0</Flaechenmass>
+            <ArtBezeichnung>Gartenanlage</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+        </BodbdAnteil>
+        <Zugang>
+          <GB2AV.Mutationstabelle.Abschnitt>
+            <Flaechenmass>4</Flaechenmass>
+            <von>
+              <GB2AV.GrundstueckNummer>
+                <EGRID>CH333274062027</EGRID>
+                <Nummer>2</Nummer>
+                <SubKreis>SO0200002402</SubKreis>
+              </GB2AV.GrundstueckNummer>
+            </von>
+          </GB2AV.Mutationstabelle.Abschnitt>
+          <GB2AV.Mutationstabelle.Abschnitt>
+            <Flaechenmass>65</Flaechenmass>
+            <von>
+              <GB2AV.GrundstueckNummer>
+                <EGRID>CH567432062621</EGRID>
+                <Nummer>622</Nummer>
+                <SubKreis>SO0200002402</SubKreis>
+              </GB2AV.GrundstueckNummer>
+            </von>
+          </GB2AV.Mutationstabelle.Abschnitt>
+          <GB2AV.Mutationstabelle.Abschnitt>
+            <Flaechenmass>6</Flaechenmass>
+            <von>
+              <GB2AV.GrundstueckNummer>
+                <EGRID>CH669832069942</EGRID>
+                <Nummer>90001</Nummer>
+                <SubKreis>SO0200002402</SubKreis>
+              </GB2AV.GrundstueckNummer>
+            </von>
+          </GB2AV.Mutationstabelle.Abschnitt>
+        </Zugang>
+      </GB2AV.Mutationstabelle.Liegenschaft>
+      <GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID="x1">
+        <Gebaeude REF="xz48185abb000002f8"/>
+        <Grundstueck REF="xz48185b7b00001632"/>
+        <Flaechenmass>341</Flaechenmass>
+      </GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+      <GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID="x2">
+        <Gebaeude REF="xz48185abb000002f9"/>
+        <Grundstueck REF="xz48185b7b00001632"/>
+        <Flaechenmass>154</Flaechenmass>
+      </GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+      <GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID="x3">
+        <Gebaeude REF="xz48185abb000002ff"/>
+        <Grundstueck REF="xz48185b7b00001632"/>
+        <Flaechenmass>180</Flaechenmass>
+      </GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+      <GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID="x4">
+        <Gebaeude REF="xz48185abb0000087d"/>
+        <Grundstueck REF="xz48185b7b00001437"/>
+        <Flaechenmass>312</Flaechenmass>
+      </GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+      <GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID="x5">
+        <Gebaeude REF="xz55af85cfeb20002c"/>
+        <Grundstueck REF="xz48185b7b00001632"/>
+        <Flaechenmass>11</Flaechenmass>
+      </GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+      <GB2AV.Mutationstabelle.AVMutation TID="xz584fd46aa1330133">
+        <Beschrieb>Grenzänderung</Beschrieb>
+        <DateinamePlan>SO0200002402_970_20161222.pdf</DateinamePlan>
+        <EndeTechnBereit>2016-12-19</EndeTechnBereit>
+        <istProjektMutation>Normal</istProjektMutation>
+        <MutationsNummer>
+          <GB2AV.MutationsNummer>
+            <Nummer>970</Nummer>
+            <NBIdent>SO0200002402</NBIdent>
+          </GB2AV.MutationsNummer>
+        </MutationsNummer>
+      </GB2AV.Mutationstabelle.AVMutation>
+      <GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID="x6">
+        <AVMutation REF="xz584fd46aa1330133"/>
+        <betroffeneGrundstuecke REF="xz48185b7b00001437"/>
+      </GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+      <GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID="x7">
+        <AVMutation REF="xz584fd46aa1330133"/>
+        <betroffeneGrundstuecke REF="xz48185b7b00001632"/>
+      </GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+      <GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID="x8">
+        <AVMutation REF="xz584fd46aa1330133"/>
+        <betroffeneGrundstuecke REF="xz48185b7b000016bb"/>
+      </GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+      <GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID="x9">
+        <AVMutation REF="xz584fd46aa1330133"/>
+        <betroffeneGrundstuecke REF="xz48185b7b000016d7"/>
+      </GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+    </GB2AV.Mutationstabelle>
+  </DATASECTION>
+</TRANSFER>
