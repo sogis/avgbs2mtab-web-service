@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>avgbs2mtab web service</title>
+
+	<link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons"/>
+	<link rel="stylesheet" th:href="@{/webjars/materializecss/0.100.1/css/materialize.min.css}"/>
+
+	<style>
+		html, body, .upload-box {
+			height: 100%;
+			padding: 0;
+			position: relative;
+    		margin: 0 auto;
+    		overflow: hidden;
+		}
+		input[type=text].valid {
+			border-bottom: 1px solid #b71c1c !important;
+			box-shadow: 0 1px 0 0 #b71c1c !important;
+		}		
+		.checkbox-blue[type="checkbox"].filled-in:checked + label:after {
+     		border: 2px solid #b71c1c;
+     		background-color: #b71c1c;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div class="valign-wrapper row upload-box">
+		<div class="col s10 pull-s1 m6 pull-m3 l4 pull-l4">
+			<form id="upload-file-form" action="" method="POST" enctype="multipart/form-data">
+				<div class="card-content">
+					<div class="row">
+						<div class="file-field input-field">
+							<div class="btn red darken-4">
+								<span class="white-text" th:text="#{browse}"></span> <input type="file" name="file"/>
+							</div>
+							<div class="file-path-wrapper">
+								<input class="file-path validate" type="text"
+									th:placeholder="#{placeholder}"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-action right-align">
+					<button id="submit-btn" class="btn red darken-4 white-text waves-effect waves-light" type="submit" name="action" th:text="#{upload}">
+    					<i class="material-icons right">send</i>
+  					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+    <script type="text/javascript" th:src="@{/webjars/jquery/2.2.4/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/materializecss/0.100.1/js/materialize.min.js}"></script>
+    <script>
+    	$(document).ready(function() {
+			$('#submit-btn').on('click', function() {
+				$(this).removeClass("waves-effect waves-light submit").addClass('disabled');
+			});
+    	});
+    </script>
+</body>
+
+</html>
