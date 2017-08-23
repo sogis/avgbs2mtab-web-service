@@ -1,4 +1,4 @@
-package ch.so.agi.avgbs2mtab.avgbs2mtabwebservice.config;
+package ch.so.agi.avgbs2mtab.webservice.config;
 
 import java.util.Locale;
 
@@ -15,7 +15,7 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "ch.so.agi.avgbs2mtab.avgbs2mtabwebservice.config")
+@ComponentScan(basePackages = "ch.so.agi.avgbs2mtab.webservice.config")
 public class MvcConfig extends WebMvcConfigurerAdapter {
 
     @Bean

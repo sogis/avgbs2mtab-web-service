@@ -1,4 +1,4 @@
-package ch.so.agi.avgbs2mtab.avgbs2mtabwebservice;
+package ch.so.agi.avgbs2mtab.webservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

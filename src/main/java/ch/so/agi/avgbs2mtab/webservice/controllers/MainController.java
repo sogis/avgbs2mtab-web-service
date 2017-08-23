@@ -1,4 +1,4 @@
-package ch.so.agi.avgbs2mtab.avgbs2mtabwebservice.controllers;
+package ch.so.agi.avgbs2mtab.webservice.controllers;
 
 import java.io.File;
 import java.io.FileInputStream;
