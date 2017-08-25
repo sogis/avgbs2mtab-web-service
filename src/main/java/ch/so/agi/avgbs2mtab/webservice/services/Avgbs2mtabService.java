@@ -28,14 +28,12 @@ public class Avgbs2mtabService {
 	@Autowired
 	private ResourceLoader resourceLoader;
 	
-	private String modelFileName = "KS3-20060703.ili";
-
 	/**
 	 * This method converts an AVGBS-INTERLIS transfer file into a xlss file with 
 	 * <a href="https://github.com/sogis/avgbs2mtab">avgbs2mtab library</a>.
 	 * @param inputFileName Name of AVGBS-INTERLIS transfer file to convert.
 	 * @param outputFileName Name of converted xlsx file.
-	 * @throws IOException if config file cannot be read or copied to file system. 
+	 * @throws IOException ?????????????? 
 	 */	
 	public synchronized void convert(String inputFileName, String outFileName) throws IOException {	
 		
