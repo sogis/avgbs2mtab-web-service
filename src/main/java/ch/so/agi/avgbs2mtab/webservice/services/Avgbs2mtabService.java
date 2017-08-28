@@ -15,6 +15,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
 
+import ch.so.agi.avgbs2mtab.main.Avgbs2mtabMain;
+
 /**
 * Spring service class for converting avgbs transfer file to xlsx.
 *
@@ -33,12 +35,9 @@ public class Avgbs2mtabService {
 	 * <a href="https://github.com/sogis/avgbs2mtab">avgbs2mtab library</a>.
 	 * @param inputFileName Name of AVGBS-INTERLIS transfer file to convert.
 	 * @param outputFileName Name of converted xlsx file.
-	 * @throws IOException ?????????????? 
+	 * @throws IOException  
 	 */	
 	public synchronized void convert(String inputFileName, String outFileName) throws IOException {	
-		
-
+		Avgbs2mtabMain.runConversion(inputFileName, outFileName);
 	}
-
-	
 }

@@ -94,22 +94,18 @@ public class MainController {
 			
 			// Convert avgbs transfer file into a xlsx file.
 			String outputFileName = baseFileName + ".xlsx";
-
 			avgbs2mtab.convert(inputFileName, outputFileName);
 			
-		
-			// Send log file back to client.
-//			File logFile = new File(logFileName);
-//			InputStream is = new FileInputStream(logFile);
-//
-//			return ResponseEntity
-//					.ok()
-//					.contentLength(logFile.length())
-//					.contentType(MediaType.parseMediaType("text/plain"))
-//					.body(new InputStreamResource(is));	    
-			
+			// Send xlsx file back to client.
+			File xlsxFile = new File(outputFileName);
+			InputStream is = new FileInputStream(xlsxFile);
+
 			return ResponseEntity
-					.ok().body("adf");
+					.ok().header("content-disposition", "attachment; filename=" + xlsxFile.getName())
+					.contentLength(xlsxFile.length())
+					.contentType(MediaType.parseMediaType("application/octet-stream"))
+					.body(new InputStreamResource(is));	    
+
 		}
 		catch (Exception e) {
 			e.printStackTrace();
