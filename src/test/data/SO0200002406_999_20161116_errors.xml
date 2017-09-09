@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <HEADERSECTION VERSION="2.2" SENDER="BSB + Partner">
+    <ALIAS/>
+  </HEADERSECTION>
+  <DATASECTION>
+    <GB2AV.Mutationstabelle BID="xxx" KIND="FULL">
+      <GB2AV.Mutationstabelle.Liegenschaft TID="xz48f364f300002077">
+        <Flaechenmass>594</Flaechenmass>
+        <GrundstueckArt>Liegenschaft</GrundstueckArt>
+        <Gemeinde>
+          <GB2AV.Gemeinde>
+            <Name>Oberbuchsiten</Name>
+            <BFSNr>2406</BFSNr>
+          </GB2AV.Gemeinde>
+        </Gemeinde>
+        <letzteVollzogeneMutation>
+          <GB2AV.MutationsNummer>
+            <Nummer>999</Nummer>
+            <NBIdent>SO0200002406</NBIdent>
+          </GB2AV.MutationsNummer>
+        </letzteVollzogeneMutation>
+        <Nummer>
+          <GB2AV.GrundstueckNummer>
+            <EGRID>CH433276067715</EGRID>
+            <SubKreis>SO0200002406</SubKreis>
+          </GB2AV.GrundstueckNummer>
+        </Nummer>
+        <GBPlaene>
+          <GB2AV.GBPlan>
+            <Nummer>2</Nummer>
+            <NBIdent>SO0200002406</NBIdent>
+          </GB2AV.GBPlan>
+        </GBPlaene>
+        <Flurnamen>
+          <GB2AV.Flurname>
+            <Name>Wolfsgruebe</Name>
+          </GB2AV.Flurname>
+        </Flurnamen>
+        <BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>humusiert.Acker_Wiese_Weide</Art>
+            <Flaechenmass>594.0</Flaechenmass>
+            <ArtBezeichnung>Acker und Wiese</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+        </BodbdAnteil>
+      </GB2AV.Mutationstabelle.Liegenschaft>
+      <GB2AV.Mutationstabelle.Liegenschaft TID="xz5822e73225c7000a">
+        <Flaechenmass>594</Flaechenmass>
+        <GrundstueckArt>Liegenschaft</GrundstueckArt>
+        <Gemeinde>
+          <GB2AV.Gemeinde>
+            <Name>Oberbuchsiten</Name>
+            <BFSNr>2406</BFSNr>
+          </GB2AV.Gemeinde>
+        </Gemeinde>
+        <letzteVollzogeneMutation>
+          <GB2AV.MutationsNummer>
+            <Nummer>999</Nummer>
+            <NBIdent>SO0200002406</NBIdent>
+          </GB2AV.MutationsNummer>
+        </letzteVollzogeneMutation>
+        <Nummer>
+          <GB2AV.GrundstueckNummer>
+            <EGRID>CH167730127725</EGRID>
+            <Nummer>2711</Nummer>
+            <SubKreis>SO0200002406</SubKreis>
+          </GB2AV.GrundstueckNummer>
+        </Nummer>
+        <GBPlaene>
+          <GB2AV.GBPlan>
+            <Nummer>2</Nummer>
+            <NBIdent>SO0200002406</NBIdent>
+          </GB2AV.GBPlan>
+        </GBPlaene>
+        <Flurnamen>
+          <GB2AV.Flurname>
+            <Name>Wolfsgruebe</Name>
+          </GB2AV.Flurname>
+        </Flurnamen>
+        <BodbdAnteil>
+          <GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+            <Art>humusiert.Acker_Wiese_Weide</Art>
+            <Flaechenmass>594.0</Flaechenmass>
+            <ArtBezeichnung>Acker und Wiese</ArtBezeichnung>
+          </GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+        </BodbdAnteil>
+        <Zugang>
+          <GB2AV.Mutationstabelle.Abschnitt>
+            <Flaechenmass>594</Flaechenmass>
+            <von>
+              <GB2AV.GrundstueckNummer>
+                <EGRID>CH433276067715</EGRID>
+                <Nummer>1948</Nummer>
+                <SubKreis>SO0200002406</SubKreis>
+              </GB2AV.GrundstueckNummer>
+            </von>
+          </GB2AV.Mutationstabelle.Abschnitt>
+        </Zugang>
+      </GB2AV.Mutationstabelle.Liegenschaft>
+      <GB2AV.Mutationstabelle.AVMutation TID="xz5820354e2e360001">
+        <Beschrieb>Parzelliereung</Beschrieb>
+        <DateinamePlan>SO0200002406_999_20161116.pdf</DateinamePlan>
+        <EndeTechnBereit>2016-11-16</EndeTechnBereit>
+        <istProjektMutation>Normal</istProjektMutation>
+        <MutationsNummer>
+          <GB2AV.MutationsNummer>
+            <Nummer>999</Nummer>
+            <NBIdent>SO0200002406</NBIdent>
+          </GB2AV.MutationsNummer>
+        </MutationsNummer>
+      </GB2AV.Mutationstabelle.AVMutation>
+      <GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID="x1">
+        <AVMutation REF="xz5820354e2e360001"/>
+        <betroffeneGrundstuecke REF="xz48f364f300002077"/>
+      </GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+      <GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID="x2">
+        <AVMutation REF="xz5820354e2e360001"/>
+        <betroffeneGrundstuecke REF="xz5822e73225c7000a"/>
+      </GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+    </GB2AV.Mutationstabelle>
+  </DATASECTION>
+</TRANSFER>
