@@ -15,7 +15,7 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
 group = 'ch.so.agi.avgbs2mtab'
-version = '0.0.3' // NOT YET RELEASED!
+version = '0.0.3' 
 
 description = """avgbs2mtab web service"""
 
@@ -41,7 +41,7 @@ dependencies {
 	compile("org.webjars:jquery:2.2.4")
 	compile("commons-io:commons-io:2.5")
 	compile("org.interlis2:ilivalidator:1.4.0")
-	compile("ch.so.agi.avgbs2mtab:avgbs2mtab:0.9.5")
+	compile("ch.so.agi.avgbs2mtab:avgbs2mtab:0.9.6")
 	compile("io.rest-assured:rest-assured:3.0.3")
     testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}") {
 		exclude(module: 'commons-logging')
