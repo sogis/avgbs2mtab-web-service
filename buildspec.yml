@@ -16,20 +16,29 @@ phases:
     commands:
       - echo Logging in to Docker Hub...
       - docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
-      # This is needed when this project is part of the avgbs2mtab codepipeline
+      # This is needed when this project / codebuild is part of the avgbs2mtab codepipeline
       # since we don't get the sources from the inputs, which is the build of
       # the avgbs2mtab library.
       - echo Download web service sources
       - git clone https://github.com/sogis/avgbs2mtab-web-service.git avgbs2mtab-web-service
   build:
     commands:
+      - echo Install Java
+      - export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+      - apt-get update -y
+      - apt-get install -y software-properties-common
+      - add-apt-repository ppa:openjdk-r/ppa
+      - apt-get update -y
+      - apt-get install -y openjdk-8-jdk
+      - echo Logging in to Docker Hub...
+      - docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
+      - echo Download web service sources
+      - git clone https://github.com/sogis/avgbs2mtab-web-service.git avgbs2mtab-web-service
       - echo Starting build `date`
       - chmod +rx -R *
       - cd avgbs2mtab-web-service
       - ./gradlew clean build
-      # git metadata is not available yet when using 
-      # codepipeline. At the moment we just use a 
-      # date string.
+      # If we git clone ourselves we get the git sha.
       - APP_VERSION=$(./gradlew -q getVersion | tail -1)
       - docker build -t sogis/avgbs2mtab-web-service:$APP_VERSION -t sogis/avgbs2mtab-web-service:latest .
   post_build:
