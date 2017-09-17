@@ -16,6 +16,9 @@ phases:
     commands:
       - echo Logging in to Docker Hub...
       - docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
+      # This is needed when this project is part of the avgbs2mtab codepipeline
+      # since we don't get the sources from the inputs, which is the build of
+      # the avgbs2mtab library.
       - echo Download web service sources
       - git clone https://github.com/sogis/avgbs2mtab-web-service.git avgbs2mtab-web-service
   build:
