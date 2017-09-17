@@ -18,7 +18,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'net.nemerosa.versioning'
 
 group = 'ch.so.agi.avgbs2mtab'
-version = '0.0.4-'+versioning.info.build 
+version = '0.0.4'
 
 description = """avgbs2mtab web service"""
 
@@ -58,6 +58,9 @@ test {
 }
 
 task getVersion {
-	//println project.version + "-" + new Date().format('yyyyMMddHHmmss')
-	println project.version
+	println project.version "-" +versioning.info.build
+}
+
+task getDateVersion {
+	println project.version + "-" + new Date().format('yyyyMMddHHmmss')
 }
