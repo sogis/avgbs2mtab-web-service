@@ -23,7 +23,7 @@ phases:
       - ./gradlew clean build
       # git metadata is not available yet when using 
       # codepipeline. At the moment we just use a 
-      # date string.
+      # date string. 
       - APP_VERSION=$(./gradlew -q getDateVersion | tail -1)
       - docker build -t sogis/avgbs2mtab-web-service:$APP_VERSION -t sogis/avgbs2mtab-web-service:latest .
   post_build:
