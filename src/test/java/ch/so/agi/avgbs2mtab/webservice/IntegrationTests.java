@@ -129,7 +129,7 @@ public class IntegrationTests {
 	 * https://github.com/rest-assured/rest-assured/issues/861
 	 * 
 	 * Use headers instead. Be careful with content length.
-	 * This can (?) be change when using different xlsx 
+	 * This can (?) change when using different xlsx 
 	 * library/version.
 	 */
 	public void successfulConversionTest() {

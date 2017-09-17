@@ -29,9 +29,9 @@ targetCompatibility = 1.8
 
 repositories {
 	mavenCentral()
+    maven { url "http://sogeo.services:8081/artifactory/libs-snapshot" }
     maven { url "http://sogeo.services:8081/artifactory/libs-release" }
 }
-
 
 dependencies {
 	compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
@@ -41,7 +41,7 @@ dependencies {
 	compile("org.webjars:jquery:2.2.4")
 	compile("commons-io:commons-io:2.5")
 	compile("org.interlis2:ilivalidator:1.4.0")
-	compile("ch.so.agi.avgbs2mtab:avgbs2mtab:0.9.6")
+	compile("ch.so.agi.avgbs2mtab:avgbs2mtab:+") // lottery...
 	compile("io.rest-assured:rest-assured:3.0.3")
     testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}") {
 		exclude(module: 'commons-logging')
@@ -52,4 +52,8 @@ test {
 	testLogging {
 		showStandardStreams = true
 	}
+}
+
+task getVersion {
+	println project.version + "-" + new Date().format('yyyyMMddHHmmss')
 }
