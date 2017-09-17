@@ -30,8 +30,8 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push sogis/ilivalidator-web-service:$APP_VERSION
-      - docker push sogis/ilivalidator-web-service:latest
+      - docker push sogis/avgbs2mtab-web-service:$APP_VERSION
+      - docker push sogis/avgbs2mtab-web-service:latest
       - echo Deleting Dockerfile
       - rm Dockerfile
       #- sed -i -e "s/IMAGE_TAG/$APP_VERSION/" Dockerrun.aws.json
