@@ -25,15 +25,15 @@ phases:
       # codepipeline. At the moment we just use a 
       # date string.
       - APP_VERSION=$(./gradlew -q getVersion | tail -1)
-      #- docker build -t sogis/avgbs2mtab-web-service:$APP_VERSION -t sogis/avgbs2mtab-web-service:latest .
+      - docker build -t sogis/avgbs2mtab-web-service:$APP_VERSION -t sogis/avgbs2mtab-web-service:latest .
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      #- docker push sogis/ilivalidator-web-service:$APP_VERSION
-      #- docker push sogis/ilivalidator-web-service:latest
-      #- echo Deleting Dockerfile
-      #- rm Dockerfile
+      - docker push sogis/ilivalidator-web-service:$APP_VERSION
+      - docker push sogis/ilivalidator-web-service:latest
+      - echo Deleting Dockerfile
+      - rm Dockerfile
       #- sed -i -e "s/IMAGE_TAG/$APP_VERSION/" Dockerrun.aws.json
 artifacts:
   files:

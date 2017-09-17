@@ -15,7 +15,7 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
 group = 'ch.so.agi.avgbs2mtab'
-version = '0.0.3' 
+version = '0.0.4' 
 
 description = """avgbs2mtab web service"""
 
