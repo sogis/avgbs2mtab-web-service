@@ -16,10 +16,13 @@ phases:
     commands:
       - echo Logging in to Docker Hub...
       - docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
+      - echo Download web service sources
+      - git clone https://github.com/sogis/avgbs2mtab-web-service.git avgbs2mtab-web-service
   build:
     commands:
       - echo Starting build `date`
       - chmod +rx -R *
+      - cd avgbs2mtab-web-service
       - ./gradlew clean build
       # git metadata is not available yet when using 
       # codepipeline. At the moment we just use a 
