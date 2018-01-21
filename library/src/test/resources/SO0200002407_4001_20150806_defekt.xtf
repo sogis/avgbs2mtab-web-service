@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<HEADERSECTION VERSION="2.2" SENDER="GEOS Pro" >
+<ALIAS />
+</HEADERSECTION>
+<DATASECTION>
+<GB2AV.Mutationstabelle BID = "xxx" KIND="FULL">
+<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz47bd8c8f00000731">
+<GWR_EGID>1701131</GWR_EGID>
+<istProjektiert>false</istProjektiert>
+<istUnterirdisch>false</istUnterirdisch>
+<Nummer>1</Nummer>
+<Gebaeudeart>Gebaeude</Gebaeudeart>
+<Flaechenmass>110.0</Flaechenmass>
+<Adresse>
+<GB2AV.GebaeudeeingangAdresse>
+<Strasse>Guetstrasse</Strasse>
+<Hausnummer>33</Hausnummer>
+<PLZ>9999</PLZ>
+<Ortschaft></Ortschaft>
+<GWR_EDID>0</GWR_EDID>
+</GB2AV.GebaeudeeingangAdresse>
+</Adresse>
+</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+<GB2AV.Mutationstabelle.Liegenschaft TID ="xz55c31f019302000b">
+<Flaechenmass>453</Flaechenmass>
+<GrundstueckArt>Liegenschaft</GrundstueckArt>
+<Gemeinde>
+<GB2AV.Gemeinde>
+<Name>Oensingen</Name>
+<BFSNr>2407</BFSNr>
+</GB2AV.Gemeinde>
+</Gemeinde>
+<letzteVollzogeneMutation>
+<GB2AV.MutationsNummer>
+<Nummer>4001</Nummer>
+<NBIdent>SO0200002407</NBIdent>
+</GB2AV.MutationsNummer>
+</letzteVollzogeneMutation>
+<Nummer>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH707743775022</EGRID>
+<Nummer>40011</Nummer>
+<SubKreis>SO0200002407</SubKreis>
+</GB2AV.GrundstueckNummer>
+</Nummer>
+<GBPlaene>
+<GB2AV.GBPlan>
+<Nummer>18</Nummer>
+<NBIdent>SO0200002407</NBIdent>
+</GB2AV.GBPlan>
+</GBPlaene>
+<Flurnamen>
+<GB2AV.Flurname>
+<Name>Guet</Name>
+</GB2AV.Flurname>
+</Flurnamen>
+<BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>humusiert.Acker_Wiese_Weide</Art>
+<Flaechenmass>453.0</Flaechenmass>
+<ArtBezeichnung>humusiert.Acker_Wiese_Weide.Acker_Wiese</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+</BodbdAnteil>
+<Zugang>
+<GB2AV.Mutationstabelle.Abschnitt>
+<Flaechenmass>453</Flaechenmass>
+<von>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH527598320654</EGRID>
+<Nummer>597</Nummer>
+<SubKreis>SO0200002407</SubKreis>
+</GB2AV.GrundstueckNummer>
+</von>
+</GB2AV.Mutationstabelle.Abschnitt>
+</Zugang>
+</GB2AV.Mutationstabelle.Liegenschaft>
+<GB2AV.Mutationstabelle.Liegenschaft TID ="xz55c31f479302000f">
+<Flaechenmass>460</Flaechenmass>
+<GrundstueckArt>Liegenschaft</GrundstueckArt>
+<Gemeinde>
+<GB2AV.Gemeinde>
+<Name>Oensingen</Name>
+<BFSNr>2407</BFSNr>
+</GB2AV.Gemeinde>
+</Gemeinde>
+<letzteVollzogeneMutation>
+<GB2AV.MutationsNummer>
+<Nummer>4001</Nummer>
+<NBIdent>SO0200002407</NBIdent>
+</GB2AV.MutationsNummer>
+</letzteVollzogeneMutation>
+<Nummer>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH727777504330</EGRID>
+<Nummer>40012</Nummer>
+<SubKreis>SO0200002407</SubKreis>
+</GB2AV.GrundstueckNummer>
+</Nummer>
+<GBPlaene>
+<GB2AV.GBPlan>
+<Nummer>18</Nummer>
+<NBIdent>SO0200002407</NBIdent>
+</GB2AV.GBPlan>
+</GBPlaene>
+<Flurnamen>
+<GB2AV.Flurname>
+<Name>Guet</Name>
+</GB2AV.Flurname>
+</Flurnamen>
+<BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>humusiert.Acker_Wiese_Weide</Art>
+<Flaechenmass>460.0</Flaechenmass>
+<ArtBezeichnung>humusiert.Acker_Wiese_Weide.Acker_Wiese</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+</BodbdAnteil>
+<Zugang>
+<GB2AV.Mutationstabelle.Abschnitt>
+<Flaechenmass>460</Flaechenmass>
+<von>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH527598320654</EGRID>
+<Nummer>597</Nummer>
+<SubKreis>SO0200002407</SubKreis>
+</GB2AV.GrundstueckNummer>
+</von>
+</GB2AV.Mutationstabelle.Abschnitt>
+</Zugang>
+</GB2AV.Mutationstabelle.Liegenschaft>
+<GB2AV.Mutationstabelle.Liegenschaft TID ="xz55c31fe393020014">
+<Flaechenmass>402</Flaechenmass>
+<GrundstueckArt>Liegenschaft</GrundstueckArt>
+<Gemeinde>
+<GB2AV.Gemeinde>
+<Name>Oensingen</Name>
+<BFSNr>2407</BFSNr>
+</GB2AV.Gemeinde>
+</Gemeinde>
+<letzteVollzogeneMutation>
+<GB2AV.MutationsNummer>
+<Nummer>4001</Nummer>
+<NBIdent>SO0200002407</NBIdent>
+</GB2AV.MutationsNummer>
+</letzteVollzogeneMutation>
+<Nummer>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH735077437783</EGRID>
+<Nummer>40013</Nummer>
+<SubKreis>SO0200002407</SubKreis>
+</GB2AV.GrundstueckNummer>
+</Nummer>
+<GBPlaene>
+<GB2AV.GBPlan>
+<Nummer>18</Nummer>
+<NBIdent>SO0200002407</NBIdent>
+</GB2AV.GBPlan>
+</GBPlaene>
+<Flurnamen>
+<GB2AV.Flurname>
+<Name>Guet</Name>
+</GB2AV.Flurname>
+</Flurnamen>
+<BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>humusiert.Acker_Wiese_Weide</Art>
+<Flaechenmass>402.0</Flaechenmass>
+<ArtBezeichnung>humusiert.Acker_Wiese_Weide.Acker_Wiese</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+</BodbdAnteil>
+<Zugang>
+<GB2AV.Mutationstabelle.Abschnitt>
+<Flaechenmass>402</Flaechenmass>
+<von>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH527598320654</EGRID>
+<Nummer>597</Nummer>
+<SubKreis>SO0200002407</SubKreis>
+</GB2AV.GrundstueckNummer>
+</von>
+</GB2AV.Mutationstabelle.Abschnitt>
+</Zugang>
+</GB2AV.Mutationstabelle.Liegenschaft>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x1">
+<Gebaeude REF="xz47bd8c8f00000731"/>
+<Grundstueck REF="xz47bd8f0000003831"/>
+<Flaechenmass>110</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Mutationstabelle.AVMutation TID ="xz55c3001593020000">
+<Beschrieb>Test AVGBS T1</Beschrieb>
+<DateinamePlan>SO0200002407_4001_20150806.pdf</DateinamePlan>
+<EndeTechnBereit>2015-08-06</EndeTechnBereit>
+<istProjektMutation>Normal</istProjektMutation>
+<MutationsNummer>
+<GB2AV.MutationsNummer>
+<Nummer>4001</Nummer>
+<NBIdent>SO0200002407</NBIdent>
+</GB2AV.MutationsNummer>
+</MutationsNummer>
+</GB2AV.Mutationstabelle.AVMutation>
+<GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID ="x2">
+<AVMutation REF="xz55c3001593020000"></AVMutation>
+<betroffeneGrundstuecke REF="xz47bd8f0000003831"></betroffeneGrundstuecke>
+</GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+<GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID ="x3">
+<AVMutation REF="xz55c3001593020000"></AVMutation>
+<betroffeneGrundstuecke REF="xz55c31f019302000b"></betroffeneGrundstuecke>
+</GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+<GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID ="x4">
+<AVMutation REF="xz55c3001593020000"></AVMutation>
+<betroffeneGrundstuecke REF="xz55c31f479302000f"></betroffeneGrundstuecke>
+</GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+<GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID ="x5">
+<AVMutation REF="xz55c3001593020000"></AVMutation>
+<betroffeneGrundstuecke REF="xz55c31fe393020014"></betroffeneGrundstuecke>
+</GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+</GB2AV.Mutationstabelle>
+</DATASECTION>
+</TRANSFER>

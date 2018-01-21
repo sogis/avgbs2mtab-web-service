@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<HEADERSECTION VERSION="2.2" SENDER="GEOS Pro" >
+<ALIAS />
+</HEADERSECTION>
+<DATASECTION>
+<GB2AV.Mutationstabelle BID = "xxx" KIND="FULL">
+<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz525793a39589000d">
+<GWR_EGID>190620713</GWR_EGID>
+<istProjektiert>false</istProjektiert>
+<istUnterirdisch>false</istUnterirdisch>
+<Nummer>1</Nummer>
+<Gebaeudeart>Gebaeude</Gebaeudeart>
+<Flaechenmass>11.0</Flaechenmass>
+<Adresse>
+<GB2AV.GebaeudeeingangAdresse>
+<Strasse>Bifangweg</Strasse>
+<Hausnummer>48</Hausnummer>
+<PLZ>9999</PLZ>
+<Ortschaft></Ortschaft>
+<GWR_EDID>0</GWR_EDID>
+</GB2AV.GebaeudeeingangAdresse>
+</Adresse>
+</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+<GB2AV.Mutationstabelle.Flaeche TID ="xz55db1069fa9f0014">
+<Flaechenmass>3656</Flaechenmass>
+<GrundstueckArt>SelbstRecht.Quellenrecht</GrundstueckArt>
+<Gemeinde>
+<GB2AV.Gemeinde>
+<Name>Oensingen</Name>
+<BFSNr>2407</BFSNr>
+</GB2AV.Gemeinde>
+</Gemeinde>
+<letzteVollzogeneMutation>
+<GB2AV.MutationsNummer>
+<Nummer>40051</Nummer>
+<NBIdent>SO0200002407</NBIdent>
+</GB2AV.MutationsNummer>
+</letzteVollzogeneMutation>
+<Nummer>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH280850437761</EGRID>
+<Nummer>40051</Nummer>
+<SubKreis>SO0200002407</SubKreis>
+</GB2AV.GrundstueckNummer>
+</Nummer>
+<GBPlaene>
+<GB2AV.GBPlan>
+<Nummer>25</Nummer>
+<NBIdent>SO0200002407</NBIdent>
+</GB2AV.GBPlan>
+</GBPlaene>
+<Flurnamen>
+<GB2AV.Flurname>
+<Name>Wolfacker</Name>
+</GB2AV.Flurname>
+</Flurnamen>
+</GB2AV.Mutationstabelle.Flaeche>
+<GB2AV.Mutationstabelle.Liegenschaft TID ="xz47bd8f0000003b83">
+<Flaechenmass>1175</Flaechenmass>
+<GrundstueckArt>Liegenschaft</GrundstueckArt>
+<Gemeinde>
+<GB2AV.Gemeinde>
+<Name>Oensingen</Name>
+<BFSNr>2407</BFSNr>
+</GB2AV.Gemeinde>
+</Gemeinde>
+<Nummer>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH108706763219</EGRID>
+<Nummer>2141</Nummer>
+<SubKreis>SO0200002407</SubKreis>
+</GB2AV.GrundstueckNummer>
+</Nummer>
+<GBPlaene>
+<GB2AV.GBPlan>
+<Nummer>25</Nummer>
+<NBIdent>SO0200002407</NBIdent>
+</GB2AV.GBPlan>
+</GBPlaene>
+<Flurnamen>
+<GB2AV.Flurname>
+<Name>Wolfacker</Name>
+</GB2AV.Flurname>
+</Flurnamen>
+<BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>Gebaeude</Art>
+<Flaechenmass>11.0</Flaechenmass>
+<ArtBezeichnung>Gebaeude</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>befestigt.uebrige_befestigte</Art>
+<Flaechenmass>1093.0</Flaechenmass>
+<ArtBezeichnung>befestigt.uebrige_befestigte.Gebaeudeers</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>humusiert.Acker_Wiese_Weide</Art>
+<Flaechenmass>71.0</Flaechenmass>
+<ArtBezeichnung>humusiert.Acker_Wiese_Weide.Acker_Wiese</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+</BodbdAnteil>
+</GB2AV.Mutationstabelle.Liegenschaft>
+<GB2AV.Mutationstabelle.Liegenschaft TID ="xz47bd8f0000003b84">
+<Flaechenmass>2481</Flaechenmass>
+<GrundstueckArt>Liegenschaft</GrundstueckArt>
+<Gemeinde>
+<GB2AV.Gemeinde>
+<Name>Oensingen</Name>
+<BFSNr>2407</BFSNr>
+</GB2AV.Gemeinde>
+</Gemeinde>
+<Nummer>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH770675173221</EGRID>
+<Nummer>2142</Nummer>
+<SubKreis>SO0200002407</SubKreis>
+</GB2AV.GrundstueckNummer>
+</Nummer>
+<GBPlaene>
+<GB2AV.GBPlan>
+<Nummer>25</Nummer>
+<NBIdent>SO0200002407</NBIdent>
+</GB2AV.GBPlan>
+</GBPlaene>
+<Flurnamen>
+<GB2AV.Flurname>
+<Name>Wolfacker</Name>
+</GB2AV.Flurname>
+</Flurnamen>
+<BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>humusiert.Acker_Wiese_Weide</Art>
+<Flaechenmass>2481.0</Flaechenmass>
+<ArtBezeichnung>humusiert.Acker_Wiese_Weide.Acker_Wiese</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+</BodbdAnteil>
+</GB2AV.Mutationstabelle.Liegenschaft>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x1">
+<Gebaeude REF="xz525793a39589000d"/>
+<Grundstueck REF="xz55db1069fa9f0014"/>
+<Flaechenmass>11</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x2">
+<Gebaeude REF="xz525793a39589000d"/>
+<Grundstueck REF="xz47bd8f0000003b83"/>
+<Flaechenmass>11</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.Anteil TID ="x3">
+<flaeche REF="xz55db1069fa9f0014"/>
+<liegt_auf REF="xz47bd8f0000003b83"/>
+<Flaechenmass>1175</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.Anteil>
+<GB2AV.Grundstuecksbeschrieb.Anteil TID ="x4">
+<flaeche REF="xz55db1069fa9f0014"/>
+<liegt_auf REF="xz47bd8f0000003b84"/>
+<Flaechenmass>2481</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.Anteil>
+<GB2AV.Mutationstabelle.AVMutation TID ="xz55db0f51fa9f0011">
+<Beschrieb>Quellenrecht &#xfc;ber GB 2141,2142</Beschrieb>
+<DateinamePlan>SO0200002407_40051_20150811.pdf</DateinamePlan>
+<EndeTechnBereit>2015-08-11</EndeTechnBereit>
+<istProjektMutation>Normal</istProjektMutation>
+<MutationsNummer>
+<GB2AV.MutationsNummer>
+<Nummer>40051</Nummer>
+<NBIdent>SO0200002407</NBIdent>
+</GB2AV.MutationsNummer>
+</MutationsNummer>
+</GB2AV.Mutationstabelle.AVMutation>
+<GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID ="x5">
+<AVMutation REF="xz55db0f51fa9f0011"></AVMutation>
+<betroffeneGrundstuecke REF="xz55db1069fa9f0014"></betroffeneGrundstuecke>
+</GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+</GB2AV.Mutationstabelle>
+</DATASECTION>
+</TRANSFER>

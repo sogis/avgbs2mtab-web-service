@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<HEADERSECTION VERSION="2.2" SENDER="GEOS Pro" >
+<ALIAS />
+</HEADERSECTION>
+<DATASECTION>
+<GB2AV.Mutationstabelle BID = "xxx" KIND="FULL">
+<GB2AV.Mutationstabelle.AVMutation TID ="xz55db2ff8d9a60015">
+<Beschrieb>Quellenrecht 40051 gel&#xf6;scht</Beschrieb>
+<DateinamePlan>SO0200002407_40061_20150814.pdf</DateinamePlan>
+<EndeTechnBereit>2015-08-14</EndeTechnBereit>
+<istProjektMutation>Normal</istProjektMutation>
+<MutationsNummer>
+<GB2AV.MutationsNummer>
+<Nummer>40061</Nummer>
+<NBIdent>SO0200002407</NBIdent>
+</GB2AV.MutationsNummer>
+</MutationsNummer>
+<geloeschteGrundstuecke>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH280850437761</EGRID>
+<Nummer>40051</Nummer>
+<SubKreis>SO0200002407</SubKreis>
+</GB2AV.GrundstueckNummer>
+</geloeschteGrundstuecke>
+</GB2AV.Mutationstabelle.AVMutation>
+</GB2AV.Mutationstabelle>
+</DATASECTION>
+</TRANSFER>

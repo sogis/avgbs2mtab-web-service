@@ -1,1 +1,3 @@
+include 'library'
+include 'web-service'
 rootProject.name = 'avgbs2mtab-web-service'

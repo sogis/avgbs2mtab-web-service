@@ -1,0 +1,59 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.9.RELEASE'
+	}
+	repositories {
+		jcenter()
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+group = 'ch.so.agi.avgbs2mtab'
+version = '0.0.5'
+
+jar.baseName = 'avgbs2mtab-web-service'
+
+description = """avgbs2mtab web service"""
+
+springBoot {
+    executable = true
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+repositories {
+	mavenCentral()
+    maven {
+        url "http://jars.interlis.ch"
+    }	
+}
+
+dependencies {
+	compile project(':library')
+	compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+	compile("org.springframework.boot:spring-boot-starter-thymeleaf:${springBootVersion}")
+	runtime("org.springframework.boot:spring-boot-devtools:${springBootVersion}")
+    compile("org.webjars:materializecss:0.100.1")
+	compile("org.webjars:jquery:2.2.4")
+	compile("commons-io:commons-io:2.5")
+	compile("ch.interlis:ilivalidator:1.5.0")
+	compile("io.rest-assured:rest-assured:3.0.3")
+    testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}") {
+		exclude(module: 'commons-logging')
+    }		
+}
+
+test {
+	testLogging {
+		showStandardStreams = true
+	}
+}

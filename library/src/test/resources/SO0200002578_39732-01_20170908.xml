@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<HEADERSECTION VERSION="2.2" SENDER="Lerch Weber AG" >
+<ALIAS />
+</HEADERSECTION>
+<DATASECTION>
+<GB2AV.Mutationstabelle BID = "xxx" KIND="FULL">
+<GB2AV.Mutationstabelle.Flaeche TID ="xz59b22e30000e0002">
+<Flaechenmass>893</Flaechenmass>
+<GrundstueckArt>SelbstRecht.Baurecht</GrundstueckArt>
+<Gemeinde>
+<GB2AV.Gemeinde>
+<Name>Gunzgen</Name>
+<BFSNr>2578</BFSNr>
+</GB2AV.Gemeinde>
+</Gemeinde>
+<letzteVollzogeneMutation>
+<GB2AV.MutationsNummer>
+<Nummer>39732-01</Nummer>
+<NBIdent>SO0200002578</NBIdent>
+</GB2AV.MutationsNummer>
+</letzteVollzogeneMutation>
+<Nummer>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH487710577797</EGRID>
+<Nummer>1635</Nummer>
+<SubKreis>SO0200002578</SubKreis>
+</GB2AV.GrundstueckNummer>
+</Nummer>
+<GBPlaene>
+<GB2AV.GBPlan>
+<Nummer>8</Nummer>
+<NBIdent>SO0200002578</NBIdent>
+</GB2AV.GBPlan>
+</GBPlaene>
+<Flurnamen>
+<GB2AV.Flurname>
+<Name>Grossacker</Name>
+</GB2AV.Flurname>
+</Flurnamen>
+</GB2AV.Mutationstabelle.Flaeche>
+<GB2AV.Mutationstabelle.Liegenschaft TID ="xz54e7056cc17274d6">
+<Flaechenmass>893</Flaechenmass>
+<GrundstueckArt>Liegenschaft</GrundstueckArt>
+<Gemeinde>
+<GB2AV.Gemeinde>
+<Name>Gunzgen</Name>
+<BFSNr>2578</BFSNr>
+</GB2AV.Gemeinde>
+</Gemeinde>
+<Nummer>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH608806623258</EGRID>
+<Nummer>1606</Nummer>
+<SubKreis>SO0200002578</SubKreis>
+</GB2AV.GrundstueckNummer>
+</Nummer>
+<GBPlaene>
+<GB2AV.GBPlan>
+<Nummer>8</Nummer>
+<NBIdent>SO0200002578</NBIdent>
+</GB2AV.GBPlan>
+</GBPlaene>
+<Flurnamen>
+<GB2AV.Flurname>
+<Name>Grossacker</Name>
+</GB2AV.Flurname>
+</Flurnamen>
+<BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>humusiert.Acker_Wiese_Weide</Art>
+<Flaechenmass>893.0</Flaechenmass>
+<ArtBezeichnung>humusiert.Acker_Wiese_Weide.Acker_Wiese</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+</BodbdAnteil>
+</GB2AV.Mutationstabelle.Liegenschaft>
+<GB2AV.Grundstuecksbeschrieb.Anteil TID ="x1">
+<flaeche REF="xz59b22e30000e0002"/>
+<liegt_auf REF="xz54e7056cc17274d6"/>
+<Flaechenmass>893.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.Anteil>
+<GB2AV.Mutationstabelle.AVMutation TID ="xz59b22c09000e0000">
+<Beschrieb>Begr&#xfc;ndung SDR Grossacker</Beschrieb>
+<DateinamePlan>SO0200002578_39732-01_20170908.pdf</DateinamePlan>
+<EndeTechnBereit>2017-09-08</EndeTechnBereit>
+<istProjektMutation>Normal</istProjektMutation>
+<MutationsNummer>
+<GB2AV.MutationsNummer>
+<Nummer>39732-01</Nummer>
+<NBIdent>SO0200002578</NBIdent>
+</GB2AV.MutationsNummer>
+</MutationsNummer>
+</GB2AV.Mutationstabelle.AVMutation>
+<GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID ="x2">
+<AVMutation REF="xz59b22c09000e0000"></AVMutation>
+<betroffeneGrundstuecke REF="xz59b22e30000e0002"></betroffeneGrundstuecke>
+</GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+</GB2AV.Mutationstabelle>
+</DATASECTION>
+</TRANSFER>

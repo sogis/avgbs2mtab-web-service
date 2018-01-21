@@ -1,0 +1,28 @@
+apply plugin: 'java'
+
+group 'ch.so.agi.avgbs2mtab'
+version '0.9.8'
+
+jar.baseName = 'avgbs2mtab'
+
+description = """avgbs2mtab library"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://jars.interlis.ch"
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile group: 'commons-cli', name: 'commons-cli', version: '1.4'
+    compile group: 'org.apache.poi', name: 'poi', version: '3.17'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
+    compile group: 'ch.interlis', name: 'iox-api', version: '1.0.3' 
+    compile group: 'ch.interlis', name: 'iox-ili', version: '1.19.8' 
+}

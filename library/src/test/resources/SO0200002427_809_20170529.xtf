@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<HEADERSECTION VERSION="2.2" SENDER="BSB+Partner" >
+<ALIAS />
+</HEADERSECTION>
+<DATASECTION>
+<GB2AV.Mutationstabelle BID = "xxx" KIND="FULL">
+<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz591eba2dce870003">
+<GWR_EGID>191556031</GWR_EGID>
+<istProjektiert>false</istProjektiert>
+<istUnterirdisch>false</istUnterirdisch>
+<Nummer>1</Nummer>
+<Gebaeudeart>Gebaeude</Gebaeudeart>
+<Flaechenmass>357.0</Flaechenmass>
+<Adresse>
+<GB2AV.GebaeudeeingangAdresse>
+<Strasse>Rehgasse</Strasse>
+<Hausnummer>11</Hausnummer>
+<PLZ>9999</PLZ>
+<Ortschaft>Matzendorf</Ortschaft>
+
+<GWR_EDID>0</GWR_EDID>
+</GB2AV.GebaeudeeingangAdresse>
+</Adresse>
+</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz52386055232500e3">
+<istProjektiert>false</istProjektiert>
+<istUnterirdisch>true</istUnterirdisch>
+<Gebaeudeart>unterirdisches_Gebaeude</Gebaeudeart>
+<Flaechenmass>1130.0</Flaechenmass>
+<Adresse>
+<GB2AV.GebaeudeeingangAdresse>
+<Strasse>Rehgasse</Strasse>
+<Hausnummer>13a</Hausnummer>
+<PLZ>9999</PLZ>
+<Ortschaft>Matzendorf</Ortschaft>
+
+</GB2AV.GebaeudeeingangAdresse>
+</Adresse>
+</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz4607e63300000d8e">
+<istProjektiert>false</istProjektiert>
+<istUnterirdisch>false</istUnterirdisch>
+<Gebaeudeart>Gebaeude</Gebaeudeart>
+<Flaechenmass>78.0</Flaechenmass>
+<Adresse>
+<GB2AV.GebaeudeeingangAdresse>
+<Strasse>Rehgasse</Strasse>
+<Hausnummer>5</Hausnummer>
+<PLZ>9999</PLZ>
+<Ortschaft>Matzendorf</Ortschaft>
+
+</GB2AV.GebaeudeeingangAdresse>
+</Adresse>
+</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz4607e63300000d9d">
+<istProjektiert>false</istProjektiert>
+<istUnterirdisch>false</istUnterirdisch>
+<Gebaeudeart>Gebaeude</Gebaeudeart>
+<Flaechenmass>101.0</Flaechenmass>
+<Adresse>
+<GB2AV.GebaeudeeingangAdresse>
+<Strasse>Rehgasse</Strasse>
+<Hausnummer>3</Hausnummer>
+<PLZ>9999</PLZ>
+<Ortschaft>Matzendorf</Ortschaft>
+
+</GB2AV.GebaeudeeingangAdresse>
+</Adresse>
+</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+<GB2AV.Mutationstabelle.Flaeche TID ="xz4e7701b4635a0024">
+<Flaechenmass>1238</Flaechenmass>
+<GrundstueckArt>SelbstRecht.Baurecht</GrundstueckArt>
+<Gemeinde>
+<GB2AV.Gemeinde>
+<Name>Matzendorf</Name>
+<BFSNr>2427</BFSNr>
+</GB2AV.Gemeinde>
+</Gemeinde>
+<letzteVollzogeneMutation>
+<GB2AV.MutationsNummer>
+<Nummer>809</Nummer>
+<NBIdent>SO0200002427</NBIdent>
+</GB2AV.MutationsNummer>
+</letzteVollzogeneMutation>
+<Nummer>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH493276380686</EGRID>
+<Nummer>1941</Nummer>
+<SubKreis>SO0200002427</SubKreis>
+</GB2AV.GrundstueckNummer>
+</Nummer>
+<GBPlaene>
+<GB2AV.GBPlan>
+<Nummer>3</Nummer>
+<NBIdent>SO0200002427</NBIdent>
+</GB2AV.GBPlan>
+</GBPlaene>
+<Flurnamen>
+<GB2AV.Flurname>
+<Name>Dorf</Name>
+</GB2AV.Flurname>
+</Flurnamen>
+</GB2AV.Mutationstabelle.Flaeche>
+<GB2AV.Mutationstabelle.Liegenschaft TID ="xz4607e6af00003a0b">
+<Flaechenmass>421</Flaechenmass>
+<GrundstueckArt>Liegenschaft</GrundstueckArt>
+<Gemeinde>
+<GB2AV.Gemeinde>
+<Name>Matzendorf</Name>
+<BFSNr>2427</BFSNr>
+</GB2AV.Gemeinde>
+</Gemeinde>
+<letzteVollzogeneMutation>
+<GB2AV.MutationsNummer>
+<Nummer>809</Nummer>
+<NBIdent>SO0200002427</NBIdent>
+</GB2AV.MutationsNummer>
+</letzteVollzogeneMutation>
+<Nummer>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH951332760665</EGRID>
+<Nummer>1273</Nummer>
+<SubKreis>SO0200002427</SubKreis>
+</GB2AV.GrundstueckNummer>
+</Nummer>
+<GBPlaene>
+<GB2AV.GBPlan>
+<Nummer>3</Nummer>
+<NBIdent>SO0200002427</NBIdent>
+</GB2AV.GBPlan>
+</GBPlaene>
+<Flurnamen>
+<GB2AV.Flurname>
+<Name>Dorf</Name>
+</GB2AV.Flurname>
+</Flurnamen>
+<BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>Gebaeude</Art>
+<Flaechenmass>179.0</Flaechenmass>
+<ArtBezeichnung>Geb&#xe4;ude</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>befestigt.uebrige_befestigte</Art>
+<Flaechenmass>242.0</Flaechenmass>
+<ArtBezeichnung>Geb&#xe4;udeerschliessung</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+</BodbdAnteil>
+<Zugang>
+<GB2AV.Mutationstabelle.Abschnitt>
+<Flaechenmass>69</Flaechenmass>
+<von>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH493275300622</EGRID>
+<Nummer>1864</Nummer>
+<SubKreis>SO0200002427</SubKreis>
+</GB2AV.GrundstueckNummer>
+</von>
+</GB2AV.Mutationstabelle.Abschnitt>
+</Zugang>
+</GB2AV.Mutationstabelle.Liegenschaft>
+<GB2AV.Mutationstabelle.Liegenschaft TID ="xz4607e6af00003be9">
+<Flaechenmass>1238</Flaechenmass>
+<GrundstueckArt>Liegenschaft</GrundstueckArt>
+<Gemeinde>
+<GB2AV.Gemeinde>
+<Name>Matzendorf</Name>
+<BFSNr>2427</BFSNr>
+</GB2AV.Gemeinde>
+</Gemeinde>
+<letzteVollzogeneMutation>
+<GB2AV.MutationsNummer>
+<Nummer>809</Nummer>
+<NBIdent>SO0200002427</NBIdent>
+</GB2AV.MutationsNummer>
+</letzteVollzogeneMutation>
+<Nummer>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH493275300622</EGRID>
+<Nummer>1864</Nummer>
+<SubKreis>SO0200002427</SubKreis>
+</GB2AV.GrundstueckNummer>
+</Nummer>
+<GBPlaene>
+<GB2AV.GBPlan>
+<Nummer>3</Nummer>
+<NBIdent>SO0200002427</NBIdent>
+</GB2AV.GBPlan>
+</GBPlaene>
+<Flurnamen>
+<GB2AV.Flurname>
+<Name>Dorf</Name>
+</GB2AV.Flurname>
+</Flurnamen>
+<BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>Gebaeude</Art>
+<Flaechenmass>357.0</Flaechenmass>
+<ArtBezeichnung>Geb&#xe4;ude</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>befestigt.uebrige_befestigte</Art>
+<Flaechenmass>122.0</Flaechenmass>
+<ArtBezeichnung>Geb&#xe4;udeerschliessung</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>humusiert.Gartenanlage</Art>
+<Flaechenmass>759.0</Flaechenmass>
+<ArtBezeichnung>Gartenanlage</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+</BodbdAnteil>
+</GB2AV.Mutationstabelle.Liegenschaft>
+<GB2AV.Mutationstabelle.Liegenschaft TID ="xz591eb3b6ce870001">
+<Flaechenmass>1436</Flaechenmass>
+<GrundstueckArt>Liegenschaft</GrundstueckArt>
+<Gemeinde>
+<GB2AV.Gemeinde>
+<Name>Matzendorf</Name>
+<BFSNr>2427</BFSNr>
+</GB2AV.Gemeinde>
+</Gemeinde>
+<letzteVollzogeneMutation>
+<GB2AV.MutationsNummer>
+<Nummer>809</Nummer>
+<NBIdent>SO0200002427</NBIdent>
+</GB2AV.MutationsNummer>
+</letzteVollzogeneMutation>
+<Nummer>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH557730771234</EGRID>
+<Nummer>1973</Nummer>
+<SubKreis>SO0200002427</SubKreis>
+</GB2AV.GrundstueckNummer>
+</Nummer>
+<GBPlaene>
+<GB2AV.GBPlan>
+<Nummer>3</Nummer>
+<NBIdent>SO0200002427</NBIdent>
+</GB2AV.GBPlan>
+</GBPlaene>
+<Flurnamen>
+<GB2AV.Flurname>
+<Name>Dorf</Name>
+</GB2AV.Flurname>
+</Flurnamen>
+<BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>befestigt.uebrige_befestigte</Art>
+<Flaechenmass>140.0</Flaechenmass>
+<ArtBezeichnung>Lagerplatz</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>humusiert.Gartenanlage</Art>
+<Flaechenmass>1296.0</Flaechenmass>
+<ArtBezeichnung>Gartenanlage</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+</BodbdAnteil>
+<Zugang>
+<GB2AV.Mutationstabelle.Abschnitt>
+<Flaechenmass>2</Flaechenmass>
+<von>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH951332760665</EGRID>
+<Nummer>1273</Nummer>
+<SubKreis>SO0200002427</SubKreis>
+</GB2AV.GrundstueckNummer>
+</von>
+</GB2AV.Mutationstabelle.Abschnitt>
+<GB2AV.Mutationstabelle.Abschnitt>
+<Flaechenmass>1434</Flaechenmass>
+<von>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH493275300622</EGRID>
+<Nummer>1864</Nummer>
+<SubKreis>SO0200002427</SubKreis>
+</GB2AV.GrundstueckNummer>
+</von>
+</GB2AV.Mutationstabelle.Abschnitt>
+</Zugang>
+</GB2AV.Mutationstabelle.Liegenschaft>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x1">
+<Gebaeude REF="xz591eba2dce870003"/>
+<Grundstueck REF="xz4e7701b4635a0024"/>
+<Flaechenmass>357</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x2">
+<Gebaeude REF="xz52386055232500e3"/>
+<Grundstueck REF="xz4e7701b4635a0024"/>
+<Flaechenmass>293</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x3">
+<Gebaeude REF="xz4607e63300000d8e"/>
+<Grundstueck REF="xz4607e6af00003a0b"/>
+<Flaechenmass>78</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x4">
+<Gebaeude REF="xz4607e63300000d9d"/>
+<Grundstueck REF="xz4607e6af00003a0b"/>
+<Flaechenmass>101</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x5">
+<Gebaeude REF="xz591eba2dce870003"/>
+<Grundstueck REF="xz4607e6af00003be9"/>
+<Flaechenmass>357</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x6">
+<Gebaeude REF="xz52386055232500e3"/>
+<Grundstueck REF="xz4607e6af00003be9"/>
+<Flaechenmass>293</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.Anteil TID ="x7">
+<flaeche REF="xz4e7701b4635a0024"/>
+<liegt_auf REF="xz4607e6af00003be9"/>
+<Flaechenmass>1238</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.Anteil>
+<GB2AV.Mutationstabelle.AVMutation TID ="xz591978ad9f0d0004">
+<Beschrieb>Parzellierung</Beschrieb>
+<DateinamePlan>SO0200002427_809_20170529.pdf</DateinamePlan>
+<EndeTechnBereit>2017-05-24</EndeTechnBereit>
+<istProjektMutation>Normal</istProjektMutation>
+<MutationsNummer>
+<GB2AV.MutationsNummer>
+<Nummer>809</Nummer>
+<NBIdent>SO0200002427</NBIdent>
+</GB2AV.MutationsNummer>
+</MutationsNummer>
+</GB2AV.Mutationstabelle.AVMutation>
+<GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID ="x8">
+<AVMutation REF="xz591978ad9f0d0004"></AVMutation>
+<betroffeneGrundstuecke REF="xz4607e6af00003a0b"></betroffeneGrundstuecke>
+</GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+<GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID ="x9">
+<AVMutation REF="xz591978ad9f0d0004"></AVMutation>
+<betroffeneGrundstuecke REF="xz4607e6af00003be9"></betroffeneGrundstuecke>
+</GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+<GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID ="x10">
+<AVMutation REF="xz591978ad9f0d0004"></AVMutation>
+<betroffeneGrundstuecke REF="xz591eb3b6ce870001"></betroffeneGrundstuecke>
+</GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+<GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID ="x11">
+<AVMutation REF="xz591978ad9f0d0004"></AVMutation>
+<betroffeneGrundstuecke REF="xz4e7701b4635a0024"></betroffeneGrundstuecke>
+</GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+</GB2AV.Mutationstabelle>
+</DATASECTION>
+</TRANSFER>
