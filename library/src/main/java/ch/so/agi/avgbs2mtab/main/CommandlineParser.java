@@ -26,7 +26,7 @@ public class CommandlineParser {
     }
 
     public String[] parse() {
-        CommandLineParser parser = new BasicParser();
+        CommandLineParser parser = new DefaultParser();
         String[] returnArguments = new String[2];
         CommandLine cmd = null;
         try {
