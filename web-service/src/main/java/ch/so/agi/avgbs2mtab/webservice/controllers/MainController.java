@@ -62,7 +62,9 @@ public class MainController {
 		
 		try {
 			// Get the filename.
-			String filename = uploadFile.getOriginalFilename();
+			// Need to use FilenameUtils.getName() since getOriginalFilename() returns absolute path for files sent with IE (on macOS only?)
+			String filename = FilenameUtils.getName(uploadFile.getOriginalFilename());
+			File file = new File(filename);
 			
 			// If the upload button was pushed w/o choosing a file,
 			// we just redirect to the starting page.
@@ -83,7 +85,7 @@ public class MainController {
 				directory = System.getProperty("java.io.tmpdir");
 			}
 			
-			Path tmpDirectory = Files.createTempDirectory(Paths.get(directory), FOLDER_PREFIX);
+			Path tmpDirectory = Files.createTempDirectory(Paths.get(directory), FOLDER_PREFIX);			
 			Path uploadFilePath = Paths.get(tmpDirectory.toString(), filename);
 
 			// Save the file locally.			

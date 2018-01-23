@@ -44,7 +44,7 @@ dependencies {
 	runtime("org.springframework.boot:spring-boot-devtools:${springBootVersion}")
     compile("org.webjars:materializecss:0.100.1")
 	compile("org.webjars:jquery:2.2.4")
-	compile("commons-io:commons-io:2.5")
+	compile("commons-io:commons-io:2.6")
 	compile("ch.interlis:ilivalidator:1.5.0")
 	compile("io.rest-assured:rest-assured:3.0.3")
     testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}") {

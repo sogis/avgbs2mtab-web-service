@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 - Spring Boot 1.5.9
 - ilivalidator-1.5.0 
 - Update to fixed (int versus String versus double) avgbs2mtab lib 
+- Fix some strange issue with .getOriginalFileName() with IE and macOS
 
 ## [0.0.4] - 2017-XX-YY
 
