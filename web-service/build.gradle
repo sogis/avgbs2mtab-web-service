@@ -88,10 +88,23 @@ docker {
 task buildDockerImage(type: DockerBuildImage) {
     description = "Build docker image."
     inputDir = project.projectDir
-    tag = "sogis/avgbs2mtab-web-service:${version}"
+    tags = ["sogis/avgbs2mtab-web-service:"+ version, "sogis/avgbs2mtab-web-service:latest"]
 }
 
-task pushDockerImage(dependsOn: 'buildDockerImage', type: DockerPushImage) {
+task pushDockerImage_One(dependsOn: 'buildDockerImage', type: DockerPushImage) {
     description = "Push docker image to hub.docker.com (images is UNTESTED)."
-    imageName = buildDockerImage.tag
+    imageName = buildDockerImage.tags[0]
+}
+
+task pushDockerImage_Two(dependsOn: 'buildDockerImage', type: DockerPushImage) {
+    description = "Push docker image to hub.docker.com (images is UNTESTED)."
+    imageName = buildDockerImage.tags[1]
+}
+
+task pushDockerImages() {
+    description = "Collect all push images tasks."
+}
+
+pushDockerImages.dependsOn {
+    tasks.findAll { task -> task.name.startsWith('pushDockerImage_') }
 }
