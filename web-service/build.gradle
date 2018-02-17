@@ -1,22 +1,33 @@
 buildscript {
-	ext {
-		springBootVersion = '1.5.9.RELEASE'
-	}
-	repositories {
-		jcenter()
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+    ext {
+        springBootVersion = '1.5.10.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }		
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("gradle.plugin.com.palantir.gradle.gitversion:gradle-git-version:0.10.1")
+        classpath("com.bmuschko:gradle-docker-plugin:3.2.3")			       
+    }
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'com.palantir.git-version'
+apply plugin: 'com.bmuschko.docker-remote-api'
 
 group = 'ch.so.agi.avgbs2mtab'
-version = '0.0.5'
+version = '0.2'
+
+if (System.env.TRAVIS_BUILD_NUMBER) {
+    project.version += "."+System.env.TRAVIS_BUILD_NUMBER
+} else {
+    def details = versionDetails()
+    project.version += "."+details.gitHash
+}
 
 jar.baseName = 'avgbs2mtab-web-service'
 
@@ -31,29 +42,56 @@ targetCompatibility = 1.8
 
 
 repositories {
-	mavenCentral()
+    mavenCentral()
     maven {
         url "http://jars.interlis.ch"
     }	
 }
 
 dependencies {
-	compile project(':library')
-	compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
-	compile("org.springframework.boot:spring-boot-starter-thymeleaf:${springBootVersion}")
-	runtime("org.springframework.boot:spring-boot-devtools:${springBootVersion}")
+    compile project(':library')
+    compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf:${springBootVersion}")
+    runtime("org.springframework.boot:spring-boot-devtools:${springBootVersion}")
     compile("org.webjars:materializecss:0.100.1")
-	compile("org.webjars:jquery:2.2.4")
-	compile("commons-io:commons-io:2.6")
-	compile("ch.interlis:ilivalidator:1.5.0")
-	compile("io.rest-assured:rest-assured:3.0.3")
+    compile("org.webjars:jquery:2.2.4")
+    compile("commons-io:commons-io:2.6")
+    compile("ch.interlis:ilivalidator:1.5.0")
+    compile("io.rest-assured:rest-assured:3.0.3")
     testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}") {
-		exclude(module: 'commons-logging')
+        exclude(module: 'commons-logging')
     }		
 }
 
 test {
-	testLogging {
-		showStandardStreams = true
-	}
+    testLogging {
+        showStandardStreams = true
+    }
+}
+
+import com.bmuschko.gradle.docker.tasks.image.Dockerfile
+import com.bmuschko.gradle.docker.tasks.image.DockerBuildImage
+import com.bmuschko.gradle.docker.tasks.image.DockerPushImage
+//import com.bmuschko.gradle.docker.tasks.container.DockerCreateContainer
+//import com.bmuschko.gradle.docker.tasks.container.DockerStartContainer
+//import com.bmuschko.gradle.docker.tasks.container.DockerLogsContainer
+//import com.bmuschko.gradle.docker.tasks.container.DockerStopContainer
+//import com.bmuschko.gradle.docker.tasks.container.DockerCreateContainer.ExposedPort
+
+docker {
+    registryCredentials {
+        username = System.env.dockerRegistryUser
+        password = System.env.dockerRegistryPass
+    }
+}
+
+task buildDockerImage(type: DockerBuildImage) {
+    description = "Build docker image."
+    inputDir = project.projectDir
+    tag = "sogis/avgbs2mtab-web-service:${version}"
+}
+
+task pushDockerImage(dependsOn: 'buildDockerImage', type: DockerPushImage) {
+    description = "Push docker image to hub.docker.com (images is UNTESTED)."
+    imageName = buildDockerImage.tag
 }

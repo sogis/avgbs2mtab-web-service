@@ -7,4 +7,4 @@ For building and running information, please visit [ilivalidator-web-service](ht
 
 ## TODO
 
-* ...
+* Test docker image.
