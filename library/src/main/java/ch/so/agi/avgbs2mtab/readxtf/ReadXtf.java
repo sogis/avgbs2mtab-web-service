@@ -143,9 +143,9 @@ public class ReadXtf {
         HashMap<String,HashMap> dprAnteilAnLiegenschaft = new HashMap<String, HashMap>();
 
         try {
-            HashMap<String, Integer> liegtaufmap = new HashMap<String, Integer>();
             IoxEvent event;
             while (true) {
+                HashMap<String, Integer> liegtaufmap = new HashMap<String, Integer>();
                 event = ioxReader.read();
                 if (event instanceof ObjectEvent) {
                     IomObject iomObj = ((ObjectEvent) event).getIomObject();
@@ -160,6 +160,7 @@ public class ReadXtf {
                             liegtaufmap = dprAnteilAnLiegenschaft.get(drpnumber);
                             liegtaufmap.put(liegt_auf, area);
                         } else {
+                            liegtaufmap.clear();
                             liegtaufmap.put(liegt_auf, area);
                         }
                         dprAnteilAnLiegenschaft.put(drpnumber, liegtaufmap);

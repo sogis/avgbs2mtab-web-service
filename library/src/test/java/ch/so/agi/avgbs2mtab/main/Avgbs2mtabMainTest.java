@@ -345,7 +345,33 @@ public class Avgbs2mtabMainTest {
         Assert.assertTrue(allValuesAreCorrect);
     }
 
+    //Dieser Test wurde eingeführt, um ein Problem, gemeldet von
+    // Armin Weber (05.04.2018) bzw. dessen Lösung zu verifizieren.
+    @Test
+    public void correctDPRTable() throws Exception {
+        ClassLoader classLoader = getClass().getClassLoader();
+        File xtfFile = new File(classLoader.getResource("SO0200002497_39928-01_20180321.xtf").getFile());
+        File outputFilePath = validOutputFilePath();
 
+        Avgbs2mtabMain.runConversion(xtfFile.getAbsolutePath(), outputFilePath.getAbsolutePath());
+
+        XSSFSheet xlsxSheet = openExcelSheet(outputFilePath.getAbsolutePath());
+
+        HashMap<String, Double> xlsxDataNumeric = generateHashMapFromNumericValuesInExcel(xlsxSheet);
+        HashMap<String, String> xlsxDataString = generateHashMapFromStringValuesInExcel(xlsxSheet);
+
+        HashMap<String, String> expectedValuesString =
+                generateHashMapOfExpectedStringValuesOfDprFromArmin_as_double();
+        HashMap<String, Double> expectedValuesNumeric =
+                generateHashMapOfExpectedNumericValuesOfDprFromArmin_as_double();
+
+        Boolean allValuesAreCorrect = checkIfValuesAreCorrect(expectedValuesNumeric,
+                xlsxDataNumeric,
+                expectedValuesString,
+                xlsxDataString);
+
+        Assert.assertTrue(allValuesAreCorrect);
+    }
 
     private File createFileWithoutXTFExtension() throws Exception {
         File noXtfExtensionFile =  folder.newFile("query.sql");
@@ -1106,6 +1132,81 @@ public class Avgbs2mtabMainTest {
         expectedValuesNumeric.put("H19", (double) -1);
         expectedValuesNumeric.put("H20",  5865.8);
 
+
+        return expectedValuesNumeric;
+    }
+
+    private HashMap<String, String> generateHashMapOfExpectedStringValuesOfDprFromArmin_as_double() {
+        HashMap<String, String> expectedValuesString = new HashMap<>();
+
+        expectedValuesString.put("A2", "Neue Liegenschaften");
+        expectedValuesString.put("A3", "Grundstück-Nr.");
+        expectedValuesString.put("A4", "");
+        expectedValuesString.put("A5", "371");
+        expectedValuesString.put("A6", "");
+        expectedValuesString.put("A7", "1065");
+        expectedValuesString.put("A8", "");
+        expectedValuesString.put("A9", "Rundungsdifferenz");
+        expectedValuesString.put("A10", "Alte Fläche [m2]");
+        expectedValuesString.put("A14", "Selbst. Recht");
+        expectedValuesString.put("A15", "Grundstück-Nr.");
+        expectedValuesString.put("A17", "(175)");
+        expectedValuesString.put("A19", "(580)");
+        expectedValuesString.put("A21", "(582)");
+        expectedValuesString.put("A23", "(583)");
+        expectedValuesString.put("A25", "(627)");
+        expectedValuesString.put("A27", "(676)");
+        expectedValuesString.put("A29", "(1025)");
+
+        expectedValuesString.put("B1", "Alte Liegenschaften");
+        expectedValuesString.put("B2", "Grundstück-Nr.");
+        expectedValuesString.put("B3", "371");
+        expectedValuesString.put("B13", "Liegenschaften");
+        expectedValuesString.put("B14", "Grundstück-Nr.");
+        expectedValuesString.put("B15", "371");
+
+
+        expectedValuesString.put("C2", "Neue Fläche");
+        expectedValuesString.put("C3", "[m2]");
+        expectedValuesString.put("C14", "Rundungs-differenz");
+        //TBC
+
+
+        expectedValuesString.put("D14", "Selbst. Recht Fläche");
+        expectedValuesString.put("D15", "[m2]");
+
+        return expectedValuesString;
+
+    }
+
+    private HashMap<String, Double> generateHashMapOfExpectedNumericValuesOfDprFromArmin_as_double() {
+
+
+
+        HashMap<String, Double> expectedValuesNumeric = new HashMap<>();
+
+        expectedValuesNumeric.put("B5", (double) 436789);
+        expectedValuesNumeric.put("B7", (double) 5201);
+        expectedValuesNumeric.put("B10", (double) 441990);
+        expectedValuesNumeric.put("B17", (double) 1334);
+        expectedValuesNumeric.put("B19", (double) 2089);
+        expectedValuesNumeric.put("B21", (double) 2240);
+        expectedValuesNumeric.put("B23", (double) 4035);
+        expectedValuesNumeric.put("B25", (double) 1026);
+        expectedValuesNumeric.put("B27", (double) 4173);
+        expectedValuesNumeric.put("B29", (double) 5184);
+
+        expectedValuesNumeric.put("C5", (double) 436789);
+        expectedValuesNumeric.put("C7", (double) 5201);
+        expectedValuesNumeric.put("C10", (double) 441990);
+
+        expectedValuesNumeric.put("D17", (double) 1334);
+        expectedValuesNumeric.put("D19", (double) 2089);
+        expectedValuesNumeric.put("D21", (double) 2240);
+        expectedValuesNumeric.put("D23", (double) 4035);
+        expectedValuesNumeric.put("D25", (double) 1026);
+        expectedValuesNumeric.put("D27", (double) 4173);
+        expectedValuesNumeric.put("D29", (double) 5184);
 
         return expectedValuesNumeric;
     }

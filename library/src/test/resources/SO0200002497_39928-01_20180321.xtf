@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+	<HEADERSECTION VERSION="2.2" SENDER="Lerch Weber AG" >
+		<ALIAS />
+	</HEADERSECTION>
+	<DATASECTION>
+		<GB2AV.Mutationstabelle BID = "xxx" KIND="FULL">
+			<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz54820e8830298ac4">
+				<istProjektiert>false</istProjektiert>
+				<istUnterirdisch>false</istUnterirdisch>
+				<Gebaeudeart>Gebaeude</Gebaeudeart>
+				<Flaechenmass>1074.0</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+			<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz54820e8830298ac6">
+				<istProjektiert>false</istProjektiert>
+				<istUnterirdisch>false</istUnterirdisch>
+				<Gebaeudeart>Gebaeude</Gebaeudeart>
+				<Flaechenmass>149.0</Flaechenmass>
+				<Adresse>
+					<GB2AV.GebaeudeeingangAdresse>
+						<Strasse>Industriestrasse</Strasse>
+						<Hausnummer>20</Hausnummer>
+						<PLZ>9999</PLZ>
+						<Ortschaft>Oberg&#xf6;sgen</Ortschaft>
+					</GB2AV.GebaeudeeingangAdresse>
+				</Adresse>
+			</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+			<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz54820e8830298ac7">
+				<GWR_EGID>2129844</GWR_EGID>
+				<istProjektiert>false</istProjektiert>
+				<istUnterirdisch>false</istUnterirdisch>
+				<Nummer>1</Nummer>
+				<Gebaeudeart>Gebaeude</Gebaeudeart>
+				<Flaechenmass>269.0</Flaechenmass>
+				<Adresse>
+					<GB2AV.GebaeudeeingangAdresse>
+						<Strasse>Industriestrasse</Strasse>
+						<Hausnummer>13</Hausnummer>
+						<PLZ>9999</PLZ>
+						<Ortschaft>Oberg&#xf6;sgen</Ortschaft>
+						<GWR_EDID>0</GWR_EDID>
+					</GB2AV.GebaeudeeingangAdresse>
+				</Adresse>
+			</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+			<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz54820e8830298ac8">
+				<GWR_EGID>347513</GWR_EGID>
+				<istProjektiert>false</istProjektiert>
+				<istUnterirdisch>false</istUnterirdisch>
+				<Nummer>1</Nummer>
+				<Gebaeudeart>Gebaeude</Gebaeudeart>
+				<Flaechenmass>216.0</Flaechenmass>
+				<Adresse>
+					<GB2AV.GebaeudeeingangAdresse>
+						<Strasse>Industriestrasse</Strasse>
+						<Hausnummer>9</Hausnummer>
+						<PLZ>9999</PLZ>
+						<Ortschaft>Oberg&#xf6;sgen</Ortschaft>
+						<GWR_EDID>0</GWR_EDID>
+					</GB2AV.GebaeudeeingangAdresse>
+				</Adresse>
+			</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+			<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz54820e8830298e17">
+				<GWR_EGID>2129840</GWR_EGID>
+				<istProjektiert>false</istProjektiert>
+				<istUnterirdisch>false</istUnterirdisch>
+				<Nummer>1</Nummer>
+				<Gebaeudeart>Gebaeude</Gebaeudeart>
+				<Flaechenmass>858.0</Flaechenmass>
+				<Adresse>
+					<GB2AV.GebaeudeeingangAdresse>
+						<Strasse>Industriestrasse</Strasse>
+						<Hausnummer>11</Hausnummer>
+						<PLZ>9999</PLZ>
+						<Ortschaft>Oberg&#xf6;sgen</Ortschaft>
+						<GWR_EDID>0</GWR_EDID>
+					</GB2AV.GebaeudeeingangAdresse>
+				</Adresse>
+			</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+			<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz54820e8830298e53">
+				<GWR_EGID>190559588</GWR_EGID>
+				<istProjektiert>false</istProjektiert>
+				<istUnterirdisch>false</istUnterirdisch>
+				<Nummer>1</Nummer>
+				<Gebaeudeart>Gebaeude</Gebaeudeart>
+				<Flaechenmass>1663.0</Flaechenmass>
+				<Adresse>
+					<GB2AV.GebaeudeeingangAdresse>
+						<Strasse>Industrieweg</Strasse>
+						<Hausnummer>2</Hausnummer>
+						<PLZ>9999</PLZ>
+						<Ortschaft>Oberg&#xf6;sgen</Ortschaft>
+						<GWR_EDID>0</GWR_EDID>
+					</GB2AV.GebaeudeeingangAdresse>
+				</Adresse>
+			</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+			<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz59898394cfba0056">
+				<istProjektiert>false</istProjektiert>
+				<istUnterirdisch>false</istUnterirdisch>
+				<Gebaeudeart>Gebaeude</Gebaeudeart>
+				<Flaechenmass>404.0</Flaechenmass>
+				<Adresse>
+					<GB2AV.GebaeudeeingangAdresse>
+						<Strasse>Industriestrasse</Strasse>
+						<Hausnummer>15</Hausnummer>
+						<PLZ>9999</PLZ>
+						<Ortschaft>Oberg&#xf6;sgen</Ortschaft>
+					</GB2AV.GebaeudeeingangAdresse>
+				</Adresse>
+			</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+			<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz54820e8830298ac0">
+				<istProjektiert>false</istProjektiert>
+				<istUnterirdisch>false</istUnterirdisch>
+				<Gebaeudeart>Gebaeude</Gebaeudeart>
+				<Flaechenmass>94.0</Flaechenmass>
+				<Adresse>
+					<GB2AV.GebaeudeeingangAdresse>
+						<Strasse>Industriestrasse</Strasse>
+						<Hausnummer>8</Hausnummer>
+						<PLZ>9999</PLZ>
+						<Ortschaft>Oberg&#xf6;sgen</Ortschaft>
+					</GB2AV.GebaeudeeingangAdresse>
+				</Adresse>
+			</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+			<GB2AV.Mutationstabelle.Flaeche TID ="xz54820ea03029b3b2">
+				<Flaechenmass>1334</Flaechenmass>
+				<GrundstueckArt>SelbstRecht.Baurecht</GrundstueckArt>
+				<Gemeinde>
+					<GB2AV.Gemeinde>
+						<Name>Oberg&#xf6;sgen</Name>
+						<BFSNr>2497</BFSNr>
+					</GB2AV.Gemeinde>
+				</Gemeinde>
+				<Nummer>
+					<GB2AV.GrundstueckNummer>
+						<EGRID>CH455532890632</EGRID>
+						<Nummer>175</Nummer>
+						<SubKreis>SO0200002497</SubKreis>
+					</GB2AV.GrundstueckNummer>
+				</Nummer>
+				<GBPlaene>
+					<GB2AV.GBPlan>
+						<Nummer>12</Nummer>
+						<NBIdent>SO0200002497</NBIdent>
+					</GB2AV.GBPlan>
+				</GBPlaene>
+				<Flurnamen>
+					<GB2AV.Flurname>
+						<Name>Schachenallmend</Name>
+					</GB2AV.Flurname>
+				</Flurnamen>
+			</GB2AV.Mutationstabelle.Flaeche>
+			<GB2AV.Mutationstabelle.Flaeche TID ="xz54820ea03029b3b4">
+				<Flaechenmass>2240</Flaechenmass>
+				<GrundstueckArt>SelbstRecht.Baurecht</GrundstueckArt>
+				<Gemeinde>
+					<GB2AV.Gemeinde>
+						<Name>Oberg&#xf6;sgen</Name>
+						<BFSNr>2497</BFSNr>
+					</GB2AV.Gemeinde>
+				</Gemeinde>
+				<Nummer>
+					<GB2AV.GrundstueckNummer>
+						<EGRID>CH168132061873</EGRID>
+						<Nummer>582</Nummer>
+						<SubKreis>SO0200002497</SubKreis>
+					</GB2AV.GrundstueckNummer>
+				</Nummer>
+				<GBPlaene>
+					<GB2AV.GBPlan>
+						<Nummer>12</Nummer>
+						<NBIdent>SO0200002497</NBIdent>
+					</GB2AV.GBPlan>
+				</GBPlaene>
+				<Flurnamen>
+					<GB2AV.Flurname>
+						<Name>Schachenallmend</Name>
+					</GB2AV.Flurname>
+				</Flurnamen>
+			</GB2AV.Mutationstabelle.Flaeche>
+			<GB2AV.Mutationstabelle.Flaeche TID ="xz54820ea03029b3b5">
+				<Flaechenmass>4035</Flaechenmass>
+				<GrundstueckArt>SelbstRecht.Baurecht</GrundstueckArt>
+				<Gemeinde>
+					<GB2AV.Gemeinde>
+						<Name>Oberg&#xf6;sgen</Name>
+						<BFSNr>2497</BFSNr>
+					</GB2AV.Gemeinde>
+				</Gemeinde>
+				<Nummer>
+					<GB2AV.GrundstueckNummer>
+						<EGRID>CH270689673212</EGRID>
+						<Nummer>583</Nummer>
+						<SubKreis>SO0200002497</SubKreis>
+					</GB2AV.GrundstueckNummer>
+				</Nummer>
+				<GBPlaene>
+					<GB2AV.GBPlan>
+						<Nummer>12</Nummer>
+						<NBIdent>SO0200002497</NBIdent>
+					</GB2AV.GBPlan>
+				</GBPlaene>
+				<Flurnamen>
+					<GB2AV.Flurname>
+						<Name>Schachenallmend</Name>
+					</GB2AV.Flurname>
+				</Flurnamen>
+			</GB2AV.Mutationstabelle.Flaeche>
+			<GB2AV.Mutationstabelle.Flaeche TID ="xz54820ea03029b3b6">
+				<Flaechenmass>1026</Flaechenmass>
+				<GrundstueckArt>SelbstRecht.Baurecht</GrundstueckArt>
+				<Gemeinde>
+					<GB2AV.Gemeinde>
+						<Name>Oberg&#xf6;sgen</Name>
+						<BFSNr>2497</BFSNr>
+					</GB2AV.Gemeinde>
+				</Gemeinde>
+				<Nummer>
+					<GB2AV.GrundstueckNummer>
+						<EGRID>CH989232068749</EGRID>
+						<Nummer>627</Nummer>
+						<SubKreis>SO0200002497</SubKreis>
+					</GB2AV.GrundstueckNummer>
+				</Nummer>
+				<GBPlaene>
+					<GB2AV.GBPlan>
+						<Nummer>12</Nummer>
+						<NBIdent>SO0200002497</NBIdent>
+					</GB2AV.GBPlan>
+				</GBPlaene>
+				<Flurnamen>
+					<GB2AV.Flurname>
+						<Name>Schachenallmend</Name>
+					</GB2AV.Flurname>
+				</Flurnamen>
+			</GB2AV.Mutationstabelle.Flaeche>
+			<GB2AV.Mutationstabelle.Flaeche TID ="xz54820ea03029b3b9">
+				<Flaechenmass>4173</Flaechenmass>
+				<GrundstueckArt>SelbstRecht.Baurecht</GrundstueckArt>
+				<Gemeinde>
+					<GB2AV.Gemeinde>
+						<Name>Oberg&#xf6;sgen</Name>
+						<BFSNr>2497</BFSNr>
+					</GB2AV.Gemeinde>
+				</Gemeinde>
+				<Nummer>
+					<GB2AV.GrundstueckNummer>
+						<EGRID>CH270687923252</EGRID>
+						<Nummer>676</Nummer>
+						<SubKreis>SO0200002497</SubKreis>
+					</GB2AV.GrundstueckNummer>
+				</Nummer>
+				<GBPlaene>
+					<GB2AV.GBPlan>
+						<Nummer>12</Nummer>
+						<NBIdent>SO0200002497</NBIdent>
+					</GB2AV.GBPlan>
+				</GBPlaene>
+				<Flurnamen>
+					<GB2AV.Flurname>
+						<Name>Schachenallmend</Name>
+					</GB2AV.Flurname>
+				</Flurnamen>
+			</GB2AV.Mutationstabelle.Flaeche>
+			<GB2AV.Mutationstabelle.Flaeche TID ="xz54820ea03029b3c1">
+				<Flaechenmass>2089</Flaechenmass>
+				<GrundstueckArt>SelbstRecht.Baurecht</GrundstueckArt>
+				<Gemeinde>
+					<GB2AV.Gemeinde>
+						<Name>Oberg&#xf6;sgen</Name>
+						<BFSNr>2497</BFSNr>
+					</GB2AV.Gemeinde>
+				</Gemeinde>
+				<Nummer>
+					<GB2AV.GrundstueckNummer>
+						<EGRID>CH740632871669</EGRID>
+						<Nummer>580</Nummer>
+						<SubKreis>SO0200002497</SubKreis>
+					</GB2AV.GrundstueckNummer>
+				</Nummer>
+				<GBPlaene>
+					<GB2AV.GBPlan>
+						<Nummer>12</Nummer>
+						<NBIdent>SO0200002497</NBIdent>
+					</GB2AV.GBPlan>
+				</GBPlaene>
+				<Flurnamen>
+					<GB2AV.Flurname>
+						<Name>Schachenallmend</Name>
+					</GB2AV.Flurname>
+				</Flurnamen>
+			</GB2AV.Mutationstabelle.Flaeche>
+			<GB2AV.Mutationstabelle.Flaeche TID ="xz54820ea03029b3c2">
+				<Flaechenmass>5184</Flaechenmass>
+				<GrundstueckArt>SelbstRecht.Baurecht</GrundstueckArt>
+				<Gemeinde>
+					<GB2AV.Gemeinde>
+						<Name>Oberg&#xf6;sgen</Name>
+						<BFSNr>2497</BFSNr>
+					</GB2AV.Gemeinde>
+				</Gemeinde>
+				<Nummer>
+					<GB2AV.GrundstueckNummer>
+						<EGRID>CH293280740610</EGRID>
+						<Nummer>1025</Nummer>
+						<SubKreis>SO0200002497</SubKreis>
+					</GB2AV.GrundstueckNummer>
+				</Nummer>
+				<GBPlaene>
+					<GB2AV.GBPlan>
+						<Nummer>21</Nummer>
+						<NBIdent>SO0200002497</NBIdent>
+					</GB2AV.GBPlan>
+				</GBPlaene>
+				<Flurnamen>
+					<GB2AV.Flurname>
+						<Name>Schachenallmend</Name>
+					</GB2AV.Flurname>
+				</Flurnamen>
+			</GB2AV.Mutationstabelle.Flaeche>
+			<GB2AV.Mutationstabelle.Liegenschaft TID ="xz54820ea03029b382">
+				<Flaechenmass>436789</Flaechenmass>
+				<GrundstueckArt>Liegenschaft</GrundstueckArt>
+				<Gemeinde>
+					<GB2AV.Gemeinde>
+						<Name>Oberg&#xf6;sgen</Name>
+						<BFSNr>2497</BFSNr>
+					</GB2AV.Gemeinde>
+				</Gemeinde>
+				<letzteVollzogeneMutation>
+					<GB2AV.MutationsNummer>
+						<Nummer>39928-01</Nummer>
+						<NBIdent>SO0200002497</NBIdent>
+					</GB2AV.MutationsNummer>
+				</letzteVollzogeneMutation>
+				<Nummer>
+					<GB2AV.GrundstueckNummer>
+						<EGRID>CH751732810610</EGRID>
+						<Nummer>371</Nummer>
+						<SubKreis>SO0200002497</SubKreis>
+					</GB2AV.GrundstueckNummer>
+				</Nummer>
+				<GBPlaene>
+					<GB2AV.GBPlan>
+						<Nummer>9</Nummer>
+						<NBIdent>SO0200002497</NBIdent>
+					</GB2AV.GBPlan>
+					<GB2AV.GBPlan>
+						<Nummer>20</Nummer>
+						<NBIdent>SO0200002497</NBIdent>
+					</GB2AV.GBPlan>
+					<GB2AV.GBPlan>
+						<Nummer>21</Nummer>
+						<NBIdent>SO0200002497</NBIdent>
+					</GB2AV.GBPlan>
+					<GB2AV.GBPlan>
+						<Nummer>12</Nummer>
+						<NBIdent>SO0200002497</NBIdent>
+					</GB2AV.GBPlan>
+				</GBPlaene>
+				<Flurnamen>
+					<GB2AV.Flurname>
+						<Name>Br&#xf6;nni</Name>
+					</GB2AV.Flurname>
+					<GB2AV.Flurname>
+						<Name>Grien</Name>
+					</GB2AV.Flurname>
+					<GB2AV.Flurname>
+						<Name>Schachenallmend</Name>
+					</GB2AV.Flurname>
+					<GB2AV.Flurname>
+						<Name>Schachen</Name>
+					</GB2AV.Flurname>
+				</Flurnamen>
+				<BodbdAnteil>
+					<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+						<Art>Gebaeude</Art>
+						<Flaechenmass>4382.0</Flaechenmass>
+						<ArtBezeichnung>Gebaeude</ArtBezeichnung>
+					</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+					<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+						<Art>befestigt.Strasse_Weg</Art>
+						<Flaechenmass>7644.0</Flaechenmass>
+						<ArtBezeichnung>befestigt.Strasse_Weg</ArtBezeichnung>
+					</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+					<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+						<Art>befestigt.uebrige_befestigte</Art>
+						<Flaechenmass>12864.0</Flaechenmass>
+						<ArtBezeichnung>befestigt.uebrige_befestigte.Lagerplatz</ArtBezeichnung>
+					</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+					<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+						<Art>humusiert.Acker_Wiese_Weide</Art>
+						<Flaechenmass>191864.0</Flaechenmass>
+						<ArtBezeichnung>humusiert.Acker_Wiese_Weide.Acker_Wiese</ArtBezeichnung>
+					</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+					<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+						<Art>humusiert.Gartenanlage</Art>
+						<Flaechenmass>5868.0</Flaechenmass>
+						<ArtBezeichnung>humusiert.Gartenanlage.Gartenanlage</ArtBezeichnung>
+					</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+					<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+						<Art>humusiert.uebrige_humusierte</Art>
+						<Flaechenmass>2359.0</Flaechenmass>
+						<ArtBezeichnung>humusiert.uebrige_humusierte</ArtBezeichnung>
+					</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+					<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+						<Art>bestockt.geschlossener_Wald</Art>
+						<Flaechenmass>203829.0</Flaechenmass>
+						<ArtBezeichnung>bestockt.geschlossener_Wald</ArtBezeichnung>
+					</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+					<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+						<Art>bestockt.uebrige_bestockte</Art>
+						<Flaechenmass>611.0</Flaechenmass>
+						<ArtBezeichnung>bestockt.uebrige_bestockte.Hecke</ArtBezeichnung>
+					</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+					<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+						<Art>vegetationslos.Geroell_Sand</Art>
+						<Flaechenmass>6407.0</Flaechenmass>
+						<ArtBezeichnung>vegetationslos.Geroell_Sand</ArtBezeichnung>
+					</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+					<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+						<Art>vegetationslos.Abbau_Deponie</Art>
+						<Flaechenmass>961.0</Flaechenmass>
+						<ArtBezeichnung>vegetationslos.Abbau_Deponie.Deponie</ArtBezeichnung>
+					</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+				</BodbdAnteil>
+			</GB2AV.Mutationstabelle.Liegenschaft>
+			<GB2AV.Mutationstabelle.Liegenschaft TID ="xz5ab214faf3720014">
+				<Flaechenmass>5201</Flaechenmass>
+				<GrundstueckArt>Liegenschaft</GrundstueckArt>
+				<Gemeinde>
+					<GB2AV.Gemeinde>
+						<Name>Oberg&#xf6;sgen</Name>
+						<BFSNr>2497</BFSNr>
+					</GB2AV.Gemeinde>
+				</Gemeinde>
+				<letzteVollzogeneMutation>
+					<GB2AV.MutationsNummer>
+						<Nummer>39928-01</Nummer>
+						<NBIdent>SO0200002497</NBIdent>
+					</GB2AV.MutationsNummer>
+				</letzteVollzogeneMutation>
+				<Nummer>
+					<GB2AV.GrundstueckNummer>
+						<EGRID>CH327778105769</EGRID>
+						<Nummer>1065</Nummer>
+						<SubKreis>SO0200002497</SubKreis>
+					</GB2AV.GrundstueckNummer>
+				</Nummer>
+				<GBPlaene>
+					<GB2AV.GBPlan>
+						<Nummer>9</Nummer>
+						<NBIdent>SO0200002497</NBIdent>
+					</GB2AV.GBPlan>
+				</GBPlaene>
+				<Flurnamen>
+					<GB2AV.Flurname>
+						<Name>Schachenallmend</Name>
+					</GB2AV.Flurname>
+				</Flurnamen>
+				<BodbdAnteil>
+					<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+						<Art>humusiert.Acker_Wiese_Weide</Art>
+						<Flaechenmass>5201.0</Flaechenmass>
+						<ArtBezeichnung>humusiert.Acker_Wiese_Weide.Acker_Wiese</ArtBezeichnung>
+					</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+				</BodbdAnteil>
+				<Zugang>
+					<GB2AV.Mutationstabelle.Abschnitt>
+						<Flaechenmass>5201</Flaechenmass>
+						<von>
+							<GB2AV.GrundstueckNummer>
+								<EGRID>CH751732810610</EGRID>
+								<Nummer>371</Nummer>
+								<SubKreis>SO0200002497</SubKreis>
+							</GB2AV.GrundstueckNummer>
+						</von>
+					</GB2AV.Mutationstabelle.Abschnitt>
+				</Zugang>
+			</GB2AV.Mutationstabelle.Liegenschaft>
+			<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x1">
+				<Gebaeude REF="xz54820e8830298ac4"/>
+				<Grundstueck REF="xz54820ea03029b3b5"/>
+				<Flaechenmass>729.0</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+			<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x2">
+				<Gebaeude REF="xz54820e8830298ac6"/>
+				<Grundstueck REF="xz54820ea03029b3b4"/>
+				<Flaechenmass>149.0</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+			<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x3">
+				<Gebaeude REF="xz54820e8830298ac7"/>
+				<Grundstueck REF="xz54820ea03029b3b6"/>
+				<Flaechenmass>269.0</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+			<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x4">
+				<Gebaeude REF="xz54820e8830298ac8"/>
+				<Grundstueck REF="xz54820ea03029b3b2"/>
+				<Flaechenmass>216.0</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+			<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x5">
+				<Gebaeude REF="xz54820e8830298e17"/>
+				<Grundstueck REF="xz54820ea03029b3c1"/>
+				<Flaechenmass>858.0</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+			<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x6">
+				<Gebaeude REF="xz54820e8830298e53"/>
+				<Grundstueck REF="xz54820ea03029b3c2"/>
+				<Flaechenmass>1663.0</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+			<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x7">
+				<Gebaeude REF="xz59898394cfba0056"/>
+				<Grundstueck REF="xz54820ea03029b3b9"/>
+				<Flaechenmass>404.0</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+			<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x8">
+				<Gebaeude REF="xz54820e8830298ac0"/>
+				<Grundstueck REF="xz54820ea03029b382"/>
+				<Flaechenmass>94</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+			<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x9">
+				<Gebaeude REF="xz54820e8830298ac4"/>
+				<Grundstueck REF="xz54820ea03029b382"/>
+				<Flaechenmass>729</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+			<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x10">
+				<Gebaeude REF="xz54820e8830298ac6"/>
+				<Grundstueck REF="xz54820ea03029b382"/>
+				<Flaechenmass>149</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+			<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x11">
+				<Gebaeude REF="xz54820e8830298ac7"/>
+				<Grundstueck REF="xz54820ea03029b382"/>
+				<Flaechenmass>269</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+			<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x12">
+				<Gebaeude REF="xz54820e8830298ac8"/>
+				<Grundstueck REF="xz54820ea03029b382"/>
+				<Flaechenmass>216</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+			<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x13">
+				<Gebaeude REF="xz54820e8830298e17"/>
+				<Grundstueck REF="xz54820ea03029b382"/>
+				<Flaechenmass>858</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+			<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x14">
+				<Gebaeude REF="xz54820e8830298e53"/>
+				<Grundstueck REF="xz54820ea03029b382"/>
+				<Flaechenmass>1663</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+			<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x15">
+				<Gebaeude REF="xz59898394cfba0056"/>
+				<Grundstueck REF="xz54820ea03029b382"/>
+				<Flaechenmass>404</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+			<GB2AV.Grundstuecksbeschrieb.Anteil TID ="x16">
+				<flaeche REF="xz54820ea03029b3b2"/>
+				<liegt_auf REF="xz54820ea03029b382"/>
+				<Flaechenmass>1334</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.Anteil>
+			<GB2AV.Grundstuecksbeschrieb.Anteil TID ="x17">
+				<flaeche REF="xz54820ea03029b3b4"/>
+				<liegt_auf REF="xz54820ea03029b382"/>
+				<Flaechenmass>2240</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.Anteil>
+			<GB2AV.Grundstuecksbeschrieb.Anteil TID ="x18">
+				<flaeche REF="xz54820ea03029b3b5"/>
+				<liegt_auf REF="xz54820ea03029b382"/>
+				<Flaechenmass>4035</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.Anteil>
+			<GB2AV.Grundstuecksbeschrieb.Anteil TID ="x19">
+				<flaeche REF="xz54820ea03029b3b6"/>
+				<liegt_auf REF="xz54820ea03029b382"/>
+				<Flaechenmass>1026</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.Anteil>
+			<GB2AV.Grundstuecksbeschrieb.Anteil TID ="x20">
+				<flaeche REF="xz54820ea03029b3b9"/>
+				<liegt_auf REF="xz54820ea03029b382"/>
+				<Flaechenmass>4173</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.Anteil>
+			<GB2AV.Grundstuecksbeschrieb.Anteil TID ="x21">
+				<flaeche REF="xz54820ea03029b3c1"/>
+				<liegt_auf REF="xz54820ea03029b382"/>
+				<Flaechenmass>2089</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.Anteil>
+			<GB2AV.Grundstuecksbeschrieb.Anteil TID ="x22">
+				<flaeche REF="xz54820ea03029b3c2"/>
+				<liegt_auf REF="xz54820ea03029b382"/>
+				<Flaechenmass>5184</Flaechenmass>
+			</GB2AV.Grundstuecksbeschrieb.Anteil>
+			<GB2AV.Mutationstabelle.AVMutation TID ="xz5ab20560f3720000">
+				<Beschrieb>Parzellierung Schachenallmend</Beschrieb>
+				<DateinamePlan>SO0200002497_39928-01_20180321.pdf</DateinamePlan>
+				<EndeTechnBereit>2018-03-21</EndeTechnBereit>
+				<istProjektMutation>Normal</istProjektMutation>
+				<MutationsNummer>
+					<GB2AV.MutationsNummer>
+						<Nummer>39928-01</Nummer>
+						<NBIdent>SO0200002497</NBIdent>
+					</GB2AV.MutationsNummer>
+				</MutationsNummer>
+			</GB2AV.Mutationstabelle.AVMutation>
+			<GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID ="x23">
+				<AVMutation REF="xz5ab20560f3720000"></AVMutation>
+				<betroffeneGrundstuecke REF="xz54820ea03029b382"></betroffeneGrundstuecke>
+			</GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+			<GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID ="x24">
+				<AVMutation REF="xz5ab20560f3720000"></AVMutation>
+				<betroffeneGrundstuecke REF="xz5ab214faf3720014"></betroffeneGrundstuecke>
+			</GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+		</GB2AV.Mutationstabelle>
+	</DATASECTION>
+</TRANSFER>
+

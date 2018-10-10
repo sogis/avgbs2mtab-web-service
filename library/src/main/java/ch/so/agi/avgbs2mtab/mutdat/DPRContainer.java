@@ -9,19 +9,20 @@ import java.util.*;
 
 public class DPRContainer implements SetDPR, MetadataOfDPRMutation, DataExtractionDPR {
     Map<String,Map> mainDprMap = new Hashtable<>(); //Main Map. Contains the DPR-Number as key and the laysOnRefAndAreaMap.
-    HashMap<String, Integer> laysOnRefAndAreaMap = new HashMap<>(); //Map, containing the Ref of the Parcel and the Area concerning the DPR.
     HashMap<String, String> numberAndRefMap = new HashMap<>(); //Map contains the Ref-String and the Parcel- or DPR-Number.
     HashMap<String, String> affectedParcelsMap = new HashMap<>(); //A small mainParcelMap, containing the numbers of affected Parcels.
     HashMap<String, Integer> newAreaMap = new HashMap<>(); //Map, contains the area of the DPRs.
+
 
     ////////////////////////////////////////////////////////
     // SET- Methoden ///////////////////////////////////////
     ///////////////////////////////////////////////////////
 
     public void setDPRWithAdditions(String dprnumber, String laysonref, Integer area) {
+        HashMap<String, Integer> laysOnRefAndAreaMap = new HashMap<>(); //Map, containing the Ref of the Parcel and the Area concerning the DPR.
         if(mainDprMap.get(dprnumber) != null) {
-            Map laysonrefandarea = mainDprMap.get(dprnumber);
-            laysonrefandarea.put(laysonref,area);
+            laysOnRefAndAreaMap = (HashMap) mainDprMap.get(dprnumber);
+            laysOnRefAndAreaMap.put(laysonref,area);
         } else {
             laysOnRefAndAreaMap.put(laysonref,area);
         }
@@ -113,6 +114,7 @@ public class DPRContainer implements SetDPR, MetadataOfDPRMutation, DataExtracti
     @Override
     public Integer getAddedAreaDPR(String parcelNumberAffectedByDPR, String dpr) {
         Map<String,Integer> innerdprmap = mainDprMap.get(dpr);
+
         String ref = getKeyFromValue(numberAndRefMap,parcelNumberAffectedByDPR);
         Integer addedarea = innerdprmap.get(ref);
         return addedarea;
