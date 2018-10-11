@@ -388,23 +388,39 @@ public class Avgbs2mtabMainTest {
         HashMap<String, Double> xlsxDataNumeric = generateHashMapFromNumericValuesInExcel(xlsxSheet);
         HashMap<String, String> xlsxDataString = generateHashMapFromStringValuesInExcel(xlsxSheet);
 
-        for (Object key : xlsxDataString.keySet()) {
-            String Feld = key.toString();
-            String Wert = xlsxDataString.get(key).toString();
-            System.out.println("Feld "+Feld+" Wert: "+Wert);
-        }
-
-        for (Object key : xlsxDataNumeric.keySet()) {
-            String Feld = key.toString();
-            String Wert = xlsxDataNumeric.get(key).toString();
-            System.out.println("Feld "+Feld+" Wert: "+Wert);
-        }
-
-
         HashMap<String, String> expectedValuesString =
                 generateHashMapOfExpectedStringValuesOfDprFromArminDeletedDPRs_as_double();
         HashMap<String, Double> expectedValuesNumeric =
                 generateHashMapOfExpectedNumericValuesOfDprFromArminDeletedDPRs_as_double();
+
+        Boolean allValuesAreCorrect = checkIfValuesAreCorrect(expectedValuesNumeric,
+                xlsxDataNumeric,
+                expectedValuesString,
+                xlsxDataString);
+
+        Assert.assertTrue(allValuesAreCorrect);
+    }
+
+    //Dieser Test wurde eingeführt, um ein Problem, gemeldet von
+    // Armin Weber (30.04.2018) bzw. dessen Lösung zu verifizieren.
+    @Test
+    public void correctDPRTableAfterDelete() throws Exception {
+        ClassLoader classLoader = getClass().getClassLoader();
+        File xtfFile = new File(classLoader.getResource("SO0200002401_1571_20180301.xtf").getFile());
+        File outputFilePath = validOutputFilePath();
+
+        Avgbs2mtabMain.runConversion(xtfFile.getAbsolutePath(), outputFilePath.getAbsolutePath());
+
+        XSSFSheet xlsxSheet = openExcelSheet(outputFilePath.getAbsolutePath());
+
+        HashMap<String, Double> xlsxDataNumeric = generateHashMapFromNumericValuesInExcel(xlsxSheet);
+        HashMap<String, String> xlsxDataString = generateHashMapFromStringValuesInExcel(xlsxSheet);
+
+
+        HashMap<String, String> expectedValuesString =
+                generateHashMapOfExpectedStringValuesOfDprFromArminDeletedDPRs2_as_double();
+        HashMap<String, Double> expectedValuesNumeric =
+                generateHashMapOfExpectedNumericValuesOfDprFromArminDeletedDPRs2_as_double();
 
         Boolean allValuesAreCorrect = checkIfValuesAreCorrect(expectedValuesNumeric,
                 xlsxDataNumeric,
@@ -1301,6 +1317,73 @@ public class Avgbs2mtabMainTest {
         expectedValuesNumeric.put("B19", (double) 17480);
 
         expectedValuesNumeric.put("D19", (double) 17480);
+
+        return expectedValuesNumeric;
+    }
+
+    private HashMap<String, String> generateHashMapOfExpectedStringValuesOfDprFromArminDeletedDPRs2_as_double() {
+        HashMap<String, String> expectedValuesString = new HashMap<>();
+
+        expectedValuesString.put("A2", "Neue Liegenschaften");
+        expectedValuesString.put("A3", "Grundstück-Nr.");
+        expectedValuesString.put("A4", "");
+        expectedValuesString.put("A5", "2856");
+        expectedValuesString.put("A6", "");
+        expectedValuesString.put("A7", "Rundungsdifferenz");
+        expectedValuesString.put("A8", "Alte Fläche [m2]");
+
+        expectedValuesString.put("A12", "Selbst. Recht");
+        expectedValuesString.put("A13", "Grundstück-Nr.");
+        expectedValuesString.put("A15", "(2858)");
+        expectedValuesString.put("A17", "(2859)");
+        expectedValuesString.put("A19", "(2860)");
+
+        expectedValuesString.put("B1", "Alte Liegenschaften");
+        expectedValuesString.put("B2", "Grundstück-Nr.");
+        expectedValuesString.put("B3", "2846");
+        expectedValuesString.put("B11", "Liegenschaften");
+        expectedValuesString.put("B12", "Grundstück-Nr.");
+        expectedValuesString.put("B13", "2856");
+
+        expectedValuesString.put("C1", "Alte Liegenschaften");
+        expectedValuesString.put("C3", "2856");
+        expectedValuesString.put("C12", "Rundungsdifferenz");
+
+        expectedValuesString.put("D1", "Alte Liegenschaften");
+        expectedValuesString.put("D3", "2857");
+        expectedValuesString.put("D12", "Selbst. Recht Fläche");
+        expectedValuesString.put("D13", "[m2]");
+        expectedValuesString.put("D17", "gelöscht");
+        expectedValuesString.put("D19", "gelöscht");
+
+        expectedValuesString.put("E2", "Neue Fläche");
+        expectedValuesString.put("E3", "[m2]");
+
+        return expectedValuesString;
+
+    }
+
+    private HashMap<String, Double> generateHashMapOfExpectedNumericValuesOfDprFromArminDeletedDPRs2_as_double() {
+
+
+
+        HashMap<String, Double> expectedValuesNumeric = new HashMap<>();
+
+        expectedValuesNumeric.put("B5", (double) 317);
+        expectedValuesNumeric.put("B8", (double) 317);
+        expectedValuesNumeric.put("B15", (double) 3102);
+        expectedValuesNumeric.put("B17", (double) 0);
+        expectedValuesNumeric.put("B19", (double) 0);
+
+        expectedValuesNumeric.put("C5", (double) 2499);
+        expectedValuesNumeric.put("C8", (double) 2499);
+
+        expectedValuesNumeric.put("D5", (double) 286);
+        expectedValuesNumeric.put("D8", (double) 286);
+        expectedValuesNumeric.put("D15", (double) 3102);
+
+        expectedValuesNumeric.put("E5", (double) 3102);
+        expectedValuesNumeric.put("E8", (double) 3102);
 
         return expectedValuesNumeric;
     }
