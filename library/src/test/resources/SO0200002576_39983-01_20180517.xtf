@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<HEADERSECTION VERSION="2.2" SENDER="Lerch Weber AG" >
+<ALIAS />
+</HEADERSECTION>
+<DATASECTION>
+<GB2AV.Mutationstabelle BID = "xxx" KIND="FULL">
+<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz54e70515c171c577">
+<istProjektiert>false</istProjektiert>
+<istUnterirdisch>false</istUnterirdisch>
+<Gebaeudeart>Gebaeude</Gebaeudeart>
+<Flaechenmass>979.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz54e70515c171cd96">
+<istProjektiert>false</istProjektiert>
+<istUnterirdisch>false</istUnterirdisch>
+<Gebaeudeart>Gebaeude</Gebaeudeart>
+<Flaechenmass>191.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz54e70515c171cd98">
+<istProjektiert>false</istProjektiert>
+<istUnterirdisch>false</istUnterirdisch>
+<Gebaeudeart>Gebaeude</Gebaeudeart>
+<Flaechenmass>4.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz54e70515c171d044">
+<istProjektiert>false</istProjektiert>
+<istUnterirdisch>false</istUnterirdisch>
+<Gebaeudeart>Gebaeude</Gebaeudeart>
+<Flaechenmass>83.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz54e70515c171d049">
+<istProjektiert>false</istProjektiert>
+<istUnterirdisch>false</istUnterirdisch>
+<Gebaeudeart>Gebaeude</Gebaeudeart>
+<Flaechenmass>2661.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+<GB2AV.Grundstuecksbeschrieb.Gebaeude TID ="xz568d26a38bf60021">
+<istProjektiert>false</istProjektiert>
+<istUnterirdisch>false</istUnterirdisch>
+<Gebaeudeart>Gebaeude</Gebaeudeart>
+<Flaechenmass>625.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.Gebaeude>
+<GB2AV.Mutationstabelle.Flaeche TID ="xz54e70543c17216e0">
+<Flaechenmass>17480</Flaechenmass>
+<GrundstueckArt>SelbstRecht.Baurecht</GrundstueckArt>
+<Gemeinde>
+<GB2AV.Gemeinde>
+<Name>Gretzenbach</Name>
+<BFSNr>2576</BFSNr>
+</GB2AV.Gemeinde>
+</Gemeinde>
+<letzteVollzogeneMutation>
+<GB2AV.MutationsNummer>
+<Nummer>39983-01</Nummer>
+<NBIdent>SO0200002576</NBIdent>
+</GB2AV.MutationsNummer>
+</letzteVollzogeneMutation>
+<Nummer>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH869932065786</EGRID>
+<Nummer>2008</Nummer>
+<SubKreis>SO0200002576</SubKreis>
+</GB2AV.GrundstueckNummer>
+</Nummer>
+<GBPlaene>
+<GB2AV.GBPlan>
+<Nummer>7</Nummer>
+<NBIdent>SO0200002576</NBIdent>
+</GB2AV.GBPlan>
+</GBPlaene>
+<Flurnamen>
+<GB2AV.Flurname>
+<Name>T&#xfc;berten</Name>
+</GB2AV.Flurname>
+</Flurnamen>
+</GB2AV.Mutationstabelle.Flaeche>
+<GB2AV.Mutationstabelle.Liegenschaft TID ="xz54e70543c17216cf">
+<Flaechenmass>17480</Flaechenmass>
+<GrundstueckArt>Liegenschaft</GrundstueckArt>
+<Gemeinde>
+<GB2AV.Gemeinde>
+<Name>Gretzenbach</Name>
+<BFSNr>2576</BFSNr>
+</GB2AV.Gemeinde>
+</Gemeinde>
+<Nummer>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH233281064966</EGRID>
+<Nummer>1173</Nummer>
+<SubKreis>SO0200002576</SubKreis>
+</GB2AV.GrundstueckNummer>
+</Nummer>
+<GBPlaene>
+<GB2AV.GBPlan>
+<Nummer>7</Nummer>
+<NBIdent>SO0200002576</NBIdent>
+</GB2AV.GBPlan>
+</GBPlaene>
+<Flurnamen>
+<GB2AV.Flurname>
+<Name>T&#xfc;berten</Name>
+</GB2AV.Flurname>
+</Flurnamen>
+<BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>Gebaeude</Art>
+<Flaechenmass>4543.0</Flaechenmass>
+<ArtBezeichnung>Gebaeude</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>befestigt.uebrige_befestigte</Art>
+<Flaechenmass>12564.0</Flaechenmass>
+<ArtBezeichnung>befestigt.uebrige_befestigte.Gebaeudeers</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>humusiert.Acker_Wiese_Weide</Art>
+<Flaechenmass>37.0</Flaechenmass>
+<ArtBezeichnung>humusiert.Acker_Wiese_Weide.Acker_Wiese</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>humusiert.Gartenanlage</Art>
+<Flaechenmass>335.0</Flaechenmass>
+<ArtBezeichnung>humusiert.Gartenanlage.Gartenanlage</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+<Art>humusiert.uebrige_humusierte</Art>
+<Flaechenmass>1.0</Flaechenmass>
+<ArtBezeichnung>humusiert.uebrige_humusierte</ArtBezeichnung>
+</GB2AV.Grundstuecksbeschrieb.BodbdAnteil>
+</BodbdAnteil>
+</GB2AV.Mutationstabelle.Liegenschaft>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x1">
+<Gebaeude REF="xz54e70515c171c577"/>
+<Grundstueck REF="xz54e70543c17216e0"/>
+<Flaechenmass>979.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x2">
+<Gebaeude REF="xz54e70515c171cd96"/>
+<Grundstueck REF="xz54e70543c17216e0"/>
+<Flaechenmass>191.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x3">
+<Gebaeude REF="xz54e70515c171cd98"/>
+<Grundstueck REF="xz54e70543c17216e0"/>
+<Flaechenmass>4.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x4">
+<Gebaeude REF="xz54e70515c171d044"/>
+<Grundstueck REF="xz54e70543c17216e0"/>
+<Flaechenmass>83.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x5">
+<Gebaeude REF="xz54e70515c171d049"/>
+<Grundstueck REF="xz54e70543c17216e0"/>
+<Flaechenmass>2661.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x6">
+<Gebaeude REF="xz568d26a38bf60021"/>
+<Grundstueck REF="xz54e70543c17216e0"/>
+<Flaechenmass>625.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x7">
+<Gebaeude REF="xz54e70515c171c577"/>
+<Grundstueck REF="xz54e70543c17216cf"/>
+<Flaechenmass>979.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x8">
+<Gebaeude REF="xz54e70515c171cd96"/>
+<Grundstueck REF="xz54e70543c17216cf"/>
+<Flaechenmass>191.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x9">
+<Gebaeude REF="xz54e70515c171cd98"/>
+<Grundstueck REF="xz54e70543c17216cf"/>
+<Flaechenmass>4.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x10">
+<Gebaeude REF="xz54e70515c171d044"/>
+<Grundstueck REF="xz54e70543c17216cf"/>
+<Flaechenmass>83.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x11">
+<Gebaeude REF="xz54e70515c171d049"/>
+<Grundstueck REF="xz54e70543c17216cf"/>
+<Flaechenmass>2661.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude TID ="x12">
+<Gebaeude REF="xz568d26a38bf60021"/>
+<Grundstueck REF="xz54e70543c17216cf"/>
+<Flaechenmass>625.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.GrundstueckGebaeude>
+<GB2AV.Grundstuecksbeschrieb.Anteil TID ="x13">
+<flaeche REF="xz54e70543c17216e0"/>
+<liegt_auf REF="xz54e70543c17216cf"/>
+<Flaechenmass>17480.0</Flaechenmass>
+</GB2AV.Grundstuecksbeschrieb.Anteil>
+<GB2AV.Mutationstabelle.AVMutation TID ="xz5afd11eb74850000">
+<Beschrieb>Begr&#xfc;ndung SDR  T&#xfc;berten</Beschrieb>
+<DateinamePlan>SO0200002576_39983-01_20180517.pdf</DateinamePlan>
+<EndeTechnBereit>2018-05-17</EndeTechnBereit>
+<istProjektMutation>Normal</istProjektMutation>
+<MutationsNummer>
+<GB2AV.MutationsNummer>
+<Nummer>39983-01</Nummer>
+<NBIdent>SO0200002576</NBIdent>
+</GB2AV.MutationsNummer>
+</MutationsNummer>
+<geloeschteGrundstuecke>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH733280065197</EGRID>
+<Nummer>1421</Nummer>
+<SubKreis>SO0200002576</SubKreis>
+</GB2AV.GrundstueckNummer>
+<GB2AV.GrundstueckNummer>
+<EGRID>CH393280260623</EGRID>
+<Nummer>1426</Nummer>
+<SubKreis>SO0200002576</SubKreis>
+</GB2AV.GrundstueckNummer>
+</geloeschteGrundstuecke>
+</GB2AV.Mutationstabelle.AVMutation>
+<GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke TID ="x14">
+<AVMutation REF="xz5afd11eb74850000"></AVMutation>
+<betroffeneGrundstuecke REF="xz54e70543c17216e0"></betroffeneGrundstuecke>
+</GB2AV.Mutationstabelle.AVMutationBetroffeneGrundstuecke>
+</GB2AV.Mutationstabelle>
+</DATASECTION>
+</TRANSFER>

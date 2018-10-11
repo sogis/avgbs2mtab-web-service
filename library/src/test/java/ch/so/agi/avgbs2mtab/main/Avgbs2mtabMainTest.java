@@ -373,6 +373,47 @@ public class Avgbs2mtabMainTest {
         Assert.assertTrue(allValuesAreCorrect);
     }
 
+    //Dieser Test wurde eingeführt, um ein Problem, gemeldet von
+    // Armin Weber (19.05.2018) bzw. dessen Lösung zu verifizieren.
+    @Test
+    public void correctDPRTableAfterDeleteOrChange() throws Exception {
+        ClassLoader classLoader = getClass().getClassLoader();
+        File xtfFile = new File(classLoader.getResource("SO0200002576_39983-01_20180517.xtf").getFile());
+        File outputFilePath = validOutputFilePath();
+
+        Avgbs2mtabMain.runConversion(xtfFile.getAbsolutePath(), outputFilePath.getAbsolutePath());
+
+        XSSFSheet xlsxSheet = openExcelSheet(outputFilePath.getAbsolutePath());
+
+        HashMap<String, Double> xlsxDataNumeric = generateHashMapFromNumericValuesInExcel(xlsxSheet);
+        HashMap<String, String> xlsxDataString = generateHashMapFromStringValuesInExcel(xlsxSheet);
+
+        for (Object key : xlsxDataString.keySet()) {
+            String Feld = key.toString();
+            String Wert = xlsxDataString.get(key).toString();
+            System.out.println("Feld "+Feld+" Wert: "+Wert);
+        }
+
+        for (Object key : xlsxDataNumeric.keySet()) {
+            String Feld = key.toString();
+            String Wert = xlsxDataNumeric.get(key).toString();
+            System.out.println("Feld "+Feld+" Wert: "+Wert);
+        }
+
+
+        HashMap<String, String> expectedValuesString =
+                generateHashMapOfExpectedStringValuesOfDprFromArminDeletedDPRs_as_double();
+        HashMap<String, Double> expectedValuesNumeric =
+                generateHashMapOfExpectedNumericValuesOfDprFromArminDeletedDPRs_as_double();
+
+        Boolean allValuesAreCorrect = checkIfValuesAreCorrect(expectedValuesNumeric,
+                xlsxDataNumeric,
+                expectedValuesString,
+                xlsxDataString);
+
+        Assert.assertTrue(allValuesAreCorrect);
+    }
+
     private File createFileWithoutXTFExtension() throws Exception {
         File noXtfExtensionFile =  folder.newFile("query.sql");
         BufferedWriter writer1 = new BufferedWriter(new FileWriter(noXtfExtensionFile));
@@ -1211,5 +1252,56 @@ public class Avgbs2mtabMainTest {
         return expectedValuesNumeric;
     }
 
+    private HashMap<String, String> generateHashMapOfExpectedStringValuesOfDprFromArminDeletedDPRs_as_double() {
+        HashMap<String, String> expectedValuesString = new HashMap<>();
 
+        expectedValuesString.put("A2", "Neue Liegenschaften");
+        expectedValuesString.put("A3", "Grundstück-Nr.");
+        expectedValuesString.put("A4", "");
+        expectedValuesString.put("A5", "");
+        expectedValuesString.put("A6", "");
+        expectedValuesString.put("A7", "Rundungsdifferenz");
+        expectedValuesString.put("A8", "Alte Fläche [m2]");
+
+        expectedValuesString.put("A12", "Selbst. Recht");
+        expectedValuesString.put("A13", "Grundstück-Nr.");
+        expectedValuesString.put("A15", "(1421)");
+        expectedValuesString.put("A17", "(1426)");
+        expectedValuesString.put("A19", "(2008)");
+
+        expectedValuesString.put("B1", "Alte Liegenschaften");
+        expectedValuesString.put("B2", "Grundstück-Nr.");
+        expectedValuesString.put("B3", "");
+        expectedValuesString.put("B11", "Liegenschaften");
+        expectedValuesString.put("B12", "Grundstück-Nr.");
+        expectedValuesString.put("B13", "1173");
+
+
+        expectedValuesString.put("C2", "Neue Fläche");
+        expectedValuesString.put("C3", "[m2]");
+        expectedValuesString.put("C12", "Rundungs-differenz");
+
+        expectedValuesString.put("D12", "Selbst. Recht Fläche");
+        expectedValuesString.put("D13", "[m2]");
+        expectedValuesString.put("D15", "gelöscht");
+        expectedValuesString.put("D17", "gelöscht");
+
+        return expectedValuesString;
+
+    }
+
+    private HashMap<String, Double> generateHashMapOfExpectedNumericValuesOfDprFromArminDeletedDPRs_as_double() {
+
+
+
+        HashMap<String, Double> expectedValuesNumeric = new HashMap<>();
+
+        expectedValuesNumeric.put("B15", (double) 0);
+        expectedValuesNumeric.put("B17", (double) 0);
+        expectedValuesNumeric.put("B19", (double) 17480);
+
+        expectedValuesNumeric.put("D19", (double) 17480);
+
+        return expectedValuesNumeric;
+    }
 }

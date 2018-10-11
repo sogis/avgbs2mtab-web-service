@@ -113,10 +113,15 @@ public class DPRContainer implements SetDPR, MetadataOfDPRMutation, DataExtracti
 
     @Override
     public Integer getAddedAreaDPR(String parcelNumberAffectedByDPR, String dpr) {
-        Map<String,Integer> innerdprmap = mainDprMap.get(dpr);
-
-        String ref = getKeyFromValue(numberAndRefMap,parcelNumberAffectedByDPR);
-        Integer addedarea = innerdprmap.get(ref);
+        Integer addedarea;
+        if (mainDprMap.containsKey(dpr)) {
+            Map<String, Integer> innerdprmap = mainDprMap.get(dpr);
+            String ref = getKeyFromValue(numberAndRefMap, parcelNumberAffectedByDPR);
+            addedarea = innerdprmap.get(ref);
+        }
+        else {
+            addedarea = 0;
+        }
         return addedarea;
     }
 
