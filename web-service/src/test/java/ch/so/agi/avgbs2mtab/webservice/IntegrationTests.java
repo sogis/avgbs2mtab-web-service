@@ -11,19 +11,15 @@ import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.springframework.boot.context.embedded.LocalServerPort;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import io.restassured.RestAssured;
-import io.restassured.response.Response;
-import io.restassured.http.ContentType;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.io.File;
 import java.io.IOException;
@@ -44,7 +40,7 @@ public class IntegrationTests {
     	RestAssured.port = randomServerPort;
     }
 	
-	//@Test
+	@Test
 	public void indexPageTest() {				
 		given().
 		when().
@@ -54,7 +50,7 @@ public class IntegrationTests {
         	body("html.head.title", equalTo("avgbs2mtab web service"));
 	}
 	
-	//@Test
+	@Test
 	/*
 	 * Sending an empty file is like pushing the upload
 	 * button without selecting a file first.
@@ -70,7 +66,7 @@ public class IntegrationTests {
 	    	statusCode(302);
 	}
 	
-	//@Test
+	@Test
 	/*
 	 * Upload a non-AVGBS-INTERLIS file.
 	 */
@@ -83,10 +79,10 @@ public class IntegrationTests {
 			post("/avgbs2mtab/").
 		then().
 	    	statusCode(200).
-	    	body(containsString("Error: SO_Agglomerationsprogramme_20170512: model not found"));		
+	    	body(containsString("model not found"));		
 	}	
 	
-	//@Test
+	@Test
 	/*
 	 * Upload a text file with nonsense content.
 	 */		
@@ -102,7 +98,7 @@ public class IntegrationTests {
 	    	body(containsString("model not found"));
 	}
 
-	//@Test
+	@Test
 	/*
 	 * Upload an AVGBS file with errors.
 	 * INTERLIS validation must fail.
