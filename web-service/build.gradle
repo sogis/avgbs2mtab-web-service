@@ -16,12 +16,13 @@ plugins {
     id "com.bmuschko.docker-remote-api" version "3.6.1"
 }
 
-
 apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'eclipse'
 apply plugin: "com.bmuschko.docker-remote-api"
+
+project.version = scmVersion.version
 
 group = 'ch.so.agi.avgbs2mtab'
 
@@ -30,8 +31,6 @@ description = """avgbs2mtab web service"""
 bootJar {
     launchScript()
 }
-
-jar.baseName = 'avgbs2mtab-web-service'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
