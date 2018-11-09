@@ -1,6 +1,17 @@
-FROM frolvlad/alpine-oraclejdk8:slim
+FROM java:8
 VOLUME /tmp
-COPY build/libs/avgbs2mtab-web-service-*.jar app.jar
-RUN sh -c 'touch /app.jar'
-ENV JAVA_OPTS=""
-ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]
+
+ENV USER_NAME avgbs2mtab
+ENV APP_HOME /home/$USER_NAME/app
+
+RUN useradd -ms /bin/bash $USER_NAME
+RUN mkdir $APP_HOME
+
+ADD build/libs/web-service*.jar $APP_HOME/app.jar
+RUN chown $USER_NAME $APP_HOME/app.jar
+
+USER $USER_NAME
+WORKDIR $APP_HOME
+RUN bash -c 'touch app.jar'
+
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","app.jar"]

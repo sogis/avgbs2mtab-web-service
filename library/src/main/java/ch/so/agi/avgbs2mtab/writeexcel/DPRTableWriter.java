@@ -110,7 +110,6 @@ class DPRTableWriter {
             for (String dpr : orderedListOfDPRs) {
 
                 Integer area = dataExtractionDPR.getAddedAreaDPR(parcel, dpr);
-
                 writeDPRInflowAndOutflows(parcel, dpr, area, numberOfNewParcelsInParcelTable, xlsxSheet);
             }
         }

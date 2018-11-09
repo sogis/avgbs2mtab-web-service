@@ -1,63 +1,62 @@
 buildscript {
     ext {
-        springBootVersion = '1.5.10.RELEASE'
+        springBootVersion = '2.0.4.RELEASE'
     }
     repositories {
+        jcenter()
         mavenCentral()
         maven { url "https://plugins.gradle.org/m2/" }		
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        classpath("gradle.plugin.com.palantir.gradle.gitversion:gradle-git-version:0.10.1")
-        classpath("com.bmuschko:gradle-docker-plugin:3.2.3")			       
     }
 }
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'com.palantir.git-version'
-apply plugin: 'com.bmuschko.docker-remote-api'
-
-group = 'ch.so.agi.avgbs2mtab'
-version = '0.2'
-
-if (System.env.TRAVIS_BUILD_NUMBER) {
-    project.version += "."+System.env.TRAVIS_BUILD_NUMBER
-} else {
-    def details = versionDetails()
-    project.version += "."+details.gitHash
+plugins {
+    id "com.bmuschko.docker-remote-api" version "3.6.1"
 }
 
-jar.baseName = 'avgbs2mtab-web-service'
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'eclipse'
+apply plugin: "com.bmuschko.docker-remote-api"
+
+project.version = scmVersion.version
+
+group = 'ch.so.agi.avgbs2mtab'
 
 description = """avgbs2mtab web service"""
 
-springBoot {
-    executable = true
+bootJar {
+    launchScript()
 }
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
 
 repositories {
-    mavenCentral()
-    maven {
-        url "http://jars.interlis.ch"
-    }	
+    jcenter()
+    maven { url "http://jars.interlis.ch/" }
+    maven { url "http://repo.maven.apache.org/maven2" }
 }
+
 
 dependencies {
     compile project(':library')
     compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf:${springBootVersion}")
     runtime("org.springframework.boot:spring-boot-devtools:${springBootVersion}")
+    runtime("org.springframework.boot:spring-boot-actuator:${springBootVersion}")
     compile("org.webjars:materializecss:0.100.1")
     compile("org.webjars:jquery:2.2.4")
     compile("commons-io:commons-io:2.6")
-    compile("ch.interlis:ilivalidator:1.5.0")
-    compile("io.rest-assured:rest-assured:3.0.3")
+    compile("ch.interlis:ilivalidator:1.9.3")
+    compile("io.rest-assured:rest-assured:3.2.0")
     testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}") {
         exclude(module: 'commons-logging')
     }		
