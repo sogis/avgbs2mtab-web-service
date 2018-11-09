@@ -86,12 +86,12 @@ task buildDockerImage(type: DockerBuildImage) {
 }
 
 task pushDockerImage_One(dependsOn: 'buildDockerImage', type: DockerPushImage) {
-    description = "Push docker image to hub.docker.com (images is UNTESTED)."
+    description = "Push docker image to hub.docker.com (images are UNTESTED)."
     imageName = buildDockerImage.tags[0]
 }
 
 task pushDockerImage_Two(dependsOn: 'buildDockerImage', type: DockerPushImage) {
-    description = "Push docker image to hub.docker.com (images is UNTESTED)."
+    description = "Push docker image to hub.docker.com (images are UNTESTED)."
     imageName = buildDockerImage.tags[1]
 }
 
