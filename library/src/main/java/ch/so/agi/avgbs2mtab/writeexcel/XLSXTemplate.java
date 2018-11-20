@@ -103,6 +103,7 @@ public class XLSXTemplate implements ExcelTemplate {
 
         LOGGER.log(Level.FINER, "Start creating Excel-Workbook");
         XSSFWorkbook workbook = createWorkbook(filePath);
+        //workbook.setPrintArea(sheetIndex,2,100,2,200);
         LOGGER.log(Level.FINER, "Finished creating Excel-Workbook; Start creating empty table" +
                 "with parcels");
         createParcelTable(workbook, filePath, numberOfNewParcels, numberOfOldParcels,
@@ -131,6 +132,7 @@ public class XLSXTemplate implements ExcelTemplate {
             XSSFSheet spreadsheet = workbook.createSheet(xlsxSheetName);
             spreadsheet.setDisplayGridlines(false);
             workbook.write(ExcelFile);
+
             ExcelFile.close();
 
             return workbook;
@@ -191,8 +193,9 @@ public class XLSXTemplate implements ExcelTemplate {
                 stylingEveryOtherParcelRow(row, oldParcels, newParcels, i, excelTemplate);
 
             }
+            //shiftColumns(row,0,1);
         }
-
+        //sheet.shiftRows(0,100,1);
         try {
             FileOutputStream out = new FileOutputStream(new File(filePath));
             excelTemplate.write(out);
@@ -629,6 +632,7 @@ public class XLSXTemplate implements ExcelTemplate {
 
         for (int i = rowStartIndex; i < (rowStartIndex + 3 + aParcelOrADprNeedsTwoRows * dpr); i++) {
             Row row = sheet.createRow(i);
+
             if (i == rowStartIndex) {
 
                 stylingFirstDPRRow(row, parcels, excelTemplate);
@@ -648,6 +652,8 @@ public class XLSXTemplate implements ExcelTemplate {
             }
         }
 
+        //sheet.shiftRows(0,100,1);
+        //sheet.shiftColumns(0,100,0);
 
         try {
             FileOutputStream out = new FileOutputStream(new File(filePath));
@@ -920,5 +926,36 @@ public class XLSXTemplate implements ExcelTemplate {
             cell.setCellStyle(newStyle);
         }
     }
+
+    void shiftColumns(Row row, int startingIndex, int shiftCount) {
+        for (int i = row.getPhysicalNumberOfCells()-1;i>=startingIndex;i--){
+            Cell oldCell = row.getCell(i);
+            Cell newCell = row.createCell(i + shiftCount, oldCell.getCellTypeEnum());
+            cloneCellValue(oldCell,newCell);
+        }
+    }
+
+    void cloneCellValue(Cell oldCell, Cell newCell) { //TODO test it
+        switch (oldCell.getCellTypeEnum()) {
+            case STRING:
+                newCell.setCellValue(oldCell.getStringCellValue());
+                break;
+            case NUMERIC:
+                newCell.setCellValue(oldCell.getNumericCellValue());
+                break;
+            case BOOLEAN:
+                newCell.setCellValue(oldCell.getBooleanCellValue());
+                break;
+            case FORMULA:
+                newCell.setCellFormula(oldCell.getCellFormula());
+                break;
+            case ERROR:
+                newCell.setCellErrorValue(oldCell.getErrorCellValue());
+            case BLANK:
+            case _NONE:
+                break;
+        }
+    }
+
 
 }
