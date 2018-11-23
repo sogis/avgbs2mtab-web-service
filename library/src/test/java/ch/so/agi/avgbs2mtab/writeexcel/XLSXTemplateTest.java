@@ -26,6 +26,7 @@ public class XLSXTemplateTest {
         File excelFile = folder.newFile("test.xlsx");
 
         String filePath = excelFile.getAbsolutePath();
+        System.out.println(filePath);
         XLSXTemplate xlsxTemplate = new XLSXTemplate();
 
         xlsxTemplate.createWorkbook(filePath);
@@ -147,6 +148,7 @@ public class XLSXTemplateTest {
                     XSSFCell cell = row.getCell(c);
                     if (!cell.getCellStyle().getFillForegroundXSSFColor().equals(lightGray)) {
                         allCellsAreCorrectlyStyled = false;
+                        System.out.println("Out 1");
                     }
                 }
             } else if (i == 1) {
@@ -154,6 +156,7 @@ public class XLSXTemplateTest {
                     XSSFCell cell = row.getCell(c);
                     if (!cell.getCellStyle().getFillForegroundXSSFColor().equals(lightGray)) {
                         allCellsAreCorrectlyStyled = false;
+                        System.out.println("Out 2");
                     }
                 }
 
@@ -171,6 +174,7 @@ public class XLSXTemplateTest {
                         !cell.getCellStyle().getVerticalAlignmentEnum().equals(VerticalAlignment.CENTER) ||
                         !cell.getStringCellValue().equals("Grundstück-Nr.")) {
                     allCellsAreCorrectlyStyled = false;
+                    System.out.println("Out 3");
                 }
 
                 cell = row.getCell(1);
@@ -183,8 +187,10 @@ public class XLSXTemplateTest {
                         !cell.getCellStyle().getFont().getFontName().equals("Arial") ||
                         cell.getCellStyle().getFont().getFontHeightInPoints() != 11 ||
                         !cell.getCellStyle().getAlignmentEnum().equals(HorizontalAlignment.RIGHT) ||
-                        !cell.getCellStyle().getVerticalAlignmentEnum().equals(VerticalAlignment.BOTTOM)) {
+                        !cell.getCellStyle().getVerticalAlignmentEnum().equals(VerticalAlignment.CENTER))
+                {
                     allCellsAreCorrectlyStyled = false;
+                    System.out.println("Out 4");
                 }
 
             } else if (i == 6) {
@@ -198,8 +204,10 @@ public class XLSXTemplateTest {
                         !cell.getCellStyle().getFont().getFontName().equals("Arial") ||
                         cell.getCellStyle().getFont().getFontHeightInPoints() != 11 ||
                         !cell.getCellStyle().getAlignmentEnum().equals(HorizontalAlignment.RIGHT) ||
-                        !cell.getCellStyle().getVerticalAlignmentEnum().equals(VerticalAlignment.BOTTOM)) {
+                        !cell.getCellStyle().getVerticalAlignmentEnum().equals(VerticalAlignment.BOTTOM)
+                ) {
                     allCellsAreCorrectlyStyled = false;
+                    System.out.println("Out 5");
                 }
 
 
@@ -213,10 +221,12 @@ public class XLSXTemplateTest {
                         cell.getCellStyle().getIndention() != 0 ||
                         !cell.getCellStyle().getFont().getFontName().equals("Arial") ||
                         cell.getCellStyle().getFont().getFontHeightInPoints() != 11 ||
-                        !cell.getCellStyle().getAlignmentEnum().equals(HorizontalAlignment.RIGHT) ||
+                        !cell.getCellStyle().getAlignmentEnum().equals(HorizontalAlignment.CENTER) ||
                         !cell.getCellStyle().getVerticalAlignmentEnum().equals(VerticalAlignment.BOTTOM) ||
-                        !cell.getStringCellValue().equals("Rundungsdifferenz")) {
+                        !cell.getStringCellValue().equals("Rundungs-\ndifferenz")
+                        ) {
                     allCellsAreCorrectlyStyled = false;
+                    System.out.println("Out 6");
                 }
 
             }
@@ -225,6 +235,7 @@ public class XLSXTemplateTest {
         if (!xlsxSheet.getMergedRegions().contains(new CellRangeAddress(0, 0, 1, 6)) ||
                 !xlsxSheet.getMergedRegions().contains(new CellRangeAddress(1, 1, 1, 6))) {
             allCellsAreCorrectlyStyled = false;
+            System.out.println("Out 7");
         }
 
         return allCellsAreCorrectlyStyled;
@@ -246,12 +257,14 @@ public class XLSXTemplateTest {
                 XSSFCell cell = row.getCell(c);
                 if (!cell.getCellStyle().getFillForegroundXSSFColor().equals(lightGray)) {
                     allCellsAreCorrectlyStyled = false;
+                    System.out.println("Out 8");
                 }
             } else if (i == 1) {
                 for (int c = 0; c <= 1 + 1; c++) {
                     XSSFCell cell = row.getCell(c);
                     if (!cell.getCellStyle().getFillForegroundXSSFColor().equals(lightGray)) {
                         allCellsAreCorrectlyStyled = false;
+                        System.out.println("Out 9");
                     }
                 }
 
@@ -268,6 +281,7 @@ public class XLSXTemplateTest {
                         !cell.getCellStyle().getAlignmentEnum().equals(HorizontalAlignment.CENTER) ||
                         !cell.getCellStyle().getVerticalAlignmentEnum().equals(VerticalAlignment.CENTER)) {
                     allCellsAreCorrectlyStyled = false;
+                    System.out.println("Out 10");
                 }
 
                 cell = row.getCell(1);
@@ -280,8 +294,9 @@ public class XLSXTemplateTest {
                         !cell.getCellStyle().getFont().getFontName().equals("Arial") ||
                         cell.getCellStyle().getFont().getFontHeightInPoints() != 11 ||
                         !cell.getCellStyle().getAlignmentEnum().equals(HorizontalAlignment.RIGHT) ||
-                        !cell.getCellStyle().getVerticalAlignmentEnum().equals(VerticalAlignment.BOTTOM)) {
+                        !cell.getCellStyle().getVerticalAlignmentEnum().equals(VerticalAlignment.CENTER)) {
                     allCellsAreCorrectlyStyled = false;
+                    System.out.println("Out 11");
                 }
 
             } else if (i == 4) {
@@ -297,6 +312,7 @@ public class XLSXTemplateTest {
                         !cell.getCellStyle().getAlignmentEnum().equals(HorizontalAlignment.RIGHT) ||
                         !cell.getCellStyle().getVerticalAlignmentEnum().equals(VerticalAlignment.BOTTOM)) {
                     allCellsAreCorrectlyStyled = false;
+                    System.out.println("Out 12");
                 }
 
 
@@ -310,9 +326,10 @@ public class XLSXTemplateTest {
                         cell.getCellStyle().getIndention() != 0 ||
                         !cell.getCellStyle().getFont().getFontName().equals("Arial") ||
                         cell.getCellStyle().getFont().getFontHeightInPoints() != 11 ||
-                        !cell.getCellStyle().getAlignmentEnum().equals(HorizontalAlignment.RIGHT) ||
+                        !cell.getCellStyle().getAlignmentEnum().equals(HorizontalAlignment.CENTER) ||
                         !cell.getCellStyle().getVerticalAlignmentEnum().equals(VerticalAlignment.BOTTOM)) {
                     allCellsAreCorrectlyStyled = false;
+                    System.out.println("Out 13");
                 }
 
             } else if (i == 11) {
@@ -320,6 +337,7 @@ public class XLSXTemplateTest {
                     XSSFCell cell = row.getCell(c);
                     if (!cell.getCellStyle().getFillForegroundXSSFColor().equals(lightGray)) {
                         allCellsAreCorrectlyStyled = false;
+                        System.out.println("Out 14");
                     }
                 }
             } else if (i == 14) {
@@ -335,6 +353,7 @@ public class XLSXTemplateTest {
                         !cell.getCellStyle().getAlignmentEnum().equals(HorizontalAlignment.RIGHT) ||
                         !cell.getCellStyle().getVerticalAlignmentEnum().equals(VerticalAlignment.BOTTOM)) {
                     allCellsAreCorrectlyStyled = false;
+                    System.out.println("Out 15");
                 }
 
             }
@@ -342,6 +361,7 @@ public class XLSXTemplateTest {
 
         if (!xlsxSheet.getMergedRegions().contains(new CellRangeAddress(11, 12, 2, 2))) {
             allCellsAreCorrectlyStyled = false;
+            System.out.println("Out 16");
         }
 
         if (!xlsxSheet.getRow(0).getCell(1).getStringCellValue().equals("Alte Liegenschaften") ||
@@ -349,17 +369,18 @@ public class XLSXTemplateTest {
                 !xlsxSheet.getRow(1).getCell(1).getStringCellValue().equals("Grundstück-Nr.") ||
                 !xlsxSheet.getRow(1).getCell(2).getStringCellValue().equals("Neue Fläche") ||
                 !xlsxSheet.getRow(2).getCell(0).getStringCellValue().equals("Grundstück-Nr.") ||
-                !xlsxSheet.getRow(2).getCell(2).getStringCellValue().equals("[m2]") ||
-                !xlsxSheet.getRow(6).getCell(0).getStringCellValue().equals("Rundungsdifferenz") ||
-                !xlsxSheet.getRow(7).getCell(0).getStringCellValue().equals("Alte Fläche [m2]") ||
+                !xlsxSheet.getRow(2).getCell(2).getStringCellValue().equals("[m²]") ||
+                !xlsxSheet.getRow(6).getCell(0).getStringCellValue().equals("Rundungs-\ndifferenz") ||
+                !xlsxSheet.getRow(7).getCell(0).getStringCellValue().equals("Alte Fläche [m²]") ||
                 !xlsxSheet.getRow(10).getCell(1).getStringCellValue().equals("Liegenschaften") ||
                 !xlsxSheet.getRow(11).getCell(0).getStringCellValue().equals("Selbst. Recht") ||
                 !xlsxSheet.getRow(11).getCell(1).getStringCellValue().equals("Grundstück-Nr.") ||
-                !xlsxSheet.getRow(11).getCell(2).getStringCellValue().equals("Rundungs-differenz") ||
+                !xlsxSheet.getRow(11).getCell(2).getStringCellValue().equals("Rundungs-\ndifferenz") ||
                 !xlsxSheet.getRow(11).getCell(3).getStringCellValue().equals("Selbst. Recht Fläche") ||
                 !xlsxSheet.getRow(12).getCell(0).getStringCellValue().equals("Grundstück-Nr.") ||
-                !xlsxSheet.getRow(12).getCell(3).getStringCellValue().equals("[m2]")) {
+                !xlsxSheet.getRow(12).getCell(3).getStringCellValue().equals("[m²]")) {
             allCellsAreCorrectlyStyled = false;
+            System.out.println("Out 17");
         }
 
 

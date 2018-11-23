@@ -22,7 +22,11 @@ public class XLSXTemplate implements ExcelTemplate {
     private static final String xlsxSheetName = "Mutationstabelle";
     private static final String thick ="thick";
     private static final String thin ="thin";
+    private static final String none = "none";
     private static final String lightGrayString = "lightGray";
+    private static final String horizontalCenter = "horizontalCenter";
+    private static final String verticalCenter = "verticalCenter";
+    private static final String textWrap = "textWrap";
     private static final String noStyling = "";
     private static final String fontName = "Arial";
     private static final String parcelString = "Liegenschaften";
@@ -30,10 +34,10 @@ public class XLSXTemplate implements ExcelTemplate {
     private static final String newParcelString = "Neue " + parcelString;
     private static final String parcelNumberString = "Grundstück-Nr.";
     private static final String newAreaString = "Neue Fläche";
-    private static final String squareMeterString = "[m2]";
+    private static final String squareMeterString = "[m²]";
     private static final String oldAreaString = "Alte Fläche " + squareMeterString;
     private static final String roundingDifferenceString = "Rundungsdifferenz";
-    private static final String splittedRoundingDifferenceString = "Rundungs-differenz";
+    private static final String splittedRoundingDifferenceString = "Rundungs-\ndifferenz";
     private static final String dprString = "Selbst. Recht";
     private static final String dprAreaString = dprString + " Fläche";
 
@@ -49,10 +53,11 @@ public class XLSXTemplate implements ExcelTemplate {
     private static final Integer additionConstantToGetIndexOfNewAreaColumnOfDPRTable = 2;
 
     private static final short rowHeightOfTableHeaderAndFooter = 600;
-    private static final short defaultRowHeight = 300;
-    private static final short defaultColumnWidth = (short) 18.43;
+    private static final short defaultRowHeight = 550;
+    private static final short defaultColumnWidth = (short) 8.14;
     private static final short fontHeight = 11;
 
+    private String cellstyle;
     private String color;
     private String border_bottom;
     private String border_top;
@@ -78,6 +83,7 @@ public class XLSXTemplate implements ExcelTemplate {
 
         Integer numberOfParcelsAffectedByDPRs = metadataOfDPRMutation.getNumberOfParcelsAffectedByDPRs();
         Integer numberOfDPRs = metadataOfDPRMutation.getNumberOfDPRs();
+
 
         return generateWorkbookTemplate(filePath, numberOfNewParcels, numberOfOldParcels,
                 numberOfParcelsAffectedByDPRs, numberOfDPRs);
@@ -122,7 +128,8 @@ public class XLSXTemplate implements ExcelTemplate {
         try {
             OutputStream ExcelFile = new FileOutputStream(filePath);
             XSSFWorkbook workbook = new XSSFWorkbook();
-            workbook.createSheet(xlsxSheetName);
+            XSSFSheet spreadsheet = workbook.createSheet(xlsxSheetName);
+            spreadsheet.setDisplayGridlines(false);
             workbook.write(ExcelFile);
             ExcelFile.close();
 
@@ -147,6 +154,7 @@ public class XLSXTemplate implements ExcelTemplate {
                                           int parcelsAffectedByDPR) {
 
         XSSFSheet sheet = excelTemplate.getSheet(xlsxSheetName);
+
 
         mergeCellsToRegions(sheet, oldParcels);
 
@@ -261,6 +269,7 @@ public class XLSXTemplate implements ExcelTemplate {
             cell = row.createCell(c);
             cell.setCellValue(oldParcelString);
 
+            cellstyle = noStyling;
             color = lightGrayString;
             border_bottom = noStyling;
             border_top = thick;
@@ -279,7 +288,7 @@ public class XLSXTemplate implements ExcelTemplate {
             }
 
             XSSFCellStyle newStyle = getStyleForCell(color, border_bottom, border_top, border_left, border_right,
-                    noIndentValue, excelTemplate);
+                    noIndentValue, cellstyle, excelTemplate);
             cell.setCellStyle(newStyle);
         }
 
@@ -295,11 +304,11 @@ public class XLSXTemplate implements ExcelTemplate {
      * @param border_left       cell border styling (left)
      * @param border_right      cell border styling (right)
      * @param indent            text indent
-     * @param excelTemplate     excel workbook
-     * @return                  cell style
+     * @param cellstyle
+     *@param excelTemplate     excel workbook  @return                  cell style
      */
     private XSSFCellStyle getStyleForCell(String color, String border_bottom, String border_top, String border_left,
-                                          String border_right, int indent, XSSFWorkbook excelTemplate ) {
+                                          String border_right, int indent, String cellstyle, XSSFWorkbook excelTemplate) {
 
         XSSFCellStyle style = excelTemplate.createCellStyle();
 
@@ -323,6 +332,18 @@ public class XLSXTemplate implements ExcelTemplate {
             style.setVerticalAlignment(VerticalAlignment.BOTTOM);
             style.setAlignment(HorizontalAlignment.RIGHT);
             style.setIndention((short) indent);
+        }
+
+        if (cellstyle.equals(horizontalCenter)) {
+            style.setAlignment(HorizontalAlignment.CENTER);
+        }
+
+        if (cellstyle.equals(verticalCenter)) {
+            style.setVerticalAlignment(VerticalAlignment.CENTER);
+        }
+
+        if (cellstyle.equals(textWrap)) {
+            style.setWrapText(true);
         }
 
         switch (border_bottom) {
@@ -387,6 +408,7 @@ public class XLSXTemplate implements ExcelTemplate {
             border_top = thin;
             border_left = thick;
             border_right = thick;
+            cellstyle = noStyling;
 
             if (c==0){
                 border_top = thick;
@@ -403,11 +425,12 @@ public class XLSXTemplate implements ExcelTemplate {
                 border_right = thin;
             } else if (c==totalSize){
                 border_top = thick;
+                border_bottom = none;
                 cell.setCellValue(newAreaString);
             }
 
             XSSFCellStyle newStyle = getStyleForCell(color, border_bottom, border_top, border_left, border_right,
-                    noIndentValue, excelTemplate);
+                    noIndentValue, cellstyle, excelTemplate);
             cell.setCellStyle(newStyle);
         }
 
@@ -434,6 +457,8 @@ public class XLSXTemplate implements ExcelTemplate {
             border_left = thick;
             border_right = thick;
             indent = indentValue;
+            cellstyle = verticalCenter;
+
 
 
             if (c==0){
@@ -455,10 +480,11 @@ public class XLSXTemplate implements ExcelTemplate {
             } else if (c==totalSize){
                 color = lightGrayString;
                 indent = noIndentValue;
+                border_top = none;
                 cell.setCellValue(squareMeterString);
             }
             XSSFCellStyle newStyle = getStyleForCell(color, border_bottom, border_top, border_left, border_right,
-                    indent, excelTemplate);
+                    indent, cellstyle, excelTemplate);
             cell.setCellStyle(newStyle);
         }
 
@@ -484,6 +510,7 @@ public class XLSXTemplate implements ExcelTemplate {
             border_left = thick;
             border_right = thick;
             indent = indentValue;
+            cellstyle = verticalCenter;
 
             if (c == 0) {
                 color = lightGrayString;
@@ -501,7 +528,7 @@ public class XLSXTemplate implements ExcelTemplate {
             }
 
             XSSFCellStyle newStyle = getStyleForCell(color, border_bottom, border_top, border_left, border_right,
-                    indent, excelTemplate);
+                    indent, cellstyle, excelTemplate);
             cell.setCellStyle(newStyle);
         }
 
@@ -536,6 +563,7 @@ public class XLSXTemplate implements ExcelTemplate {
             border_left = thick;
             border_right = thick;
             indent = indentValue;
+            cellstyle = noStyling;
 
             if (c == 0) {
                 cell.setCellType(CellType.STRING);
@@ -543,7 +571,8 @@ public class XLSXTemplate implements ExcelTemplate {
                     border_bottom = thick;
                     border_top = noStyling;
                     indent = noIndentValue;
-                    cell.setCellValue(roundingDifferenceString);
+                    cellstyle = horizontalCenter;
+                    cell.setCellValue(splittedRoundingDifferenceString);
                 }
             } else if (c == 1) {
                 if (oldParcels > 1) {
@@ -556,7 +585,7 @@ public class XLSXTemplate implements ExcelTemplate {
                 border_right = thin;
             }
             XSSFCellStyle newStyle = getStyleForCell(color, border_bottom, border_top, border_left, border_right,
-                    indent, excelTemplate);
+                    indent, cellstyle, excelTemplate);
             cell.setCellStyle(newStyle);
         }
     }
@@ -681,6 +710,7 @@ public class XLSXTemplate implements ExcelTemplate {
             border_top = thick;
             border_left = noStyling;
             border_right = noStyling;
+            cellstyle = noStyling;
 
             if (c == 1) {
                 if (parcels == 1) {
@@ -694,7 +724,7 @@ public class XLSXTemplate implements ExcelTemplate {
             }
 
             XSSFCellStyle newStyle = getStyleForCell(color, border_bottom, border_top, border_left, border_right,
-                    noIndentValue, excelTemplate);
+                    noIndentValue, cellstyle, excelTemplate);
             cell.setCellStyle(newStyle);
 
         }
@@ -720,6 +750,7 @@ public class XLSXTemplate implements ExcelTemplate {
             border_top = thin;
             border_left = thin;
             border_right = thin;
+            cellstyle = noStyling;
 
             if (c==0){
                 border_top = thick;
@@ -737,16 +768,17 @@ public class XLSXTemplate implements ExcelTemplate {
                 if (parcels >= oldParcels) {
                     cell.setCellValue(splittedRoundingDifferenceString);
                 } else {
-                    cell.setCellValue(roundingDifferenceString);
+                    cell.setCellValue(splittedRoundingDifferenceString);
                 }
             }else if (c==totalSize){
                 border_top = thick;
                 border_left = thick;
                 border_right = thick;
+                border_bottom = none;
                 cell.setCellValue(dprAreaString);
             }
             XSSFCellStyle newStyle = getStyleForCell(color, border_bottom, border_top, border_left, border_right,
-                    noIndentValue, excelTemplate);
+                    noIndentValue, cellstyle, excelTemplate);
             if (c==0){
                 newStyle.setVerticalAlignment(VerticalAlignment.BOTTOM);
             }
@@ -774,6 +806,7 @@ public class XLSXTemplate implements ExcelTemplate {
             border_left = thin;
             border_right = thick;
             indent = noIndentValue;
+            cellstyle = noStyling;
 
 
             if (c == 0) {
@@ -785,18 +818,21 @@ public class XLSXTemplate implements ExcelTemplate {
                 border_left = thick;
                 border_right = thin;
                 indent = 2;
+                cellstyle = verticalCenter;
             } else if (c <= parcels && parcels != 1) {
                 color = noStyling;
                 border_right = thin;
                 indent = 2;
+                cellstyle = verticalCenter;
             } else if (c == parcels + additionConstantToGetIndexOfRoundingDifferenceColumnOfDPRTable) {
                 border_top = noStyling;
             } else if (c == totalSize) {
                 border_left = thick;
+                border_top = none;
                 cell.setCellValue(squareMeterString);
             }
             XSSFCellStyle newStyle = getStyleForCell(color, border_bottom, border_top, border_left, border_right,
-                    indent, excelTemplate);
+                    indent, cellstyle, excelTemplate);
             if (c==0){
                 newStyle.setVerticalAlignment(VerticalAlignment.BOTTOM);
             }
@@ -834,6 +870,7 @@ public class XLSXTemplate implements ExcelTemplate {
             color = noStyling;
             border_left = thick;
             border_right = thick;
+            cellstyle = noStyling;
 
             if (c == 0) {
                 if (i==dpr * aParcelOrADprNeedsTwoRows + rowStartIndex + 2){
@@ -879,7 +916,7 @@ public class XLSXTemplate implements ExcelTemplate {
                 }
             }
             XSSFCellStyle newStyle = getStyleForCell(color, border_bottom, border_top, border_left, border_right,
-                    indentValue, excelTemplate);
+                    indentValue, cellstyle, excelTemplate);
             cell.setCellStyle(newStyle);
         }
     }
