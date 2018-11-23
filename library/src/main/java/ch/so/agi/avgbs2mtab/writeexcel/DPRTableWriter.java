@@ -5,6 +5,7 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -26,6 +27,10 @@ class DPRTableWriter {
     private static final Integer additionConstantToGetToFirstRowWithDPRNumber =
             additionConstantToGetToParcelNumberRowInDPRTable + 2;
     private static final WritingUtils writingUtils = new WritingUtils();
+
+    //LISTE MIT gelöschten DPRs
+    HashMap<String,String> mapOfDeletedDPRs = new HashMap<String, String>();
+
 
     /**
      * writes all number of parcels and dprs into dpr table
@@ -248,11 +253,18 @@ class DPRTableWriter {
         XSSFRow rowFlows = xlsxSheet.getRow(rowDPRNumber);
         XSSFCell cellFlows = rowFlows.getCell(columnNewArea);
         double areaDouble = area/10.0;
+        String dprnumber = rowFlows.getCell(rowFlows.getFirstCellNum()).getStringCellValue();
 
         if (areaDouble > 0) {
             cellFlows.setCellValue(areaDouble);
         } else {
             cellFlows.setCellValue("gelöscht");
+            if (!dprnumber.equals(null)) {
+                mapOfDeletedDPRs.put(dprnumber,dprnumber);
+            }
+
+
+            //System.out.println(mapOfDeletedDPRs);
         }
     }
 }

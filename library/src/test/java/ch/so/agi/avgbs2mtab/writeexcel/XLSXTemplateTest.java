@@ -85,6 +85,8 @@ public class XLSXTemplateTest {
     }
 
 
+
+
     private List<Integer> generateOldParcels() {
         List<Integer> oldparcels = new ArrayList<>();
         oldparcels.add(695);
@@ -139,7 +141,7 @@ public class XLSXTemplateTest {
 
         boolean allCellsAreCorrectlyStyled = true;
 
-        XSSFColor lightGray = new XSSFColor(new java.awt.Color(217, 217, 217));
+        XSSFColor lightGray = new XSSFColor(new java.awt.Color(217, 217,217));
 
         for (int i = 0; i < 20; i++) {
             XSSFRow row = xlsxSheet.getRow(i);
@@ -248,7 +250,8 @@ public class XLSXTemplateTest {
 
         boolean allCellsAreCorrectlyStyled = true;
 
-        XSSFColor lightGray = new XSSFColor(new java.awt.Color(217, 217, 217));
+        //IndexedColorMap colorMap = workbook.getStylesSource().getIndexedColors();
+        XSSFColor lightGray = new XSSFColor(new java.awt.Color(217, 217,217));
 
         for (int i = 0; i <= 14; i++) {
             XSSFRow row = xlsxSheet.getRow(i);

@@ -204,7 +204,6 @@ public class Avgbs2mtabMainTest {
                 expectedValuesString,
                 xlsxDataString);
 
-
         Assert.assertTrue(allValuesAreCorrect);
 
     }
@@ -527,8 +526,8 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("A2", "Neue Liegenschaften");
         expectedValuesString.put("A3", "Grundstück-Nr.");
         expectedValuesString.put("A5", "2199");
-        expectedValuesString.put("A7", "Rundungsdifferenz");
-        expectedValuesString.put("A8", "Alte Fläche [m2]");
+        expectedValuesString.put("A7", "Rundungs-\ndifferenz");
+        expectedValuesString.put("A8", "Alte Fläche [m²]");
 
         expectedValuesString.put("B1", "Alte Liegenschaften");
         expectedValuesString.put("B2", "Grundstück-Nr.");
@@ -541,7 +540,7 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("D3", "2199");
 
         expectedValuesString.put("E2", "Neue Fläche");
-        expectedValuesString.put("E3", "[m2]");
+        expectedValuesString.put("E3", "[m²]");
 
         expectedValuesString.put("A12", "Selbst. Recht");
         expectedValuesString.put("A13", "Grundstück-Nr.");
@@ -549,10 +548,10 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("B11", "Liegenschaften");
         expectedValuesString.put("B12", "Grundstück-Nr.");
 
-        expectedValuesString.put("C12", "Rundungsdifferenz");
+        expectedValuesString.put("C12", "Rundungs-\ndifferenz");
 
         expectedValuesString.put("D12", "Selbst. Recht Fläche");
-        expectedValuesString.put("D13", "[m2]");
+        expectedValuesString.put("D13", "[m²]");
 
         return expectedValuesString;
 
@@ -694,15 +693,15 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("A7", "40011");
         expectedValuesString.put("A9", "40012");
         expectedValuesString.put("A11", "40013");
-        expectedValuesString.put("A13", "Rundungsdifferenz");
-        expectedValuesString.put("A14", "Alte Fläche [m2]");
+        expectedValuesString.put("A13", "Rundungs-\ndifferenz");
+        expectedValuesString.put("A14", "Alte Fläche [m²]");
 
         expectedValuesString.put("B1", "Alte Liegenschaften");
         expectedValuesString.put("B2", "Grundstück-Nr.");
         expectedValuesString.put("B3", "597");
 
         expectedValuesString.put("C2", "Neue Fläche");
-        expectedValuesString.put("C3", "[m2]");
+        expectedValuesString.put("C3", "[m²]");
 
         expectedValuesString.put("A18", "Selbst. Recht");
         expectedValuesString.put("A19", "Grundstück-Nr.");
@@ -710,10 +709,10 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("B17", "Liegenschaften");
         expectedValuesString.put("B18", "Grundstück-Nr.");
 
-        expectedValuesString.put("C18", "Rundungs-differenz");
+        expectedValuesString.put("C18", "Rundungs-\ndifferenz");
 
         expectedValuesString.put("D18", "Selbst. Recht Fläche");
-        expectedValuesString.put("D19", "[m2]");
+        expectedValuesString.put("D19", "[m²]");
 
         return expectedValuesString;
     }
@@ -745,14 +744,14 @@ public class Avgbs2mtabMainTest {
         HashMap<String, String> expectedValuesString = new HashMap<>();
         expectedValuesString.put("A2", "Neue Liegenschaften");
         expectedValuesString.put("A3", "Grundstück-Nr.");
-        expectedValuesString.put("A7", "Rundungsdifferenz");
-        expectedValuesString.put("A8", "Alte Fläche [m2]");
+        expectedValuesString.put("A7", "Rundungs-\ndifferenz");
+        expectedValuesString.put("A8", "Alte Fläche [m²]");
 
         expectedValuesString.put("B1", "Alte Liegenschaften");
         expectedValuesString.put("B2", "Grundstück-Nr.");
 
         expectedValuesString.put("C2", "Neue Fläche");
-        expectedValuesString.put("C3", "[m2]");
+        expectedValuesString.put("C3", "[m²]");
 
         expectedValuesString.put("A12", "Selbst. Recht");
         expectedValuesString.put("A13", "Grundstück-Nr.");
@@ -765,10 +764,10 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("C11", "Liegenschaften");
         expectedValuesString.put("C13", "2142");
 
-        expectedValuesString.put("D12", "Rundungs-differenz");
+        expectedValuesString.put("D12", "Rundungs-\ndifferenz");
 
         expectedValuesString.put("E12", "Selbst. Recht Fläche");
-        expectedValuesString.put("E13", "[m2]");
+        expectedValuesString.put("E13", "[m²]");
 
         return expectedValuesString;
 
@@ -792,14 +791,18 @@ public class Avgbs2mtabMainTest {
         HashMap<String, String> expectedValuesString = new HashMap<>();
         expectedValuesString.put("A2", "Neue Liegenschaften");
         expectedValuesString.put("A3", "Grundstück-Nr.");
-        expectedValuesString.put("A7", "Rundungsdifferenz");
-        expectedValuesString.put("A8", "Alte Fläche [m2]");
+        expectedValuesString.put("A4", "");
+        expectedValuesString.put("A5", "");
+        expectedValuesString.put("A6", "");
+        expectedValuesString.put("A7", "Rundungs-\ndifferenz");
+        expectedValuesString.put("A8", "Alte Fläche [m²]");
 
         expectedValuesString.put("B1", "Alte Liegenschaften");
         expectedValuesString.put("B2", "Grundstück-Nr.");
+        expectedValuesString.put("B3", "");
 
         expectedValuesString.put("C2", "Neue Fläche");
-        expectedValuesString.put("C3", "[m2]");
+        expectedValuesString.put("C3", "[m²]");
 
         expectedValuesString.put("A12", "Selbst. Recht");
         expectedValuesString.put("A13", "Grundstück-Nr.");
@@ -808,10 +811,10 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("B11", "Liegenschaften");
         expectedValuesString.put("B12", "Grundstück-Nr.");
 
-        expectedValuesString.put("C12", "Rundungs-differenz");
+        expectedValuesString.put("C12", "Rundungs-\ndifferenz");
 
         expectedValuesString.put("D12", "Selbst. Recht Fläche");
-        expectedValuesString.put("D13", "[m2]");
+        expectedValuesString.put("D13", "[m²]");
         expectedValuesString.put("D15", "gelöscht");
 
         return expectedValuesString;
@@ -845,8 +848,8 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("A13", "870");
         expectedValuesString.put("A15", "874");
         expectedValuesString.put("A17", "4004");
-        expectedValuesString.put("A19", "Rundungsdifferenz");
-        expectedValuesString.put("A20", "Alte Fläche [m2]");
+        expectedValuesString.put("A19", "Rundungs-\ndifferenz");
+        expectedValuesString.put("A20", "Alte Fläche [m²]");
 
         expectedValuesString.put("B1", "Alte Liegenschaften");
         expectedValuesString.put("B2", "Grundstück-Nr.");
@@ -868,7 +871,7 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("G3", "874");
 
         expectedValuesString.put("H2", "Neue Fläche");
-        expectedValuesString.put("H3", "[m2]");
+        expectedValuesString.put("H3", "[m²]");
 
         expectedValuesString.put("A24", "Selbst. Recht");
         expectedValuesString.put("A25", "Grundstück-Nr.");
@@ -876,10 +879,10 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("B23", "Liegenschaften");
         expectedValuesString.put("B24", "Grundstück-Nr.");
 
-        expectedValuesString.put("C24", "Rundungsdifferenz");
+        expectedValuesString.put("C24", "Rundungs-\ndifferenz");
 
         expectedValuesString.put("D24", "Selbst. Recht Fläche");
-        expectedValuesString.put("D25", "[m2]");
+        expectedValuesString.put("D25", "[m²]");
 
         return expectedValuesString;
 
@@ -956,8 +959,8 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("A5", "1273");
         expectedValuesString.put("A7", "1864");
         expectedValuesString.put("A9", "1973");
-        expectedValuesString.put("A11", "Rundungsdifferenz");
-        expectedValuesString.put("A12", "Alte Fläche [m2]");
+        expectedValuesString.put("A11", "Rundungs-\ndifferenz");
+        expectedValuesString.put("A12", "Alte Fläche [m²]");
 
         expectedValuesString.put("B1", "Alte Liegenschaften");
         expectedValuesString.put("B2", "Grundstück-Nr.");
@@ -967,7 +970,7 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("C3", "1864");
 
         expectedValuesString.put("D2", "Neue Fläche");
-        expectedValuesString.put("D3", "[m2]");
+        expectedValuesString.put("D3", "[m²]");
 
         expectedValuesString.put("A16", "Selbst. Recht");
         expectedValuesString.put("A17", "Grundstück-Nr.");
@@ -977,10 +980,10 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("B16", "Grundstück-Nr.");
         expectedValuesString.put("B17", "1864");
 
-        expectedValuesString.put("C16", "Rundungsdifferenz");
+        expectedValuesString.put("C16", "Rundungs-\ndifferenz");
 
         expectedValuesString.put("D16", "Selbst. Recht Fläche");
-        expectedValuesString.put("D17", "[m2]");
+        expectedValuesString.put("D17", "[m²]");
 
         return expectedValuesString;
     }
@@ -1017,14 +1020,14 @@ public class Avgbs2mtabMainTest {
 
         expectedValuesString.put("A2", "Neue Liegenschaften");
         expectedValuesString.put("A3", "Grundstück-Nr.");
-        expectedValuesString.put("A7", "Rundungsdifferenz");
-        expectedValuesString.put("A8", "Alte Fläche [m2]");
+        expectedValuesString.put("A7", "Rundungs-\ndifferenz");
+        expectedValuesString.put("A8", "Alte Fläche [m²]");
 
         expectedValuesString.put("B1", "Alte Liegenschaften");
         expectedValuesString.put("B2", "Grundstück-Nr.");
 
         expectedValuesString.put("C2", "Neue Fläche");
-        expectedValuesString.put("C3", "[m2]");
+        expectedValuesString.put("C3", "[m²]");
 
         expectedValuesString.put("A12", "Selbst. Recht");
         expectedValuesString.put("A13", "Grundstück-Nr.");
@@ -1034,10 +1037,10 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("B12", "Grundstück-Nr.");
         expectedValuesString.put("B13", "1606");
 
-        expectedValuesString.put("C12", "Rundungs-differenz");
+        expectedValuesString.put("C12", "Rundungs-\ndifferenz");
 
         expectedValuesString.put("D12", "Selbst. Recht Fläche");
-        expectedValuesString.put("D13", "[m2]");
+        expectedValuesString.put("D13", "[m²]");
 
         return expectedValuesString;
     }
@@ -1057,14 +1060,14 @@ public class Avgbs2mtabMainTest {
 
         expectedValuesString.put("A2", "Neue Liegenschaften");
         expectedValuesString.put("A3", "Grundstück-Nr.");
-        expectedValuesString.put("A7", "Rundungsdifferenz");
-        expectedValuesString.put("A8", "Alte Fläche [m2]");
+        expectedValuesString.put("A7", "Rundungs-\ndifferenz");
+        expectedValuesString.put("A8", "Alte Fläche [m²]");
 
         expectedValuesString.put("B1", "Alte Liegenschaften");
         expectedValuesString.put("B2", "Grundstück-Nr.");
 
         expectedValuesString.put("C2", "Neue Fläche");
-        expectedValuesString.put("C3", "[m2]");
+        expectedValuesString.put("C3", "[m²]");
 
         expectedValuesString.put("A12", "Selbst. Recht");
         expectedValuesString.put("A13", "Grundstück-Nr.");
@@ -1074,10 +1077,10 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("B12", "Grundstück-Nr.");
         expectedValuesString.put("B13", "1606");
 
-        expectedValuesString.put("C12", "Rundungs-differenz");
+        expectedValuesString.put("C12", "Rundungs-\ndifferenz");
 
         expectedValuesString.put("D12", "Selbst. Recht Fläche");
-        expectedValuesString.put("D13", "[m2]");
+        expectedValuesString.put("D13", "[m²]");
 
         return expectedValuesString;
     }
@@ -1104,8 +1107,8 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("A13", "870");
         expectedValuesString.put("A15", "874");
         expectedValuesString.put("A17", "4004");
-        expectedValuesString.put("A19", "Rundungsdifferenz");
-        expectedValuesString.put("A20", "Alte Fläche [m2]");
+        expectedValuesString.put("A19", "Rundungs-\ndifferenz");
+        expectedValuesString.put("A20", "Alte Fläche [m²]");
 
         expectedValuesString.put("B1", "Alte Liegenschaften");
         expectedValuesString.put("B2", "Grundstück-Nr.");
@@ -1127,7 +1130,7 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("G3", "874");
 
         expectedValuesString.put("H2", "Neue Fläche");
-        expectedValuesString.put("H3", "[m2]");
+        expectedValuesString.put("H3", "[m²]");
 
         expectedValuesString.put("A24", "Selbst. Recht");
         expectedValuesString.put("A25", "Grundstück-Nr.");
@@ -1135,10 +1138,10 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("B23", "Liegenschaften");
         expectedValuesString.put("B24", "Grundstück-Nr.");
 
-        expectedValuesString.put("C24", "Rundungsdifferenz");
+        expectedValuesString.put("C24", "Rundungs-\ndifferenz");
 
         expectedValuesString.put("D24", "Selbst. Recht Fläche");
-        expectedValuesString.put("D25", "[m2]");
+        expectedValuesString.put("D25", "[m²]");
 
         return expectedValuesString;
 
@@ -1203,8 +1206,8 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("A6", "");
         expectedValuesString.put("A7", "1065");
         expectedValuesString.put("A8", "");
-        expectedValuesString.put("A9", "Rundungsdifferenz");
-        expectedValuesString.put("A10", "Alte Fläche [m2]");
+        expectedValuesString.put("A9", "Rundungs-\ndifferenz");
+        expectedValuesString.put("A10", "Alte Fläche [m²]");
         expectedValuesString.put("A14", "Selbst. Recht");
         expectedValuesString.put("A15", "Grundstück-Nr.");
         expectedValuesString.put("A17", "(175)");
@@ -1224,13 +1227,13 @@ public class Avgbs2mtabMainTest {
 
 
         expectedValuesString.put("C2", "Neue Fläche");
-        expectedValuesString.put("C3", "[m2]");
-        expectedValuesString.put("C14", "Rundungs-differenz");
+        expectedValuesString.put("C3", "[m²]");
+        expectedValuesString.put("C14", "Rundungs-\ndifferenz");
         //TBC
 
 
         expectedValuesString.put("D14", "Selbst. Recht Fläche");
-        expectedValuesString.put("D15", "[m2]");
+        expectedValuesString.put("D15", "[m²]");
 
         return expectedValuesString;
 
@@ -1276,8 +1279,8 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("A4", "");
         expectedValuesString.put("A5", "");
         expectedValuesString.put("A6", "");
-        expectedValuesString.put("A7", "Rundungsdifferenz");
-        expectedValuesString.put("A8", "Alte Fläche [m2]");
+        expectedValuesString.put("A7", "Rundungs-\ndifferenz");
+        expectedValuesString.put("A8", "Alte Fläche [m²]");
 
         expectedValuesString.put("A12", "Selbst. Recht");
         expectedValuesString.put("A13", "Grundstück-Nr.");
@@ -1294,11 +1297,11 @@ public class Avgbs2mtabMainTest {
 
 
         expectedValuesString.put("C2", "Neue Fläche");
-        expectedValuesString.put("C3", "[m2]");
-        expectedValuesString.put("C12", "Rundungs-differenz");
+        expectedValuesString.put("C3", "[m²]");
+        expectedValuesString.put("C12", "Rundungs-\ndifferenz");
 
         expectedValuesString.put("D12", "Selbst. Recht Fläche");
-        expectedValuesString.put("D13", "[m2]");
+        expectedValuesString.put("D13", "[m²]");
         expectedValuesString.put("D15", "gelöscht");
         expectedValuesString.put("D17", "gelöscht");
 
@@ -1329,8 +1332,8 @@ public class Avgbs2mtabMainTest {
         expectedValuesString.put("A4", "");
         expectedValuesString.put("A5", "2856");
         expectedValuesString.put("A6", "");
-        expectedValuesString.put("A7", "Rundungsdifferenz");
-        expectedValuesString.put("A8", "Alte Fläche [m2]");
+        expectedValuesString.put("A7", "Rundungs-\ndifferenz");
+        expectedValuesString.put("A8", "Alte Fläche [m²]");
 
         expectedValuesString.put("A12", "Selbst. Recht");
         expectedValuesString.put("A13", "Grundstück-Nr.");
@@ -1347,17 +1350,17 @@ public class Avgbs2mtabMainTest {
 
         expectedValuesString.put("C1", "Alte Liegenschaften");
         expectedValuesString.put("C3", "2856");
-        expectedValuesString.put("C12", "Rundungsdifferenz");
+        expectedValuesString.put("C12", "Rundungs-\ndifferenz");
 
         expectedValuesString.put("D1", "Alte Liegenschaften");
         expectedValuesString.put("D3", "2857");
         expectedValuesString.put("D12", "Selbst. Recht Fläche");
-        expectedValuesString.put("D13", "[m2]");
+        expectedValuesString.put("D13", "[m²]");
         expectedValuesString.put("D17", "gelöscht");
         expectedValuesString.put("D19", "gelöscht");
 
         expectedValuesString.put("E2", "Neue Fläche");
-        expectedValuesString.put("E3", "[m2]");
+        expectedValuesString.put("E3", "[m²]");
 
         return expectedValuesString;
 
