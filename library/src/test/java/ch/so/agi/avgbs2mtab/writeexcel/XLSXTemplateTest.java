@@ -185,7 +185,7 @@ public class XLSXTemplateTest {
                         !cell.getCellStyle().getBorderTopEnum().equals(BorderStyle.THIN) ||
                         !cell.getCellStyle().getBorderLeftEnum().equals(BorderStyle.THICK) ||
                         !cell.getCellStyle().getBorderRightEnum().equals(BorderStyle.THIN) ||
-                        cell.getCellStyle().getIndention() != 2 ||
+                        cell.getCellStyle().getIndention() != 1 ||
                         !cell.getCellStyle().getFont().getFontName().equals("Arial") ||
                         cell.getCellStyle().getFont().getFontHeightInPoints() != 11 ||
                         !cell.getCellStyle().getAlignmentEnum().equals(HorizontalAlignment.RIGHT) ||
@@ -202,7 +202,7 @@ public class XLSXTemplateTest {
                         !cell.getCellStyle().getBorderTopEnum().equals(BorderStyle.NONE) ||
                         !cell.getCellStyle().getBorderLeftEnum().equals(BorderStyle.THIN) ||
                         !cell.getCellStyle().getBorderRightEnum().equals(BorderStyle.THIN) ||
-                        cell.getCellStyle().getIndention() != 2 ||
+                        cell.getCellStyle().getIndention() != 1 ||
                         !cell.getCellStyle().getFont().getFontName().equals("Arial") ||
                         cell.getCellStyle().getFont().getFontHeightInPoints() != 11 ||
                         !cell.getCellStyle().getAlignmentEnum().equals(HorizontalAlignment.RIGHT) ||
@@ -293,7 +293,7 @@ public class XLSXTemplateTest {
                         !cell.getCellStyle().getBorderTopEnum().equals(BorderStyle.THIN) ||
                         !cell.getCellStyle().getBorderLeftEnum().equals(BorderStyle.THICK) ||
                         !cell.getCellStyle().getBorderRightEnum().equals(BorderStyle.THICK) ||
-                        cell.getCellStyle().getIndention() != 2 ||
+                        cell.getCellStyle().getIndention() != 1 ||
                         !cell.getCellStyle().getFont().getFontName().equals("Arial") ||
                         cell.getCellStyle().getFont().getFontHeightInPoints() != 11 ||
                         !cell.getCellStyle().getAlignmentEnum().equals(HorizontalAlignment.RIGHT) ||
@@ -309,7 +309,7 @@ public class XLSXTemplateTest {
                         !cell.getCellStyle().getBorderTopEnum().equals(BorderStyle.NONE) ||
                         !cell.getCellStyle().getBorderLeftEnum().equals(BorderStyle.THICK) ||
                         !cell.getCellStyle().getBorderRightEnum().equals(BorderStyle.THICK) ||
-                        cell.getCellStyle().getIndention() != 2 ||
+                        cell.getCellStyle().getIndention() != 1 ||
                         !cell.getCellStyle().getFont().getFontName().equals("Arial") ||
                         cell.getCellStyle().getFont().getFontHeightInPoints() != 11 ||
                         !cell.getCellStyle().getAlignmentEnum().equals(HorizontalAlignment.RIGHT) ||
@@ -350,7 +350,7 @@ public class XLSXTemplateTest {
                         !cell.getCellStyle().getBorderTopEnum().equals(BorderStyle.NONE) ||
                         !cell.getCellStyle().getBorderLeftEnum().equals(BorderStyle.THICK) ||
                         !cell.getCellStyle().getBorderRightEnum().equals(BorderStyle.THIN) ||
-                        cell.getCellStyle().getIndention() != 2 ||
+                        cell.getCellStyle().getIndention() != 1 ||
                         !cell.getCellStyle().getFont().getFontName().equals("Arial") ||
                         cell.getCellStyle().getFont().getFontHeightInPoints() != 11 ||
                         !cell.getCellStyle().getAlignmentEnum().equals(HorizontalAlignment.RIGHT) ||

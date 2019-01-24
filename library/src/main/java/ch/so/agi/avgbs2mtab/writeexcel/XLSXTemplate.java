@@ -46,7 +46,7 @@ public class XLSXTemplate implements ExcelTemplate {
     private static final Integer widthMultiplicationFactor = 253;
     private static final Integer widthOfFirstColumn = 19 * widthMultiplicationFactor;
     private static final Integer widthOfLastParcelTableColumnAndTheFollowingColumn = 14 * widthMultiplicationFactor;
-    private static final Integer indentValue = 2;
+    private static final Integer indentValue = 1;
     private static final Integer noIndentValue = 0;
     private static final Integer additionConstantToGetIndexOfLastColumnOfParcelTable = 1;
     private static final Integer additionConstantToGetIndexOfRoundingDifferenceColumnOfDPRTable = 1;
