@@ -25,6 +25,7 @@ public class XLSXTemplate implements ExcelTemplate {
     private static final String none = "none";
     private static final String lightGrayString = "lightGray";
     private static final String horizontalCenter = "horizontalCenter";
+    private static final String alignLeft = "alignLeft";
     private static final String verticalCenter = "verticalCenter";
     private static final String textWrap = "textWrap";
     private static final String noStyling = "";
@@ -36,7 +37,8 @@ public class XLSXTemplate implements ExcelTemplate {
     private static final String newAreaString = "Neue Fläche";
     private static final String squareMeterString = "[m²]";
     private static final String oldAreaString = "Alte Fläche " + squareMeterString;
-    private static final String roundingDifferenceString = "Rundungsdifferenz";
+    private static final String roundingDifferenceString1 = "Rundungs-";
+    private static final String roundingDifferenceString2 = "differenz";
     private static final String splittedRoundingDifferenceString = "Rundungs-\ndifferenz";
     private static final String dprString = "Selbst. Recht";
     private static final String dprAreaString = dprString + " Fläche";
@@ -348,6 +350,10 @@ public class XLSXTemplate implements ExcelTemplate {
         if (cellstyle.equals(textWrap)) {
             style.setWrapText(true);
         }
+        if (cellstyle.equals(alignLeft)) {
+            style.setAlignment(HorizontalAlignment.LEFT);
+            style.setIndention((short) indent);
+        }
 
         switch (border_bottom) {
             case thick:
@@ -570,12 +576,18 @@ public class XLSXTemplate implements ExcelTemplate {
 
             if (c == 0) {
                 cell.setCellType(CellType.STRING);
+                if (i==newParcels * aParcelOrADprNeedsTwoRows + rowsBesideParcelRows - 2){
+                    border_top = noStyling;
+                    indent = indentValue;
+                    cellstyle = alignLeft;
+                    cell.setCellValue(roundingDifferenceString1);
+                }
                 if (i==newParcels * aParcelOrADprNeedsTwoRows + rowsBesideParcelRows - 1){
                     border_bottom = thick;
                     border_top = noStyling;
-                    indent = noIndentValue;
-                    cellstyle = horizontalCenter;
-                    cell.setCellValue(splittedRoundingDifferenceString);
+                    indent = indentValue;
+                    cellstyle = alignLeft;
+                    cell.setCellValue(roundingDifferenceString2);
                 }
             } else if (c == 1) {
                 if (oldParcels > 1) {
