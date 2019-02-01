@@ -113,8 +113,11 @@ class DPRTableWriter {
 
         for (String parcel : orderedListOfParcelNumbers) {
             for (String dpr : orderedListOfDPRs) {
-
                 Integer area = dataExtractionDPR.getAddedAreaDPR(parcel, dpr);
+                if (area == null) {
+                    /** Wenn der Wert Null ist, muss er auf 0 gesetzt werden. Andernfalls entsteht hier eine NullPointException **/
+                    area = 0;
+                }
                 writeDPRInflowAndOutflows(parcel, dpr, area, numberOfNewParcelsInParcelTable, xlsxSheet);
             }
         }
@@ -140,8 +143,9 @@ class DPRTableWriter {
         int indexParcel = writingUtils.getColumnIndexOfParcelInTable(parcelNumberAffectedByDPR, indexOfParcelRow, xlsxSheet);
 
         int indexDPR = writingUtils.getRowIndexOfDPRInTable(indexOfParcelRow, dpr, xlsxSheet);
-
-        writingUtils.writeValueIntoCell(indexDPR, indexParcel, xlsxSheet, area, typeArea);
+        if (area > 0) {
+            writingUtils.writeValueIntoCell(indexDPR, indexParcel, xlsxSheet, area, typeArea);
+        }
     }
 
 

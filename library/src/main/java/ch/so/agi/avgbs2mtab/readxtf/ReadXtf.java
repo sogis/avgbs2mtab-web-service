@@ -155,7 +155,6 @@ public class ReadXtf {
                         String drpnumber = iomObj.getattrobj("flaeche", 0).getobjectrefoid();
                         String liegt_auf = iomObj.getattrobj("liegt_auf", 0).getobjectrefoid();
                         int area = (int) (Double.parseDouble(iomObj.getattrvalue("Flaechenmass"))*10);
-
                         if (dprAnteilAnLiegenschaft.get(drpnumber) != null) {
                             liegtaufmap = dprAnteilAnLiegenschaft.get(drpnumber);
                             liegtaufmap.put(liegt_auf, area);
