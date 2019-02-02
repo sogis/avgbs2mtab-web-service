@@ -32,19 +32,12 @@ Use your favorite IDE (e.g. [Spring Tool Suite](https://spring.io/tools/sts/all)
 
 `./gradlew clean build` will create an executable JAR.
 
-### Release management
+### Release management / versioning
 
-It uses the [https://plugins.gradle.org/plugin/pl.allegro.tech.build.axion-release](https://plugins.gradle.org/plugin/pl.allegro.tech.build.axion-release) plugin:
-
-**Condition:** Releases (= Tag on Github, = non-SNAPSHOT version) are made locally.
-
-1. Develop and test and build on your local machine: `./gradlew clean build` 
-2. Commit your changes locally: `git commit -a -m 'some fix'`. You cannot make a release without `git push`. Before a release `./gradlew currentVersion` shows `x.y.z-SNAPSHOT`.
-3. `./gradlew clean build pushDockerImages` is run on Travis and will push a SNAPSHOT and a latest image on hub.docker.com.
-4. If you want a final release (non-SNAPSHOT version), this has to be done locally (commit and push first): `./gradlew release -Prelease.customUsername=foobar -Prelease.customPassword=$*fubarXX! clean build pushDockerImages` (TODO: `release` as last task?). Be carefull: if you push the changes to Github, Travis will be slower with testing and pushing the image than your pushes from your local machine to docker. In this case the `latest` docker image will be overwritten. By default version patch (least significant) number is incremented. This can be changed in `build.gradle` or as command line argument [https://axion-release-plugin.readthedocs.io/en/latest/configuration/version/#incrementing](https://axion-release-plugin.readthedocs.io/en/latest/configuration/version/#incrementing)
+It uses a simple release management and versioning mechanism: Local builds are tagged as `1.0.LOCALBUILD`. Builds on Travis or Jenkins will append the build number, e.g. `1.0.48`. Major version will be increased after "major" changes. After every commit to the repository a docker image will be build and pushed to `hub.docker.com`. It will be tagged as `latest` and with the build number (`1.0.48`).
 
 ## Running as Docker Image (SO!GIS)
-* To be done... 
+See [openshift/README.md](openshift/README.md)
 
 ## TODO
 
