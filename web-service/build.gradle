@@ -14,6 +14,7 @@ buildscript {
 
 plugins {
     id "com.bmuschko.docker-remote-api" version "3.6.1"
+    id "org.ajoberstar.grgit" version "3.0.0"
 }
 
 apply plugin: 'java'
@@ -101,8 +102,18 @@ pushDockerImages.dependsOn {
     tasks.findAll { task -> task.name.startsWith('pushDockerImage_') }
 }
 
-task printVersion() {
+import java.text.SimpleDateFormat
+import org.ajoberstar.grgit.Grgit
+
+task versionTxt()  {
     doLast {
-        println version
+        new File("$projectDir/src/main/resources/templates/version.txt").text = """
+Version: $version
+Revision: ${Grgit.open(dir: '.').head().id}
+Buildtime: ${new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date())}
+Application-name: avgbs2mtab-web-service
+"""
     }
 }
+build.dependsOn(versionTxt)
+classes.dependsOn(versionTxt)
