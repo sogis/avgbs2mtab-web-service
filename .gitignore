@@ -1,4 +1,6 @@
 web-service/src/main/resources/templates/version.txt
+web-service/version.txt
+version.txt
 
 target/
 !.mvn/wrapper/maven-wrapper.jar
