@@ -116,8 +116,8 @@ Application-name: avgbs2mtab-web-service
     }
 }
 task copyVersionTxt(type: Copy) {
-    from "version.txt"
-    into "$projectDir/src/main/resources/templates/"
+    from "../version.txt"
+    into "src/main/resources/templates/"
 }
 copyVersionTxt.dependsOn(versionTxt)
 build.dependsOn(copyVersionTxt)
