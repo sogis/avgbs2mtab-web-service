@@ -579,6 +579,7 @@ public class XLSXTemplate implements ExcelTemplate {
                 if (i==newParcels * aParcelOrADprNeedsTwoRows + rowsBesideParcelRows - 2){
                     border_top = noStyling;
                     indent = indentValue;
+                    cellstyle = horizontalCenter;
                     /**cellstyle = alignLeft; **/
                     cell.setCellValue(roundingDifferenceString1);
                 }
@@ -586,6 +587,7 @@ public class XLSXTemplate implements ExcelTemplate {
                     border_bottom = thick;
                     border_top = noStyling;
                     indent = indentValue;
+                    cellstyle = horizontalCenter;
                     /**cellstyle = alignLeft; **/
                     cell.setCellValue(roundingDifferenceString2);
                 }
