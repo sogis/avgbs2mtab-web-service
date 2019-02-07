@@ -50,6 +50,20 @@ public class IntegrationTests {
         	body("html.head.title", equalTo("avgbs2mtab web service"));
 	}
 	
+    /*
+     * Test if version.txt is available.
+     */
+    @Test
+    public void versionPageTest() {               
+        given().
+        when().
+            get("/avgbs2mtab/version.txt").
+        then().
+            statusCode(200).
+            body(containsString("Revision")).
+            body(containsString("Application-name"));
+    }
+
 	@Test
 	/*
 	 * Sending an empty file is like pushing the upload

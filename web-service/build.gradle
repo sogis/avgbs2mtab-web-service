@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.0.4.RELEASE'
+        springBootVersion = '2.1.2.RELEASE'
     }
     repositories {
         jcenter()
@@ -14,6 +14,7 @@ buildscript {
 
 plugins {
     id "com.bmuschko.docker-remote-api" version "3.6.1"
+    id "org.ajoberstar.grgit" version "3.0.0"
 }
 
 apply plugin: 'java'
@@ -21,8 +22,6 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'eclipse'
 apply plugin: "com.bmuschko.docker-remote-api"
-
-project.version = scmVersion.version
 
 group = 'ch.so.agi.avgbs2mtab'
 
@@ -102,3 +101,24 @@ task pushDockerImages() {
 pushDockerImages.dependsOn {
     tasks.findAll { task -> task.name.startsWith('pushDockerImage_') }
 }
+
+import java.text.SimpleDateFormat
+import org.ajoberstar.grgit.Grgit
+
+task versionTxt()  {
+    doLast {
+        new File("version.txt").text = """
+Version: $version
+Revision: ${Grgit.open(dir: '.').head().id}
+Buildtime: ${new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date())}
+Application-name: avgbs2mtab-web-service
+"""
+    }
+}
+task copyVersionTxt(type: Copy) {
+    from "../version.txt"
+    into "src/main/resources/templates/"
+}
+copyVersionTxt.dependsOn(versionTxt)
+build.dependsOn(copyVersionTxt)
+classes.dependsOn(copyVersionTxt)
