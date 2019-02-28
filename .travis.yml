@@ -14,7 +14,7 @@ install: true
 
 script:
   - ./gradlew clean classes
-  - ./gradlew library:test web-service:test
+  - ./gradlew library:test web-service:test web-service:jar
 
 deploy:
   - provider: script
