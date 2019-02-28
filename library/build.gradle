@@ -10,10 +10,11 @@ targetCompatibility = 1.8
 
 group 'ch.so.agi.avgbs2mtab'
 
-//jar.baseName = 'avgbs2mtab'
 archivesBaseName = 'avgbs2mtab'
 
 description = """avgbs2mtab library"""
+
+project.version = '1.0.1'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
