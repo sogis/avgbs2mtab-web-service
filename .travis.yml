@@ -13,4 +13,12 @@ branches:
 install: true
 
 script:
-  - ./gradlew clean build pushDockerImages
+  - ./gradlew clean classes
+  - ./gradlew library:test web-service:test
+
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: ./gradlew library:bintrayUpload web-service:pushDockerImages
+    on:
+      branch: master
