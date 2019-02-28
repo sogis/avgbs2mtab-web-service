@@ -13,7 +13,7 @@ branches:
 install: true
 
 script:
-  - ./gradlew clean classes
+  - ./gradlew clean build -x test -x library:javadoc
   - ./gradlew library:test web-service:test web-service:jar
 
 deploy:
