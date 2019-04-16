@@ -579,14 +579,16 @@ public class XLSXTemplate implements ExcelTemplate {
                 if (i==newParcels * aParcelOrADprNeedsTwoRows + rowsBesideParcelRows - 2){
                     border_top = noStyling;
                     indent = indentValue;
-                    cellstyle = alignLeft;
+                    cellstyle = horizontalCenter;
+                    /**cellstyle = alignLeft; **/
                     cell.setCellValue(roundingDifferenceString1);
                 }
                 if (i==newParcels * aParcelOrADprNeedsTwoRows + rowsBesideParcelRows - 1){
                     border_bottom = thick;
                     border_top = noStyling;
                     indent = indentValue;
-                    cellstyle = alignLeft;
+                    cellstyle = horizontalCenter;
+                    /**cellstyle = alignLeft; **/
                     cell.setCellValue(roundingDifferenceString2);
                 }
             } else if (c == 1) {

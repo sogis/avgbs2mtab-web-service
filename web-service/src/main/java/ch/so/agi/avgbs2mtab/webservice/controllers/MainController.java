@@ -29,7 +29,6 @@ import org.springframework.web.multipart.MultipartFile;
 import ch.so.agi.avgbs2mtab.webservice.services.Avgbs2mtabService;
 import ch.so.agi.avgbs2mtab.webservice.services.IlivalidatorService;
 
-
 @Controller
 public class MainController {
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
@@ -53,7 +52,12 @@ public class MainController {
 	public String index() {
 		return "index";
 	}
-	
+    
+	@RequestMapping(value = "/version.txt", method = RequestMethod.GET)
+    public String version() {
+        return "version.txt";
+    }
+    
 	@RequestMapping(value = "/", method = RequestMethod.POST)
 	@ResponseBody
 	public ResponseEntity<?> uploadFile(
@@ -128,7 +132,6 @@ public class MainController {
 					.contentLength(xlsxFile.length())
 					.contentType(MediaType.parseMediaType("application/octet-stream"))
 					.body(new InputStreamResource(is));	    
-
 		}
 		catch (Exception e) {
 			e.printStackTrace();
