@@ -81,7 +81,7 @@ docker {
 task buildDockerImage(type: DockerBuildImage) {
     description = "Build docker image."
     inputDir = project.projectDir
-    tags = ["sogis/avgbs2mtab-web-service:"+ version, "sogis/avgbs2mtab-web-service:latest"]
+    tags = ["sogis/avgbs2mtab-web-service2:"+ version, "sogis/avgbs2mtab-web-service2:latest"]
     labels = ["avgbs2mtab-web-service.created": new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()), 
             "avgbs2mtab-web-service.git_commit": Grgit.open(dir: '.').head().id, 
             "avgbs2mtab-web-service.travis_build": version]    
