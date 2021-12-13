@@ -73,8 +73,8 @@ import com.bmuschko.gradle.docker.tasks.image.DockerPushImage
 
 docker {
     registryCredentials {
-        username = System.env.dockerRegistryUser
-        password = System.env.dockerRegistryPass
+        username = System.env.DOCKER_USERNAME
+        password = System.env.DOCKER_PASSWORD
     }
 }
 
