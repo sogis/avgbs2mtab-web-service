@@ -14,4 +14,7 @@ USER $USER_NAME
 WORKDIR $APP_HOME
 RUN bash -c 'touch app.jar'
 
+#Log4j 2 CVE-2021-44228
+ENV LOG4J_FORMAT_MSG_NO_LOOKUPS=true
+
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","app.jar"]
