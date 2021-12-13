@@ -30,8 +30,8 @@ jobs:
           docker images
           ./gradlew web-service:pushDockerImages
         env:
-          DOCKER_PASSWORD: ${{secrets.dockerRegistryPass}}
-          DOCKER_USERNAME: ${{secrets.dockerRegistryUser}}
+          DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+          DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
          # DOCKER_ACCOUNT: sogis
           #DOCKER_REPO: cadastre-web-service
       
