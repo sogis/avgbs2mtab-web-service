@@ -14,7 +14,7 @@ buildscript {
 
 plugins {
     id "com.bmuschko.docker-remote-api" version "3.6.1"
-    id "org.ajoberstar.grgit" version "3.0.0"
+    //id "org.ajoberstar.grgit" version "3.0.0"
 }
 
 apply plugin: 'java'
@@ -70,6 +70,8 @@ test {
 import com.bmuschko.gradle.docker.tasks.image.Dockerfile
 import com.bmuschko.gradle.docker.tasks.image.DockerBuildImage
 import com.bmuschko.gradle.docker.tasks.image.DockerPushImage
+//import org.ajoberstar.grgit.Grgit
+import java.text.SimpleDateFormat
 
 docker {
     registryCredentials {
@@ -83,7 +85,7 @@ task buildDockerImage(type: DockerBuildImage) {
     inputDir = project.projectDir
     tags = ["sogis/avgbs2mtab-web-service:"+ version, "sogis/avgbs2mtab-web-service:latest"]
     labels = ["avgbs2mtab-web-service.created": new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()), 
-            "avgbs2mtab-web-service.git_commit": Grgit.open(dir: '.').head().id, 
+            //"avgbs2mtab-web-service.git_commit": Grgit.open(dir: '.').head().id, 
             "avgbs2mtab-web-service.travis_build": version]    
 }
 
@@ -105,14 +107,10 @@ pushDockerImages.dependsOn {
     tasks.findAll { task -> task.name.startsWith('pushDockerImage_') }
 }
 
-import java.text.SimpleDateFormat
-import org.ajoberstar.grgit.Grgit
-
 task versionTxt()  {
     doLast {
         new File("version.txt").text = """
 Version: $version
-Revision: ${Grgit.open(dir: '.').head().id}
 Buildtime: ${new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date())}
 Application-name: avgbs2mtab-web-service
 """
