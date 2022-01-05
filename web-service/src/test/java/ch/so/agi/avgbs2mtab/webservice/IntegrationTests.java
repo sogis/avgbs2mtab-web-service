@@ -60,7 +60,7 @@ public class IntegrationTests {
             get("/avgbs2mtab/version.txt").
         then().
             statusCode(200).
-            body(containsString("Revision")).
+            body(containsString("Version")).
             body(containsString("Application-name"));
     }
 
