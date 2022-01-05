@@ -85,7 +85,7 @@ public class IntegrationTests {
 	 * Upload a non-AVGBS-INTERLIS file.
 	 */
 	public void wrongInterlisFileUploadTest() {
-		File file = new File("src/test/data/agglo_20170529.xtf");
+		File file = new File("src/test/data/254900.itf");
 
 		given().
 			multiPart("file", file).
