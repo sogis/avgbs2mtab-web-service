@@ -55,7 +55,7 @@ dependencies {
     compile("org.webjars:jquery:2.2.4")
     compile("commons-io:commons-io:2.6")
     compile("ch.interlis:ilivalidator:1.9.3")
-    compile("io.rest-assured:rest-assured:3.2.0")
+    testCompile("io.rest-assured:rest-assured:3.2.0")
     testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}") {
         exclude(module: 'commons-logging')
     }		
