@@ -120,7 +120,7 @@ jobs:
       - name: Build jar
         run: |
           ./gradlew clean build
-          ls -la build/libs/
+          ls -la web-service/build/libs/
 
       - uses: actions/upload-artifact@v2
         if: ${{ failure() }}
