@@ -13,8 +13,6 @@ jobs:
       DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}} 
       BUILD_NUMBER: ${{ github.run_number }}
       VERSION: 1.2.${{ github.run_number }}
-      AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
-      AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
 
     runs-on: ubuntu-latest
 
@@ -90,3 +88,83 @@ jobs:
           pull: true
           push: ${{ (github.ref == 'refs/heads/master') && (github.event_name != 'pull_request') && !env.ACT }}
 
+  # build-jvm:
+  #   env:
+  #     DOCKER_ACCOUNT: sogis
+  #     DOCKER_REPO: avgbs2mtab-web-service-jvm
+  #     DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+  #     DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}} 
+  #     BUILD_NUMBER: ${{ github.run_number }}
+  #     VERSION: 1.2.${{ github.run_number }}
+
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     - uses: actions/checkout@v2
+
+  #     - uses: actions/cache@v3
+  #       with:
+  #         path: |
+  #           ~/.gradle/caches
+  #           ~/.gradle/wrapper
+  #         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+  #         restore-keys: |
+  #           ${{ runner.os }}-gradle-
+
+  #     - name: Set up JDK 17
+  #       uses: actions/setup-java@v3
+  #       with:
+  #         distribution: 'liberica' 
+  #         java-version: '17'
+
+  #     - name: Build jar
+  #       run: |
+  #         ./gradlew clean build
+  #         ls -la build/libs/
+
+  #     - uses: actions/upload-artifact@v2
+  #       if: ${{ failure() }}
+  #       with:
+  #         name: reports
+  #         path: build/reports/tests/
+
+  #     - name: Set up QEMU for amd64 and arm64
+  #       uses: docker/setup-qemu-action@v2
+  #       with:
+  #         platforms: linux/amd64, linux/arm64
+
+  #     - name: Set up Docker Buildx
+  #       uses: docker/setup-buildx-action@v2
+
+  #     - name: Docker meta
+  #       id: meta
+  #       uses: docker/metadata-action@v4
+  #       with:
+  #         images: ${{ env.DOCKER_ACCOUNT }}/${{ env.DOCKER_REPO }}
+  #         labels: |
+  #           org.opencontainers.image.title=${{ env.DOCKER_REPO }}
+  #           org.opencontainers.image.version=${{ env.VERSION }}
+  #           org.opencontainers.image.base.name=docker.io/bellsoft/liberica-openjdk-alpine-musl:17.0.3
+  #         tags: |
+  #           type=raw,value=${{ env.VERSION }},enable=true,priority=200
+  #           type=raw,value=1.2,enable=true,priority=200
+  #           type=raw,value=1,enable=true,priority=200
+  #           type=raw,value=latest,enable=true,priority=200
+
+  #     - name: Login to GitHub Container Registry
+  #       uses: docker/login-action@v2
+  #       with:
+  #         username: ${{ secrets.DOCKER_USERNAME }}
+  #         password: ${{ secrets.DOCKER_PASSWORD }}
+  #       if: ${{ (github.ref == 'refs/heads/master') && (github.event_name != 'pull_request') && !env.ACT }}
+
+  #     - name: Multi-platform build and push
+  #       uses: docker/build-push-action@v2
+  #       with:
+  #         platforms:  linux/amd64, linux/arm64
+  #         context: web-service
+  #         file: web-service/Dockerfile.jvm
+  #         tags: ${{ steps.meta.outputs.tags }}
+  #         labels: ${{ steps.meta.outputs.labels }}
+  #         pull: true
+  #         push: ${{ (github.ref == 'refs/heads/master') && (github.event_name != 'pull_request') && !env.ACT }}

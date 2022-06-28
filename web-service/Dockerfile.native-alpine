@@ -8,7 +8,7 @@ WORKDIR /work/
 RUN chown $UID /work \
     && chmod "g+rwX" /work \
     && chown $UID:root /work
-COPY --chown=$UID:root build/native/nativeCompile/cadastral-data-disposal /work/application
+COPY --chown=$UID:root build/native/nativeCompile/web-service /work/application
 
 USER $UID
 EXPOSE 8080
