@@ -5,88 +5,88 @@ on:
   push:
 
 jobs:
-  # build-native:
-  #   env:
-  #     DOCKER_ACCOUNT: sogis
-  #     DOCKER_REPO: avgbs2mtab-web-service
-  #     DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-  #     DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}} 
-  #     BUILD_NUMBER: ${{ github.run_number }}
-  #     VERSION: 1.2.${{ github.run_number }}
+  build-native:
+    env:
+      DOCKER_ACCOUNT: sogis
+      DOCKER_REPO: avgbs2mtab-web-service
+      DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+      DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}} 
+      BUILD_NUMBER: ${{ github.run_number }}
+      VERSION: 1.2.${{ github.run_number }}
 
-  #   runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #     - uses: actions/checkout@v2
+    steps:
+      - uses: actions/checkout@v2
 
-  #     - uses: actions/cache@v3
-  #       with:
-  #         path: |
-  #           ~/.gradle/caches
-  #           ~/.gradle/wrapper
-  #         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-  #         restore-keys: |
-  #           ${{ runner.os }}-gradle-
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
 
-  #     - uses: graalvm/setup-graalvm@v1
-  #       with:
-  #         version: '22.1.0'
-  #         java-version: '17'
-  #         components: 'native-image'
-  #         native-image-musl: 'true'
-  #         github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: graalvm/setup-graalvm@v1
+        with:
+          version: '22.1.0'
+          java-version: '17'
+          components: 'native-image'
+          native-image-musl: 'true'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
-  #     - name: Build native image
-  #       run: |
-  #         ./gradlew clean aotTest nativeCompile -i
-  #         ls -la web-service/build/native/nativeCompile/
+      - name: Build native image
+        run: |
+          ./gradlew clean aotTest nativeCompile -i
+          ls -la web-service/build/native/nativeCompile/
 
-  #     - uses: actions/upload-artifact@v2
-  #       if: ${{ failure() }}
-  #       with:
-  #         name: reports
-  #         path: web-service/build/reports/tests/
+      - uses: actions/upload-artifact@v2
+        if: ${{ failure() }}
+        with:
+          name: reports
+          path: web-service/build/reports/tests/
 
-  #     - name: Set up QEMU for amd64
-  #       uses: docker/setup-qemu-action@v2
-  #       with:
-  #         platforms: linux/amd64
+      - name: Set up QEMU for amd64
+        uses: docker/setup-qemu-action@v2
+        with:
+          platforms: linux/amd64
 
-  #     - name: Set up Docker Buildx
-  #       uses: docker/setup-buildx-action@v2
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
 
-  #     - name: Docker meta
-  #       id: meta
-  #       uses: docker/metadata-action@v4
-  #       with:
-  #         images: ${{ env.DOCKER_ACCOUNT }}/${{ env.DOCKER_REPO }}
-  #         labels: |
-  #           org.opencontainers.image.title=${{ env.DOCKER_REPO }}
-  #           org.opencontainers.image.version=${{ env.VERSION }}
-  #           org.opencontainers.image.base.name=docker.io/alpine:3.16
-  #         tags: |
-  #           type=raw,value=${{ env.VERSION }},enable=true,priority=200
-  #           type=raw,value=1.2,enable=true,priority=200
-  #           type=raw,value=1,enable=true,priority=200
-  #           type=raw,value=latest,enable=true,priority=200
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ${{ env.DOCKER_ACCOUNT }}/${{ env.DOCKER_REPO }}
+          labels: |
+            org.opencontainers.image.title=${{ env.DOCKER_REPO }}
+            org.opencontainers.image.version=${{ env.VERSION }}
+            org.opencontainers.image.base.name=docker.io/alpine:3.16
+          tags: |
+            type=raw,value=${{ env.VERSION }},enable=true,priority=200
+            type=raw,value=1.2,enable=true,priority=200
+            type=raw,value=1,enable=true,priority=200
+            type=raw,value=latest,enable=true,priority=200
 
-  #     - name: Login to GitHub Container Registry
-  #       uses: docker/login-action@v2
-  #       with:
-  #         username: ${{ secrets.DOCKER_USERNAME }}
-  #         password: ${{ secrets.DOCKER_PASSWORD }}
-  #       if: ${{ (github.ref == 'refs/heads/master') && (github.event_name != 'pull_request') && !env.ACT }}
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+        if: ${{ (github.ref == 'refs/heads/master') && (github.event_name != 'pull_request') && !env.ACT }}
 
-  #     - name: Single-platform build and push
-  #       uses: docker/build-push-action@v2
-  #       with:
-  #         platforms: linux/amd64
-  #         context: web-service
-  #         file: web-service/Dockerfile.native-alpine
-  #         tags: ${{ steps.meta.outputs.tags }}
-  #         labels: ${{ steps.meta.outputs.labels }}
-  #         pull: true
-  #         push: ${{ (github.ref == 'refs/heads/master') && (github.event_name != 'pull_request') && !env.ACT }}
+      - name: Single-platform build and push
+        uses: docker/build-push-action@v2
+        with:
+          platforms: linux/amd64
+          context: web-service
+          file: web-service/Dockerfile.native-alpine
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          pull: true
+          push: ${{ (github.ref == 'refs/heads/master') && (github.event_name != 'pull_request') && !env.ACT }}
 
   build-jvm:
     env:
