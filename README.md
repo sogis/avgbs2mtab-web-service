@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/sogis/avgbs2mtab-web-service.svg?branch=master)](https://travis-ci.org/sogis/avgbs2mtab-web-service)
+[![CI/CD](https://github.com/sogis/avgbs2mtab-web-service/actions/workflows/build.yml/badge.svg)](https://github.com/sogis/avgbs2mtab-web-service/actions/workflows/build.yml)
 
 # avgbs2mtab-web-service
 
@@ -28,16 +28,37 @@ Use your favorite IDE (e.g. [Spring Tool Suite](https://spring.io/tools/sts/all)
 
 `./gradlew clean test` will run all tests: unit tests in the library and functional tests in the web service.
 
-### Building
+## Building
 
-`./gradlew clean build` will create an executable JAR.
+### JVM
 
-### Release management / versioning
+```
+./gradlew clean build
+```
 
-It uses a simple release management and versioning mechanism: Local builds are tagged as `1.0.LOCALBUILD`. Builds on Travis or Jenkins will append the build number, e.g. `1.0.48`. Major version will be increased after "major" changes. After every commit to the repository a docker image will be build and pushed to `hub.docker.com`. It will be tagged as `latest` and with the build number (`1.0.48`).
+### Native
 
-## Running as Docker Image (SO!GIS)
-See [openshift/README.md](openshift/README.md)
+```
+./gradlew clean build
+
+java -DspringAot=true -agentlib:native-image-agent=config-output-dir=web-service/src/main/resources/META-INF/native-image -jar web-service/build/libs/web-service-1.1.LOCALBUILD-exec.jar
+
+./gradlew clean aotTest nativeCompile -i
+```
+
+## Run
+
+```
+
+```
+
+Es ist keine Anwendungs-Konfiguration vorzunehmen, d.h. keine umgebungsspezifische Properties-Dateien oder ENV-Variablen.
+
+
+## Release management / versioning
+
+It uses a simple release management and versioning mechanism: Local builds are tagged as `1.0.LOCALBUILD`. Builds on Github Action will append the build number, e.g. `1.0.48`. Major version will be increased after "major" changes. After every commit to the repository a docker image will be build and pushed to `hub.docker.com`. It will be tagged as `latest` and with the build number (`1.0.48`).
+
 
 ## TODO
 

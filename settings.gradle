@@ -1,3 +1,11 @@
+pluginManagement {
+    repositories {
+      maven { url 'https://repo.spring.io/release' }
+      mavenCentral()
+      gradlePluginPortal()
+    }
+}
+
 include 'library'
 include 'web-service'
 rootProject.name = 'avgbs2mtab-web-service'

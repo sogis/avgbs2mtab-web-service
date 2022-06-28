@@ -1,117 +1,103 @@
-buildscript {
-    ext {
-        springBootVersion = '2.1.2.RELEASE'
-    }
-    repositories {
-        jcenter()
-        mavenCentral()
-        maven { url "https://plugins.gradle.org/m2/" }		
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-    }
-}
-
 plugins {
-    id "com.bmuschko.docker-remote-api" version "3.6.1"
-    //id "org.ajoberstar.grgit" version "3.0.0"
+    id 'org.springframework.boot' version '2.7.1'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id 'org.springframework.experimental.aot' version '0.12.0'
 }
-
-apply plugin: 'java'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
-apply plugin: 'eclipse'
-apply plugin: "com.bmuschko.docker-remote-api"
 
 group = 'ch.so.agi.avgbs2mtab'
-
 description = """avgbs2mtab web service"""
 
-bootJar {
-    launchScript()
-}
+sourceCompatibility = 17
+targetCompatibility = 17
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+compileJava {
+    options.compilerArgs.addAll(['--release', '17'])
+}
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-repositories {
-    jcenter()
-    maven { url "http://jars.interlis.ch/" }
-    maven { url "http://repo.maven.apache.org/maven2" }
+bootJar {
+   archiveName = baseName + "-" + version + "-exec.jar"
 }
 
+repositories {
+    maven { url 'https://repo.spring.io/release' }
+    mavenCentral()
+    maven { url "https://jars.interlis.ch/" }
+}
+
+// TODO:
+// Force dependencies version.
 
 dependencies {
-    compile project(':library')
-    compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
-    compile("org.springframework.boot:spring-boot-starter-thymeleaf:${springBootVersion}")
-    runtime("org.springframework.boot:spring-boot-devtools:${springBootVersion}")
-    runtime("org.springframework.boot:spring-boot-actuator:${springBootVersion}")
-    compile("org.webjars:materializecss:0.100.1")
-    compile("org.webjars:jquery:2.2.4")
-    compile("commons-io:commons-io:2.6")
-    compile("ch.interlis:ilivalidator:1.9.3")
-    testCompile("io.rest-assured:rest-assured:3.2.0")
-    testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}") {
-        exclude(module: 'commons-logging')
-    }		
+    implementation project(':library')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation "org.webjars:materializecss:0.100.1"
+    implementation "org.webjars:jquery:2.2.4"
+    implementation "commons-io:commons-io:2.11.0"
+    implementation "ch.interlis:ilivalidator:1.11.13"
+    
+    // Weil sonst @TypeHint das Package nicht findet. Es ist eine transitive Abhängigkeit von Apache POI.
+    //implementation "org.apache.xmlbeans:xmlbeans:3.1.0" 
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation ("io.rest-assured:rest-assured:5.1.1") {
+        exclude(module: 'groovy')
+        exclude(module: 'groovy-xml')
+    } 
+    // https://github.com/rest-assured/rest-assured/wiki/FAQ
+    // Version entspricht der Gradle-Groovy-Version. Problematisch
+    // wirds wenn die Ansprüche von Rest Assured nicht mehr
+    // mit der Gradle-Groovy-Version zusammenpassen.
+    testImplementation 'org.codehaus.groovy:groovy-all:3.0.9' 
+    
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
 }
 
-test {
-    testLogging {
-        showStandardStreams = true
-    }
+tasks.named('test') {
+    useJUnitPlatform()
 }
 
-import com.bmuschko.gradle.docker.tasks.image.Dockerfile
-import com.bmuschko.gradle.docker.tasks.image.DockerBuildImage
-import com.bmuschko.gradle.docker.tasks.image.DockerPushImage
-//import org.ajoberstar.grgit.Grgit
+springAot {
+    //mode = org.springframework.aot.gradle.dsl.AotMode.NATIVE_AGENT
+    debugVerify = false
+    removeXmlSupport = false
+    removeYamlSupport = false
+    removeJmxSupport = true
+    verify = true
+}
+
+nativeBuild {
+    verbose = true
+    fallback = false
+    buildArgs.add("--libc=musl")
+    buildArgs.add("--static")
+    buildArgs.add("-H:+AddAllCharsets") // native image kopiert nur einige wenige rein. Hier wird CP12-Gugus benötigt.
+}
+
 import java.text.SimpleDateFormat
 
-docker {
-    registryCredentials {
-        username = System.env.DOCKER_USERNAME
-        password = System.env.DOCKER_PASSWORD
-    }
+def getCheckedOutGitCommitHash() {
+    'git log -1 --pretty=%H'.execute().text.trim()
 }
 
-task buildDockerImage(type: DockerBuildImage) {
-    description = "Build docker image."
-    inputDir = project.projectDir
-    tags = ["sogis/avgbs2mtab-web-service:"+ version, "sogis/avgbs2mtab-web-service:latest"]
-    labels = ["avgbs2mtab-web-service.created": new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()), 
-            //"avgbs2mtab-web-service.git_commit": Grgit.open(dir: '.').head().id, 
-            "avgbs2mtab-web-service.travis_build": version]    
-}
-
-task pushDockerImage_One(dependsOn: 'buildDockerImage', type: DockerPushImage) {
-    description = "Push docker image to hub.docker.com (images are UNTESTED)."
-    imageName = buildDockerImage.tags[0]
-}
-
-task pushDockerImage_Two(dependsOn: 'buildDockerImage', type: DockerPushImage) {
-    description = "Push docker image to hub.docker.com (images are UNTESTED)."
-    imageName = buildDockerImage.tags[1]
-}
-
-task pushDockerImages() {
-    description = "Collect all push images tasks."
-}
-
-pushDockerImages.dependsOn {
-    tasks.findAll { task -> task.name.startsWith('pushDockerImage_') }
+def getTimestamp() {
+    def date = new Date()
+    return date.format('yyyy-MM-dd HH:mm:ss')
 }
 
 task versionTxt()  {
+    outputs.upToDateWhen { false }
     doLast {
         new File("version.txt").text = """
 Version: $version
-Buildtime: ${new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date())}
+Revision: ${getCheckedOutGitCommitHash()}
+Buildtime: ${getTimestamp()}
 Application-name: avgbs2mtab-web-service
 """
     }

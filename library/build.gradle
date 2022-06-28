@@ -1,12 +1,6 @@
 plugins {
     id 'java-library'
-    id "com.jfrog.bintray" version "1.8.4"    
 }
-
-apply plugin: 'maven-publish'
-
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
 
 group 'ch.so.agi.avgbs2mtab'
 
@@ -14,105 +8,24 @@ archivesBaseName = 'avgbs2mtab'
 
 description = """avgbs2mtab library"""
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 17
+targetCompatibility = 17
+
+compileJava {
+    options.compilerArgs.addAll(['--release', '17'])
+}
 
 repositories {
-    jcenter()
     mavenCentral()
-    maven { url "http://jars.interlis.ch" }
+    maven { url "https://jars.interlis.ch" }
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation 'junit:junit:4.13.2'
 
-    compile group: 'commons-cli', name: 'commons-cli', version: '1.4'
-    compile group: 'org.apache.poi', name: 'poi', version: '3.17'
-    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
-    compile group: 'ch.interlis', name: 'iox-api', version: '1.0.3' 
-    compile group: 'ch.interlis', name: 'iox-ili', version: '1.19.8' 
+    implementation 'commons-cli:commons-cli:1.5.0'
+    implementation 'org.apache.poi:poi:4.1.2' // api break mit 5.x: getCellTypeEnum() -> getCellType(), STRING/NUMERIC/... -> ?
+    implementation 'org.apache.poi:poi-ooxml:4.1.2'
+    implementation 'ch.interlis:iox-api:1.0.4' 
+    implementation 'ch.interlis:iox-ili:1.21.9' 
 }
-
-// Bintray / jcenter
-task sourcesJar(type: Jar, dependsOn: classes) {
-    classifier = 'sources'
-    from sourceSets.main.allSource
-}
-
-javadoc.failOnError = false
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-
-artifacts {
-    archives sourcesJar
-    archives javadocJar
-}
-
-def githubRepoUrl = "https://github.com/sogis/avgbs2mtab-web-service"
-def pomConfig = {
-    licenses {
-        license {
-            name "MIT License"
-            url "https://github.com/sogis/avgbs2mtab-web-service/blob/master/LICENSE"
-        }
-    }
-    developers {
-        developer {
-            id "edigonzales"
-            name "Stefan Ziegler"
-            email "stefan.ziegler@bd.so.ch"
-        }
-    }
-
-    scm {
-        url githubRepoUrl
-    }
-}
-
-publishing {
-    publications {
-        mavenPublication(MavenPublication) {
-            from components.java
-            artifact sourcesJar {
-                classifier "sources"
-            }
-            artifact javadocJar {
-                classifier "javadoc"
-            }
-            groupId project.group
-            artifactId 'avgbs2mtab'
-            version project.version
-            pom.withXml {
-                def root = asNode()
-                root.appendNode('description', 'A library that converts parcel area and ownership mutation data (GB2AV INTERLIS model aka "Kleine Schnittstelle" aka AVGBS) to visual crosstables (Excel file).')
-                root.appendNode('name', 'avgbs2mtab')
-                root.appendNode('url', githubRepoUrl)
-                root.children().last() + pomConfig
-            }
-        }
-    }
-}
-
-bintray {
-    user = System.env.bintrayUser
-    key = System.env.bintrayKey
-    publications = ['mavenPublication']
-    publish = true
-    
-    pkg {
-        repo = 'avgbs2mtab'
-        name = 'avgbs2mtab'
-        userOrg = 'sogis'
-        licenses = ['MIT']
-        labels = ['avgbs', 'interlis', 'xml', 'xtf']        
-        vcsUrl = githubRepoUrl
-        version {
-            name = project.version
-            desc = project.version
-            released  = new Date()
-        }
-    }
-}
-// Bintray / jcenter

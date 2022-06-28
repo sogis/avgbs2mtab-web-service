@@ -1,0 +1,18 @@
+FROM alpine:3.16
+
+ARG UID=1001
+RUN adduser -S appuser -u $UID
+
+WORKDIR /work/
+
+RUN chown $UID /work \
+    && chmod "g+rwX" /work \
+    && chown $UID:root /work
+COPY --chown=$UID:root build/native/nativeCompile/cadastral-data-disposal /work/application
+
+USER $UID
+EXPOSE 8080
+
+ENV LOG4J_FORMAT_MSG_NO_LOOKUPS=true
+
+CMD ["./application"]
