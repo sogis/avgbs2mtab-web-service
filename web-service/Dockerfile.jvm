@@ -1,17 +1,17 @@
 FROM bellsoft/liberica-openjdk-alpine-musl:17.0.3
 
 ARG UID=1001
-RUN adduser -S appuser -u $UID
+RUN adduser -S avgbs2mtab -u $UID
 
-WORKDIR /work/
+ENV HOME=/work
+WORKDIR $HOME
 
-RUN chown $UID /work \
-    && chmod "g+rwX" /work \
-    && chown $UID:root /work
-COPY --chown=$UID:root build/libs/web-service-*-exec.jar /work/application.jar
+COPY build/libs/web-service-*-exec.jar ./application.jar
+RUN chown $UID:0 . && \
+    chmod 0775 . && \
+    ls -la
 
 USER $UID
 EXPOSE 8080
-
 ENV LOG4J_FORMAT_MSG_NO_LOOKUPS=true
 CMD java -XX:MaxRAMPercentage=80.0 -jar application.jar

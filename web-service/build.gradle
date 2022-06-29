@@ -77,7 +77,9 @@ nativeBuild {
     fallback = false
     buildArgs.add("--libc=musl")
     buildArgs.add("--static")
-    buildArgs.add("-H:+AddAllCharsets") // native image kopiert nur einige wenige rein. Hier wird CP12-Gugus benötigt.
+    // Native image kopiert nur einige wenige rein. Hier wird CP1252-Gugus benötigt. 
+    // Warum ich überhaupt dieses komsiche Charset benötige, ist mir nicht klar.
+    buildArgs.add("-H:+AddAllCharsets") 
 }
 
 import java.text.SimpleDateFormat

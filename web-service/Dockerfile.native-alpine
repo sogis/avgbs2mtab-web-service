@@ -1,18 +1,17 @@
 FROM alpine:3.16
 
 ARG UID=1001
-RUN adduser -S appuser -u $UID
+RUN adduser -S avgbs2mtab -u $UID
 
-WORKDIR /work/
+ENV HOME=/work
+WORKDIR $HOME
 
-RUN chown $UID /work \
-    && chmod "g+rwX" /work \
-    && chown $UID:root /work
-COPY --chown=$UID:root build/native/nativeCompile/web-service /work/application
+COPY build/native/nativeCompile/web-service ./application
+RUN chown $UID:0 . && \
+    chmod 0775 . && \
+    ls -la
 
 USER $UID
 EXPOSE 8080
-
 ENV LOG4J_FORMAT_MSG_NO_LOOKUPS=true
-
 CMD ["./application"]

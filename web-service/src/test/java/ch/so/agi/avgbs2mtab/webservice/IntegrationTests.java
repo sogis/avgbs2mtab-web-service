@@ -54,7 +54,7 @@ public class IntegrationTests {
         Response response = 
                 given()
                 .when()
-                    .get("/avgbs2mtab/")
+                    .get("/")
                 .then().contentType(ContentType.HTML).extract()
                 .response();
         assertEquals(response.getStatusCode(), 200);
@@ -70,7 +70,7 @@ public class IntegrationTests {
     public void versionPageTest() {               
         given().
         when().
-            get("/avgbs2mtab/version.txt").
+            get("/version.txt").
         then().
             statusCode(200).
             body(containsString("Version")).
@@ -89,7 +89,7 @@ public class IntegrationTests {
         given().
             multiPart("file", file).
         when().
-            post("/avgbs2mtab/").
+            post("/").
         then().
             statusCode(302);
     }
@@ -104,7 +104,7 @@ public class IntegrationTests {
         given().
             multiPart("file", file).
         when().
-            post("/avgbs2mtab/").
+            post("/").
         then().
             statusCode(200).
             body(containsString("model(s) not found"));     
@@ -120,7 +120,7 @@ public class IntegrationTests {
         given().
             multiPart("file", file).
         when().
-            post("/avgbs2mtab/").
+            post("/").
         then().
             statusCode(200).
             body(containsString("no reader found"));
@@ -137,7 +137,7 @@ public class IntegrationTests {
         given().
             multiPart("file", file).
         when().
-            post("/avgbs2mtab/").
+            post("/").
         then().
             statusCode(200).
             body(containsString("tid z48f364f300002077: Attribute Nummer[0]/Nummer requires a value")).
@@ -162,7 +162,7 @@ public class IntegrationTests {
         given().
             multiPart("file", file).
         when().
-            post("/avgbs2mtab/").
+            post("/").
         then().
             statusCode(200).
             header("Content-Type", "application/octet-stream").
